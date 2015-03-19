@@ -1,0 +1,118 @@
+\chapter{uppercase{Appendix}}
+\label{chap:appendix}
+\section{Types of instructions}
+\label{sec:type}
+MIRA can handle the following type of instructions:
+\begin{enumerate}
+\item \label{itm:simple} Simple clear-cut imperatives (\cite{ChrisFox}), such as \textit{``Shut the door"}.
+\item Negative imperatives (\cite{ChrisFox}), like \textit{``Don't come to the party"}.
+\item Imperatives that denote a sequence \cite{Hare}, such as \textit{``Put on a parachute and jump out"}.
+\item Imperatives that denote the condition or reason, like \textit{``If it is raining, take an umbrella"}.
+\item Imperatives that indicate the goal, like \textit{``Exercise well to stay healthy"}.
+\item Imperatives that indicate both reason and goal, like \textit{``Since grandmother is weak, take this piece of cake, to strengthen her"}.
+\item Imperatives that occur with \textit{or}, like \textit{``To write, take the pen or pencil"}.
+\item Imperatives that occur with \textit{and}, such as:
+\begin{itemize}
+\item \textit{``Shut the window and close the door"}.
+\item \textit{``To write, take the pen and to draw, take the pencil"}.
+\item \textit{``If it is raining, take an umbrella and wear a raincoat"}.
+\item \textit{``If it is raining, take an umbrella and if it is not raining, don't take an umbrella"}.
+\end{itemize}
+\end{enumerate}
+\newpage
+%\chapter{Theorem proofs}
+\section{Proof of theorem \ref{th:rimp}}
+\label{sec:proofrip}
+\begin{proof}
+The theorem \\
+``Let an imperative be given by $(\tau \rightarrow_r \varphi) \rightarrow_p \theta)$. It evaluates to $N$ if $\mathcal{E}(\theta) = \bot$; and evaluates to $S$ or $V$, if $\mathcal{E}(\theta) = \top$" can be proved using the task table. \\
+\begin{table}[h]
+\begin{center}
+\caption{Evaluation of $(\tau \rightarrow_r \varphi) \rightarrow_p \theta$}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\tau$ & $\varphi$ & $\theta$ & $(\tau \rightarrow_r \varphi)$ & $(\tau \rightarrow_r \varphi) \rightarrow_p \theta$ \\
+\hline
+$\top$ & $S$ & $\top$ & $S$ & $S$ \\
+\hline
+$\top$ & $V$ & $\top$ & $V$ & $V$ \\
+\hline
+$\bot$ & $S$ & $\top$ & $N$ & $N$ \\
+\hline
+$\bot$ & $V$ & $\top$ & $N$ & $N$ \\
+\hline
+$\top$ & $S$ & $\bot$ & $S$ & $N$ \\
+\hline
+$\top$ & $V$ & $\bot$ & $V$ & $N$ \\
+\hline
+$\bot$ & $S$ & $\bot$ & $N$ & $N$ \\
+\hline
+$\bot$ & $V$ & $\bot$ & $N$ & $N$ \\
+\hline
+\end{tabular}
+\label{tab:rimp}
+\end{center}
+\end{table}
+From the task table \ref{tab:rimp}, it can be seen that when $\theta = \bot$, $(\tau \rightarrow_r \varphi) \rightarrow_p \theta$ evaluates to $N$ and when $\tau = \theta = \top$, $(\tau \rightarrow_r \varphi) \rightarrow_p \theta$ evaluates to $S$ or $V$.\\
+Hence the proof.
+\end{proof}
+\newpage
+\section{Glossary of Sanskrit terms used in this work}
+\begin{enumerate}
+\item \textit{Adhik\={a}ravidhi} - Injunction of qualification
+\item \textit{Adhikar\d{n}as} - Subsection
+\item \textit{An\={a}di} - Without a beginning
+\item \textit{Apouru\d{s}eya} - Without an author
+\item \textit{Artha} - Meaning
+\item \textit{Arthakrama} - Sequence based on meaning
+\item \textit{Arthav\={a}da} - Eulogy
+\item \textit{\={A}rth\={i}bh\={a}v\={a}n\={a}} - Performance of action arising from the motivation of goal
+\item \textit{Bh\={a}van\={a}} - Motivation
+\item \textit{Dharma\'{s}\={a}stra} - Indic branch of learning, pertaining to religious and legal duty
+\item \textit{Gu\d{n}avidhi/Viniyogavidhi} - Injunction enjoining auxiliaries
+\item \textit{Hetu} - Reason
+\item \textit{Hetumat} - Proceeding from a cause
+\item \textit{Hetu-hetumatbh\={a}va} - Relation between the cause and one that proceeds from the cause
+\item \textit{Itikartavyat\={a}} - Auxiliaries
+\item \textit{Li\.{n}ga} - Indicative mark
+\item \textit{Man} - Examine or investigate
+\item \textit{Mantra} - Hymns recited at the sacrifice
+\item \textit{Mukyakrama} - Sequence of auxiliaries following the main item
+\item \textit{N\={a}\.{m}adheya} - Titles of the sacrifice
+\item \textit{Ni\d{s}edha} - Prohibitions
+\item \textit{Niyamavidhi} - Restrictive injunction
+\item \textit{Ny\={a}ya} - Logic
+\item \textit{p\={a}d\={a}s} - Section
+\item \textit{Parisa\.{n}khy\={a}vidhi} - Exclusive injunction
+\item \textit{Pa\.{t}hakrama} - Sequence based on the order mentioned in the text
+\item \textit{Phalavidhi} - Injunction enjoining goal
+\item \textit{Prakara\d{n}a} - Context
+\item \textit{Pravrithikrama} - Actions that are to be repeated in an iterative manner
+\item \textit{Prayogavidhi} - Procedural injunction
+\item \textit{Prayojana} - Purpose
+\item \textit{Prera\d{n}\={a}} - 
+\item \textit{prav\d{r}tti} -
+\item \textit{Puran\={a}s} - Mythology
+\item \textit{P\={u}rvapak\'{s}a} - Argument in favor of 
+\item \textit{S\={a}bdibh\={a}van\={a}} - Motivation at linguistic and psychological levels
+\item \textit{S\={a}dhya} - Objective
+\item \textit{S\={a}dhana/Kara\d{n}a} - Instrument
+\item \textit{sam\={a}khy\={a}} - Etymological sense
+\item \textit{sam\'{s}aya} - Doubt
+\item \textit{Sa\d{m}ucchya\d{h}} - Uniting/Joining
+\item \textit{Siddh\={a}nta} - Conclusion
+\item \textit{sth\={a}na} - Position
+\item \textit{Sth\={a}nakrama} - Sequence based on place
+\item \textit{\'{s}ruti} - Direct statement
+\item \textit{\'{S}rutikrama} - Direct assertion of the sequence
+\item \textit{S\={u}tra} - Aphorism
+\item \textit{Utpattividhi} - Principal injunction
+\item \textit{Uttarapak\'{s}a} - Rebuttal
+\item \textit{v\={a}ka} - Syntactical connection
+\item \textit{Vedas} - The primary text of Hinduism
+\item \textit{Vedaangas} - Limbs of \textit{Vedas}
+\item \textit{Ved\={a}nta} - Appendix to the Vedic hymns
+\item \textit{Vidhi} - Injunction
+\item \textit{Vi\'{s}ayav\={a}kya} - Subject of interest
+\end{enumerate}
+

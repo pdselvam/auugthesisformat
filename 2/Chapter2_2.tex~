@@ -1,0 +1,408 @@
+
+\chapter{\uppercase{Survey of Imperative and Action representation formalisms}} % Main chapter title
+\label{chap:survey} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+%\lhead{Chapter 1. \emph{Chapter Title Here}} % This is for the header on each page - perhaps a shortened title
+Imperatives have been studied in the areas of linguistics and logic. In linguistics, imperatives are expressed as an illocutionary act, indicating the performative nature of an utterance \cite{austin}. In logic, work can be seen in bringing the imperative to a logical structure. Since this dissertation focuses on imperatives that denote actions, this chapter examines imperatives from the view point of linguistics, logic and action representation formalisms.
+%----------------------------------------------------------------------------------------
+\section{Imperatives in Linguistics}
+\label{sec:impling}
+\begin{sloppypar}
+Imperatives address different illocutionary forces like advice, suggestion, permission, threats, warnings and orders. A few examples illustrating these illocutionary forces are given below:
+\begin{itemize}
+\item \textit{Take the pen} (order)
+\item \textit{Be cheerful} (advice)
+\item \textit{Touch the live wire and you will get burned} (threat, warning)
+\item \textit{First take the cup. Fill it with water. Heat it for a minute} (Instructions)
+\end{itemize}
+The imperative mood denoted in these statements can be viewed from the perspective of the speaker and from that of the addressee. While the imperative indicates the obligation or permission issued by the former, it creates an obligation for the addressee in the latter \cite{lewis}.  For example, the  statement, \textit{``The assessment must be completed within an hour"} addressed by the instructor to the class indicates that \textit{the students are obligated to complete the assessment within an hour}. 
+ 
+The use of imperatives is categorized into four groups. These are described below \cite{imperatives}:
+\begin{enumerate}
+\item Directives: Imperatives that indicate the addressee to perform or refrain an action belong to this category. Example: \textit{Hand me the salt, please}, \textit{Don't touch the hot plate}.
+\item Wish type uses: This category includes the wish of the speaker. Example: \textit{Get well soon}.
+\item Permissions and Invitations: The speaker's intention of inviting or permitting the addressee is indicated in this group. Example: \textit{Okay, go out and play}, \textit{Come to dinner tonight}.
+\item Disinterested advice: In this category, the speaker does not possess the interest for the fulfilment of actions performed by the addressee. Example: For the stranger's request to get to San Francisco, the utterance by speaker: \textit{``Take the train that leaves from over there in 10 minutes"} helps the addressee to accompolish the task.
+\end{enumerate}
+\end{sloppypar}
+
+In the aforementioned categorization, directives and disinterested advice are from the perspective of addressee in performing the action; whereas the other two categories (wish type uses and permissions and invitations) are from the perspective of the speaker's intention.
+
+The proposed formalism MIRA is based on the inspiration from \mimamsa, which deals with the interpretation of Vedic injunctions. As stated in Section \ref{sec:inspiration}, the speaker of Veda is unknown. Hence, injunctions are assumed to be present and actions are instructed to be performed accordingly. Following this notion, this dissertation addresses imperatives only from the perspective of the addressee in performing the action as per the stated injunction.
+
+\section{Imperative Logic}
+\label{sec:implogic}
+Imperatives like propositional statement \footnote{The sentence which can be evaluated to \textit{true} or \textit{false} is a proposition or declarative sentence. Example, ``\textit{The sum of the numbers 3 and 5 equals 8}" \cite{huth}.}, can be connected by connectives like negation, conjunction, disjunction and conditionals. Examples employing these connectives  are shown below \cite{Fox2}.
+\begin{itemize}
+\item \textbf{Direct imperative}: \textit{Come here!}
+\item \textbf{Negative imperative}: \emph{Don't do that!} 
+\item \textbf{Conjunction}: \emph{Sitdown and listen carefully!} 
+\item \textbf{Disjunction}: \emph{Read loudly or move out!} 
+\item \textbf{Conditional imperative}: \emph{If it is raining, close the window!}
+\end{itemize}
+This behavior of imperative reveals the analogous nature of imperatives and propositions. This analogous nature prompted researchers to explore the logical structure of imperatives. Hence it can be seen that much of the work has been carried out to relate imperatives and propositions, so as to fit into the realm of conventional logic. This section gives an overview of such formalisms, which has been proposed in this area. 
+\subsection{Hofstadter and McKinsey: Imperatives as Fiats}
+\label{sec:fiat}
+In the partial syntactical analysis of imperatives, Hofstadter and McKinsey differentiates the imperative between a directive and a fiat. While fiats do not include the reference to an agent, directives include the agent reference. Eg., \textit{``Let there be light"} is a fiat and \textit{``Henry, don't forget to stop at the grocery"} is a directive \cite{Hofstadter}. In this theory, the directive is converted to a fiat by placing the agent outside, as: \textit{``[Henry] Let it be the case that Henry does not stop at the grocery!"}.
+
+The satisfaction criteria is based on the whether the imperative is satisfied. For example, the imperative \textit{``Close the door"} is converted to \textit{``Let the door be closed!"} and is satisfied, if the \textit{``door is closed"}. This satisfaction is claimed to be analogous to the truth of the sentence. 
+
+The imperatives are connected using the connectives ``$!$", ``$-$",``$+$",``$X$", ``$\rightarrow$", and ``$>$", which are described below. 
+\begin{enumerate}
+\item The unary operator $!$ is used to convert the imperative to a proposition. For example, by using the operator $!$, \textit{``let the door be closed!"} is translated to \textit{``Let it be the case that the door is closed"}.
+\item The complementary operator $-$ is used as an opposite of the imperative. For example, if $-$ is applied to the imperative \textit{``!every door is closed"}, it results in \textit{``!not every door is closed"}.
+\item The sum $+$ connects the two imperatives $C_1$ and $C_2$ such that if $C_1$ is the imperative, ``Let the door be closed!" and if $C_2$ is the imperative, ``Let the window be closed!", then $C_1 + C_2$ indicates \textit{``Either let the door be closed or the window be closed"}. The operator $+$ is considered as an inclusive disjunction, in the sense that $C_1 + C_2$ is satisfied, if $C_1$ is satisfied or $C_2$ is satisfied or both.
+\item The product $X$ connects the two imperatives $C_1$ and $C_2$ such that if $C_1$ is the imperative, ``Let the door be closed!" and if $C_2$ is the imperative, ``Let the window be closed!", then $C_1 X C_2$ indicates \textit{``Let the door be closed"} [\textit{and}] \textit{``Let the window be closed."} $C_1$ and $C_2$ are satisfied, only when both the imperatives are satisfied.
+\item The conditional operator $\rightarrow$ connects the sentence $S_1$ and imperative $C_1$, such that if $S_1$ is the sentence \textit{``It is cold outside"} and if $C_1$ is the imperative \textit{``Let the window be closed!"}, then $S_1 \rightarrow C_1$ indicates \textit{``If it is cold outside, let the window be closed."}. $S_1 \rightarrow C_1$ is satisfied, if $C_1$ is satisfied. 
+\item The operator $>$ translates the two imperatives into a sentence. If $C_1$ and $C_2$ are imperatives, then $C_1 > C_2$ indicates \textit{$C_1$ materially includes $C_2$}. This sentence is true if $C_1$ is not satisfied or if $C_2$ is satisfied. 
+\end{enumerate}
+
+This formalism considers only fiats and these fiats are translated to the sentence structure of the form, \textit{``Let it be the case that...."}. According to Beardsley (1944), this translation is ambiguous and destroys the indicative property, which are essential to imperatives. Thus the logical properties of indicatives do not hold for these type of statements. Beardsley raises two objections against this formalism. These are:
+\begin{enumerate}
+\item Indicatives are treated as fundamental units with respect to imperatives and
+\item the translation of fiats to \textit{let it be the case that....} is syntactic oriented, which only relegates the truth of the sentence. For example, the imperative statement \textit{``John, close the door"}, is evaluated to \textit{true}, if the \textit{door is closed}. This statement is true even if the \textit{door is closed} by some other means, other than John performing the action.
+\end{enumerate}
+
+\subsection{J\"{o}rgen J\"{o}rgensen: Imperatives and Logic}
+\label{sec:jorgensen}
+Jorgensen was one of the forerunners to initiate the discussion on the syllogistic relation between imperatives and propositions \cite{Jorgensen}. This relation can be illustrated with the following example: 
+\begin{center}
+\textit{$S_1$: If it is raining, hold an umbrella!} \\
+\textit{$S_2$: It is raining} \\
+\vspace{-0.9em}
+\line(1,0){200} \\
+\textit{$S_3$: Hold an umbrella}\\
+%\vspace{-0.9em} 
+\end{center}
+$S_1$ and $S_2$ are premises and $S_3$ is the conclusion. The inferential behavior of $S_3$ from $S_1$ and $S_2$ is similar to that of classical logic. Though this behavior is similar to the classical logic, it leads to a dilemma, because imperatives do not preserve the truth. This came to be known as ``Jorgensen's dilemma".
+
+Jorgensen provides a solution for this dilemma suggesting two factors. These are (i) imperative factor and (ii) indicative factor. The former denotes the desire or wish of the person who is uttering the imperative and the latter points to the propositional content of what is being commanded. Therefore, using these two factors, any imperative can be translated to indicative statements. For example, the imperative \textit{``Close the door!"} can be translated to \textit{``!The door is to be closed."}
+
+Once the imperative is translated to an indicative statement, the deduction rules of classical logic can be applied to it. Ross (1941) studied this behavior and illustrated the difficulty, while translating the imperatives to propositions. This is described in the next section.
+
+\subsection{Alf Ross: Imperatives and Logic}
+\label{sec:ross}
+Ross (1941) raised objections against Jorgensen's solution while translating imperatives to propositions. This is illustrated by the following example. 
+
+Let an imperative $I_1$ determine the indicative statement $S_1$. Through classical logic deduction, $S_2$ can be inferred by $S_1$. From $S_2$, the corresponding imperative $I_2$ could be determined. In other words, $I_2$ is logically inferred from $I_1$. In symbols, this can be represented by Equation \ref{eq:ross}.
+\begin{eqnarray}
+\label{eq:ross}
+I_1 - S_1 \rightarrow S_2 -I_2 
+\end{eqnarray}
+Suppose the disjunction introduction rule, shown by the equation \ref{eq:propdis} is applied at $S_1$. The resulting imperative $I_2$ may lead to a different meaning.
+\begin{eqnarray}
+\label{eq:propdis}
+\frac{S_a}{S_a \vee S_b}
+\end{eqnarray}
+For instance, the propositional content \textit{``!The letter has to be posted $\vee$ !The letter has to be burned" ($S_2$)} can be inferred from \textit{``The letter has to be posted" ($S_1$)} (Equation \ref{eq:rossdis}). 
+\begin{eqnarray}
+\label{eq:rossdis}
+\frac{!The~letter~has~to~be~posted}{(!The~letter~has~to~be~posted) \vee !(The~letter~has~to~be~burned)}
+\end{eqnarray}
+
+The inferred statement on translating again to imperatives, results in \textit{``Post the letter or burn the letter!"}, which is in a different sense than what was intended. 
+
+Thus the treatment of imperatives as a subordinate to indicatives by the mere translation proves to be problamatic. Beardsley (1944) suggests that the imperative should be treated as a fundamental unit and not a subordinate to indicatives. An overview of the method addressed by Beardsley is described below.
+\subsection{Beardsley: Imperative sentences in relation to Indicatives}
+\label{sec:beardsley}
+In the work of the relation between imperatives and indicatives, Beardsley (1944) suggests the treatment of imperatives as a fundamental unit and claims that it is not a subordinate to indicative statements. Beardsley relates the imperatives with the inclination of the addressee. For example, the imperative \textit{``Hand me an umbrella"} is treated as \textit{``She wants me to hand an umbrella"}, where the desire of the addressee is taken into account. This desire is accounted as satisfaction, which is different from Hofstadter and McKinsey's (1939) approach. 
+
+Beardsley also deals with the compound expression like ``\textit{Do this or I will tell your mother}", which is transformed to the conditional imperative, ``\textit{If you do not do this, I will tell your mother"}.
+
+In another attempt, ChrisFox (2008) provides a logic for satisfaction, that addresses the issues while translating imperatives to indicative statements. The background behind this approach is discussed below.
+
+\subsection{ChrisFox: A logic of Satisfaction}
+\label{sec:fox}
+\begin{sloppypar}
+Chris Fox provides a proof-theoretic formalisation of imperatives towards an attempt to formalise the logic of satisfaction \cite{ChrisFox}. According to this theory, the imperative with the agentive property is related to the propositional property of the agent. For example, the imperative, $p!_\alpha$ is mapped to the proposition $p(\alpha)$, where $\alpha$ is the agent and $p$ is the agentive property. For instance, if $p!\alpha$ is \textit{``Close the door, [John]!"}, then $p(\alpha$) is \textit{``John closes the door"}.  Satisfaction conditions for imperatives $\diamond$ $p!_\alpha$ are determined and if satisfied, they are mapped to a proposition with a true value. This is illustrated by the Equation \ref{eq:fox}.
+\begin{eqnarray}
+\label{eq:fox}
+\frac{p:Pty_{ag}~~~\diamond p(\alpha) True~~~\alpha: Agent}{\blacklozenge p!_{\alpha} True}~~~\blacklozenge True_{atomic} 
+\end{eqnarray}
+Equation \ref{eq:fox} can be read as:\\
+If it is true that \textit{``In the future the agent does $p$"}, then \textit{``Do $p$ is satisfied"}.
+Negation, conjunction and disjunction of imperatives are handled in this theory along with conditional ones. But it does not distinguish the occurrence of conjunction and temporal ordering of imperatives. For example, \textit{``close the door and close the window"} indicates the conjunction of two imperatives, where the sequence of two actions (\textit{``close the door"} and \textit{``close the window"}) does not matter; and \textit{``put on a parachute and jump out"} denotes the two imperatives in sequence, i.e., \textit{``putting on a parachute"} first and then \textit{``jumping out"}.
+\end{sloppypar} 
+
+Beardsley (1944), ChrisFox (2008) and Franke (2005) deal with compound imperatives that include \textit{or} and \textit{and}. A description of these compound imperatives, known as pseudo-imperatives is provided below.
+
+\subsection{Pseudo-imperatives}
+Pseudo-imperatives combine imperatives with declaratives. According to Franke, ``pseudo-imperatives are compound sentences, where an imperative sentence is followed by `\textit{and}' or `\textit{or}' and a declarative sentence" \cite{Franke}. While dealing with compound expressions Beardsley (1944) mentions that the occurrence of `$or$' and `$and$' in compound imperative is different from that of truth functional interpretation of `$or$' and `$and$' in declaratives. Formalisation of disjunctive pseudo-imperatives ``\textit{Have another blanket or you will be cold}" and conjunctive pseudo-imperatives ``\textit{Close the door and you will become warmer}" as a logic of satisfaction has been attempted by Chris Fox (2008), where these sentences are converted to conditionals that fit into logical formalisms. 
+
+Vranas (2008) proposed a different approach for the logic of imperatives, where imperatives are treated as fundamental unit and evaluated to a tri-value, namely \textit{Satisfaction}, \textit{Violation} and \textit{avoidance}. This formalism is described in the next section. 
+\subsection{Peter Vranas: Foundations for Imperative Logic I} 
+\begin{sloppypar}
+To address the dilemma raised by Jorgensen, Peter Vranas proposed a logic for imperatives, where imperatives are treated as atomic ones and are not translated to propositions \cite{vranas2008}. This theory includes both unconditional and conditional imperatives, whose examples are given below. 
+\begin{center}
+S3: ``Do $y$" \\
+S4: ``If $x$ do $y$"
+\end{center}
+While S3 is an unconditional imperative, S4 is a conditional one which includes a declarative antecedent (If $x$) and the imperative consequent (do $y$). Negation, conjunction, disjunction, conditional and biconditional operators are used in this theory to formulate imperatives. But it does not address the temporal ordering of imperatives. 
+
+According to the logic proposed by Vranas, imperatives are evaluated to three values, namely Satisfaction ($S$), Violation($V$) and Avoidance ($A$). For instance S4 is evaluated to:
+\begin{enumerate}
+\item $S$, if $x$ is true and $y$ is performed. 
+\item $V$ if $x$ is true and $y$ is not performed and
+\item $A$ if $x$ is not true.
+\end{enumerate}
+Semantic tables in the form of satisfaction tables are provided to evaluate imperatives, which are analogous to the truth tables in propositional logic.
+\end{sloppypar}
+
+The aforementioned formalisms address commands in general. van Eijck (2000) explicitly denotes actions through commands. This approach is described below.
+\subsection{van Eijck: Logics of change}
+Theory on Logics of change has been proposed based on two assumptions: (i) the world can be represented as a collection of facts and (ii) it can be changed by commands \cite{Van}. The commands denote actions and the change of the world is interpreted through actions. The actions take the value of 1 or 0 and mapped on to the propositional states. For example, in a world $w$ making an action $p$ \textit{true}, results in a world $v$. This is given by Equation \ref{eq:van}. 
+\begin{eqnarray}
+\label{eq:van}
+w = v(p|1)
+\end{eqnarray} 
+If an imperative is executed, then it is considered to be \textit{valid}. It is \textit{satisfiable} if necessary conditions exist for the execution of an imperative. This theory also includes the sequence ($\phi;\phi$), conditional ($p?$) and disjunction of imperatives ($\phi \cup \phi$). 
+
+Though this theory formalises the change of state through commands, it does not make any distinction between the actual and intended change, rather it assumes that commands are fulfilled \cite{ChrisFox}. 
+
+Although imperatives indicate the performance of actions, in computational arena, much of the work on actions can be seen from the perspective of classical logic. This perspective is analysed in the next section.
+\section{Actions in computational arena}
+\label{sec:action_representation}
+Representation and reasoning of actions form an integral part in AI planning, intelligent agents and robotics. A number of representation schemes have been proposed in this area. This section gives an overview of the action representations based on situation calculus, STRIPS, linear logic, Cohen and Levesque's Intention Logic, proposition dynamic logic and natural language interpretation by Eugenio. 
+\subsection{Situation Calculus}
+Situation calculus is described through \textit{fluents}, \textit{situation} and \textit{actions} \cite{sc}. A \textit{fluent} is a predicate or function, where the truth value varies from situation to situation. The \textit{situation} denotes the change of state and \textit{actions} are represented as a function of first order predicate formula.
+
+For instance, a block world domain can be considered, where three blocks $A$, $B$ and $C$ are kept initially on the table. The goal is to move the block $A$ on to the top of block $B$. The \textit{fluent} for this example is given as follows:
+\begin{equation}
+\label{eq:fluent}
+On(A,table,S_0), On(B,table,S_0),On(C,table,S_0)
+\end{equation}
+where $S_0$ is the initial state. If $move$ is the action in this domain, then the function represented through this action namely, `$Result(move(A,B),s)$' results in a new situation. 
+
+To represent actions, two axioms are used viz, \textit{possibility axiom} and \textit{effect axiom}. The \textit{possibility axiom} specifies the condition for an action to be performed and the \textit{effect axiom} specifies the effect of performing an action. For instance, the possibility and effect axiom of the block world can be described as Equations \ref{eq:poss} and \ref{eq:effect} respectively.
+\begin{eqnarray}
+\label{eq:poss}
+clear(x,s) \wedge clear(y,s) \wedge x \neq y \rightarrow Poss(move(x,y,s))
+\end{eqnarray}
+\begin{eqnarray}
+\label{eq:effect}
+Poss(move(x,y,s) \rightarrow  on(x,y, Result(move(x,y,s))) 
+\end{eqnarray}
+The \textit{possibility axiom} states that it is possible to move $x$ on to the top of $y$ in situation $s$ when $x$ is clear and $y$ is clear and $x$ is not the same as $y$. The \textit{effect axiom} describes the result of the action of moving the block $x$ on to $y$ in situation $s$. This results to the state $on(x,y)$ in a new situation.
+
+\textit{Effect axioms} specify the changes, when an action is applied; but do not describe the world states that are not changed in every situation. For example, by the $move$ action in \textit{block world} domain, the color of block, the size of block, laws of physics etc., are not changed. The representation of these statements are more difficult, since it leads to the specification of large number of non-effects. To handle this problem, \textit{frame axioms} were used, where non-effects are explicitly stated. If there are $m$ actions and $n$ fluents that remain unchanged for each action, then the number of frame axioms that need to be specified is $mn$. The need to formalize the large number of frame axioms to specify the non-effect of actions is known as the \textit{frame problem}. 
+
+Reiter proposed a partial solution to this problem, where in an assumed closed world system, actions are represented as positive and negative effects called successor state axioms \cite{Reiter2001}. A number of researchers have worked on similar approaches in reasoning about actions such as event calculus [\cite{Kowalski}, \cite{Shanahan95}] and unifying action calculus \cite{uac}. In the event calculus, value of fluents and actions are specified in time points. In unifying action calculus, a generalized method of action representation is proposed that encompasses different action representation formalisms like situation calculus and event calculus.
+
+In an attempt to address the robot find its goal, a problem solver has been designed based on a search in the space of ``world models" \cite{STRIPS}. The operator in this state space search form actions. The action representation scheme and the background of the problem solver is described in the next section.  
+\subsection{STRIPS}
+STRIPS (Stanford Research Institute Problem Solver) is one of the common languages used in planning problems. It is basically a state-space search operating with a combination of means end analysis and resolution theorem prover. The world model or state is represented as first-order formula with ground free literals and it employs closed world assumption i.e., whatever not stated explicitly is taken to be false. The use of theorem prover within this state-space search is three-fold. These are given below.
+\begin{enumerate}
+\item To select the required operator, thereby narrowing the search within the state-space.
+\item To verify the precondition of the operator with the current world model.
+\item To validate the achievement of goal formula in the last world model.
+\end{enumerate}
+
+Actions, which are the operators constitute the following:
+\begin{enumerate}
+\item Name of the action.
+\item Parameters for the action or variables.
+\item Preconditions: Conditions that should be satisfied to perform an action.
+\item Effects: Postcondition of the action. This contains two lists namely \textit{ADD} and \textit{DELETE} lists. These lists help in updating the current state of the world.
+\end{enumerate}
+For example, the block world problem given in Equations \ref{eq:poss} and \ref{eq:effect} can be represented as:\\
+Action : $move(x,y)$ \\
+Precondition: $clear(x) \wedge clear(y) \wedge x \neq y$ \\
+Add: $on(x,y)$ \\
+Delete: $clear(x)$
+
+With these representation, the search proceeds as follows:
+\begin{enumerate}
+\item Variation between the current state and the goal is calculated.
+\item Using theorem prover, an operator for the search is selected.
+\item The selected operator is applied to the current state. This leads to the modified state through \textit{ADD} and \textit{DELETE} lists. When an action is executed, items in \textit{ADD} list are added to the current state of the world and items in \textit{DELETE} lists are removed from it.
+\item The process is repeated until the goal is reached.
+\end{enumerate}
+In this search process, the sequence of operators from the initial to the final state constitute a plan. 
+
+As an advancement of STRIPS, ADL (Action Description Language) was developed \cite{adl}. The following features enhance the expressive nature of ADL over STRIPS \cite{seminar}.
+\begin{enumerate}
+\item ADL supports both positive and negative literals.
+\item ADL employs Open World Assumption, i.e., whatever literals not stated are treated as unknown.
+\item ADL encompasses quantified variables.
+\item ADL allows conjunction and disjunction in goals, whereas STRIPS allow only conjunctions.
+\item ADL allows conditional effects.
+\end{enumerate}
+\begin{sloppypar}
+In the above representation schemes \cite{sc} and \cite{STRIPS}, actions are generally viewed as atomic. In the realistic scenario, actions do not appear singular. A few instances, where two or more actions are conjoined are listed below:
+\end{sloppypar}
+\begin{enumerate}
+\item Actions can occur with a choice. Eg.,\textit{``Using a Euro, tea or coffee can be bought"}.
+\item Actions can occur without a choice. Eg.,\textit{``Winning or losing a game"}.
+\item The same action can be performed a number of times. Eg., \textit{``Stirring the mixture, until the mix is evenly distributed"}.
+\item Actions can be concurrent. Eg., \textit{``Taking the pen and taking the paper"}.
+\item Actions can be sequential. Eg., \textit{``Taking the pen and then writing on the paper"}.
+\end{enumerate}
+
+Actions incorporated into linear logic \cite{kungas} and dynamic logic \cite{PDL} addresses this constraint, where actions are represented in molecular fashion. These are described in the next two sections.
+\subsection{Intuitionistic Linear Logic}
+Intuitionistic Linear Logic (ILL) is considered as a resource sensitive logic. Actions are represented using this logic, specifically for AI planning \cite{kungas}, \cite{dixon}. ILL formulas are considered as resources, where a resource is an information or data given to the program and is used just once that can be absorbed. It employs the following binary connectives to connect the resources, $A$ and $B$: 
+\begin{enumerate}
+\item  Linear implication ($A \mapsto B$): Resource $A$ is consumed and as a result resource $B$ is produced. 
+\item Multiplicative conjunction ($A \otimes B$): Resources $A$ and $B$ are present.
+\item Additive disjunction ($A \oplus B$):  Either Resource $A$ is present or $B$ is present, but not both.
+\item Additive conjunction ($A \& B $): Represents exclusive choice i.e., Resource $A$ or $B$ can be chosen.
+\item Unary operator ($!A$) : Represents a number of resources $A$.
+\end{enumerate}
+
+An example for each of these connectives is shown in Table \ref{ta:ill}.To solve the planning problem, an expression as in Equation \ref{eq:ill} is constructed using ILL formulas.
+\begin{equation}
+\label{eq:ill}
+Actions, State \vdash Goals
+\end{equation}
+The proof of Equation \ref{eq:ill} establishes the achievement of goal from the initial state. Hence, this proof correspond to the plan, which when executed leads to the goal. 
+
+\begin{table*}
+\caption{Action representation examples in Intuitionistic Linear Logic}
+\label{ta:ill}
+\begin{tabular}{|c|p{4.5 cm}|p{5 cm}|}
+\hline
+ILL formula & Example & Explanation \\
+\hline
+$A \mapsto B$ & $Eating: hungry \mapsto full$ & Action of \textit{eating} transforms \textit{hunger} to \textit{full} \\
+\hline
+$A \otimes B$ & $Euro \otimes Euro \mapsto cake$ & Using up two \textit{euros} can produce a \textit{cake} \\
+\hline
+$A \oplus B$ & $Lottery~ticket \mapsto win \oplus lose$ & Using \textit{Lottery ticket}, \textit{win} or \textit{lose} is chosen but not both \\
+\hline
+$A \& B $ & $Euro \mapsto tea \& coffee$ & Using a \textit{euro}, \textit{tea} or \textit{coffee} can be bought with a choice \\
+\hline
+$!A$ & $!(tea \mapsto euro)$ & Using a \textit{euro}, as many teas can be sold \\
+\hline
+\end{tabular}
+\end{table*}
+\subsection{Proposition Dynamic Logic}
+The purpose of Proposition Dynamic Logic was initially to reason about the behavior of computer programs \cite{Pratt}, \cite{PDL}. Later it made its way to reason about agent's knowledge and actions. PDL is defined over two languages, the propositional language and the language of actions, given by Equations \ref{eq:pdl1} and \ref{eq:pdl2} respectively \cite{lia}.  
+\begin{eqnarray}
+\label{eq:pdl1}
+\varphi~&::=&~ \top~|~p~|~\neg \varphi~|~\varphi_1 \vee \varphi_2~|~\varphi_1 \wedge \varphi_2~|~ \langle \alpha \rangle~|~[ \alpha] \\
+\label{eq:pdl2}
+\alpha~&:=&~a~|~?\varphi|~\alpha_1;\alpha_2~|~\alpha_1 \cup \alpha_2~|~\alpha^*
+\end{eqnarray}
+where $\top$  - True,  $p$ is the range over the set of basic propositions $P$, $a$ is the range over the set of basic actions $A$, $\varphi$ is the propositional formula and $\alpha$ is the action statement. The notation of $\varphi$ and $\alpha$ are defined as follows:
+\begin{itemize}
+\item $\neg \varphi$, $\varphi_1 \vee \varphi_2$, and $\varphi_1 \wedge \varphi_2$ are negation, conjunction and disjunction of propositions.
+\item Action statement $\alpha$ is represented as a binary relation on states. For example, let $(s,s')$ be states and let an interpretation of $\alpha$ lie in $(s,s')$. If $\langle \alpha \rangle \varphi$ is true in state $s$, then $\langle \alpha \rangle \varphi$ may be true in state $s'$. If $[\alpha]\varphi$ is true in $s$, it is true in $s'$ too.
+\item $? \varphi$ is a proposition acting as a test condition. For example, the statement,  \textit{``if $\varphi$ then $\alpha_1$, else $\alpha_2$"} can be expressed as Equation \ref{eq:testpdl}. 
+\begin{eqnarray}
+\label{eq:testpdl}
+?\varphi; \alpha_1~\cup~?\neg \varphi; \alpha_2
+\end{eqnarray}
+\item The choice of actions, sequence and repetitive actions are represented as $\alpha \cup \alpha$, $\alpha;\alpha$ and  $\alpha^*$ respectively.
+\end{itemize}
+
+The semantics are described as a labeled transition system with the set of states ($S$), valuation ($V$) and the binary relations on $S$ for action $a$. 
+
+Dynamic logic is used in other formalisms and various applications in AI. Instances of it can be seen in robotics \cite{temporalrobot} and the theory of intention \cite{cohen}. These are described in the Section \ref{sec:robot} and \ref{sec:cohen}, respectively.
+\subsection{Use of Dynamic logic in robots}
+\label{sec:robot}
+Temporal and Dynamic logic is used for translating the directives to goal and action sequence in robotics \cite{temporalrobot}. Firstly, the command is translated to goal using temporal logic and then action sequence is detected through dynamic logic. For example, the command, \textit{``Go to the breakroom and report the location of the blue box"} is translated to the goal using CTL (Computational Tree Logic) as shown in Equation \ref{eq:ctl}.
+\begin{eqnarray}
+\label{eq:ctl}
+\Diamond(at(breakroom) \wedge \Diamond reported(location,blue\_box))
+\end{eqnarray}
+where, $\Diamond at(breakroom)$ and $\Diamond reported(location,blue\-box)$ specifies the goal of \textit{being in breakroom} and \textit{reporting the location of blue-box} respectively. From this goal, the action sequence using dynamic logic is determined, which is shown by Equation \ref{eq:pdl}.
+\begin{eqnarray}
+\label{eq:pdl}
+goto\_(breakroom);report(location,blue\_box)
+\end{eqnarray}
+The method described in this approach is indirect. Instead of translating commands directly to actions, this approach suggests to translate the commands to goal sometime in future and then based on that action sequence is derived. 
+\subsection{Cohen and Levesque: Theory of Intention}
+\label{sec:cohen}
+Cohen and Levesque has proposed a theory of rational actions for agents, which has four basic modal operators: BELief, GOAL, HAPPENS and DONE \cite{cohen}. The notation and meaning is given in Table \ref{ta:cohen} \cite{ch24}. 
+\begin{table}[h]
+
+\caption{Operators in Cohen and Levesque's Logic}
+\label{ta:cohen}
+\centering
+\begin{tabular}{l l}
+\hline
+Operator & Meaning \\
+\hline
+(BEL i $\phi$) & agent $i$ believes $\phi$ \\
+
+(GOAL i $\phi$) & agent $i$ has goal of $\phi$ \\
+
+(HAPPENS $\alpha$) & action $\alpha$ will happen next \\
+ 
+(DONE $\alpha$) & action $\alpha$ has just happened \\
+\hline
+\end{tabular}
+\end{table}
+These operators along with the temporal operators, `$\Diamond$' (eventually), `$\square$' (always), $BEFORE$ and $LATER$  and dynamic logic operators, $\alpha;\alpha'$ ($\alpha' follows \alpha$), $\alpha?$ (test action $\alpha$) are used in this theory to represent the concept of intention. 
+
+The persistent goal ($P-GOAl(i,p)$) and Intention ($INTEND(x,p,q)$) are defined as follows: 
+\begin{itemize}
+\item An agent $i$ has a $P-GOAL$ $p$ if the agent has the goal $p$, which is \textit{true} in future, but currently \textit{false}. If the agent believes that $p$ is \textit{true} or $p$ will always be \textit{false}, then $i$ drops the goal $p$ in future. This is given by Equation \ref{eq:pergoal}.
+\begin{eqnarray}
+\label{eq:pergoal}
+(P-GOAL~i~p) \stackrel{def}{=}&(GOAL~i(LATER~p)) \wedge (BEL~i~\neg p) \nonumber \\
+& [BEFORE((BEL~i~p)\vee(BEL~i~\square \neg p)) \nonumber \\
+& \neg (GOAL~i(LATER~p)]
+\end{eqnarray}
+\item Intention in this theory is defined at two levels: Intention to perform an action ($INTEND_1$) and intention to achieve the result ($INTEND_2$). 
+
+$INTEND_1$ is expressed using persistent goal. An agent $i$ intends to perform action $\alpha$ if it has a persistent goal $P-GOAL$ to complete $\alpha$ after the initial belief of performing $\alpha$. This is given by Equation \ref{eq:intend1}.
+\begin{eqnarray}
+\label{eq:intend1} 
+&(INTEND_1~i~\alpha) \stackrel{def}{=} \nonumber \\
+&(P-GOAL~i[DONE~i(BEL~i(HAPPENS~\alpha))?;\alpha])
+\end{eqnarray}
+$INTEND_2$ is defined as an agent $i$ having a persistent goal $p$ to complete the events $e$, such that the actual completion of $e$ results in $p$, after the belief that the sequence of some events ($e'$) results in $p$ and the agent not having the goal of not achieving $p$, by performing the same sequence of events $e$. This is given by Equation \ref{eq:intend2}.
+\begin{eqnarray}
+\label{eq:intend2}
+&(INTEND_2~i~p)\stackrel{def}{=}(P-GOAL~i~\exists e(DONE~i \nonumber \\
+&[BEL~i \exists e'(HAPPENS~i~e';p?)) \wedge  \nonumber \\
+&\neg(GOAL~i \neg (HAPPENS~i~e;p?))]?;e;p?))
+\end{eqnarray}
+\end{itemize}
+
+In this formalism, the imperative is seen as the communication from the speaker ($S$) to the hearer ($H$). ``The domain axiom for imperatives is given by Equation \ref{eq:impcohen}, which can be read as the $GOAL$ of $S$ when uttering the imperative $\varphi$ is that $H$ performs $\alpha$, which $FULFILLS$ the satisfaction conditions imposed by sentence $\varphi$" \cite[p.~44]{dieugenio_thesis}.
+\begin{eqnarray}
+\label{eq:impcohen}
+\models IMPERATIVE (\varphi) \Rightarrow GOAL(S,\Diamond[\exists \alpha DONE(H,\alpha) \wedge \nonumber \\ FULFILL-CONDS(\varphi,\alpha)])
+\end{eqnarray}
+
+Di Eugenio (1998) has made use of this formalism to axiomatize natural language instructions that combine the purpose and negative clauses. This is explained in the next section. 
+\subsection{Di Eugenio: Goals and actions in natural language instructions}
+In a speaker/hearer model agent of imperatives, natural language instructions are interpreted based on the purpose clauses, which indicate the goal \cite{dieugenio_thesis}. For example, the statement \textit{``Place the plank between two ladders to create a simple scaffold"}, contains the action $\alpha$, \textit{``place the plank between the two ladders"} and the purpose clause $\beta$, \textit{``to create a simple scaffold"}. Here, $\beta$ restricts the agent to perform $\alpha$ in such a way that the goal is achieved. 
+In this proposal, a computational model of instructions is constructed at three levels. These are:
+\begin{enumerate}
+\item Based on Cohen and Levesque's formalism, imperatives involving purpose clauses are axiomitized. Using Equation \ref{eq:impcohen}, imperatives of type \textit{``Do $\alpha$ to do $\beta$"} is given by Equation \ref{eq:eugeniocohen}.
+\begin{eqnarray}
+\label{eq:eugeniocohen}
+\models Do-\mathcal{A}-to-do-\mathcal{B}(\varphi) \Rightarrow 
+GOAL(S,\Diamond[\exists \beta[DONE(H,\beta) \nonumber \\ 
+\wedge FUFILL-CONDS-PC(\mathcal{B},\beta)]]) ~~~~~~~ \nonumber \\
+\wedge ~~~~~~~~~~~~~~~~~~~~~~~ \nonumber \\
+GOAL(S,\Diamond[\exists \alpha [DONE(H,\alpha) \wedge FULFIL-CONDS-PC(\mathcal{A},\alpha) \nonumber \\
+BEL(H,CONTRIBUTES \nonumber \\ (HAPPENS(H,\alpha), HAPPENS(H,\beta)))]])~~~~~~~
+\end{eqnarray} 
+where, $FULFIL-CONDS-PC$ is a specialized form of FULFIL-CONDS, $mathcal{B}$ is the purpose clause in $\varphi$ and $CONTRIBUTES$ is a generic name for relation between $\alpha$ and $\beta$. 
+\item Actions specified by imperatives are formalised using hybrid knowledge representation systems (T-Box and A-Box) and conceptual structure terms based on lexical terms and action library. 
+\item A plan graph is built for the set of instructions, which helps the agent to keep track of the goals it has to achieve, the relation between actions and goals and the relation between actions.
+\end{enumerate}  
+
+In this approach, instructions are first formalized based on beliefs of the speaker and the hearer. This guides the hearer to perform actions as stated by the speaker. The given instruction is broken down into verbs to recognize the action based on conceptual structures. The constructed plan graph enables the agent to execute instructions effectively. 
+
+\section{Discussion}
+A study in imperative logic and action representation formalisms in computational arena reveal the following aspects:
+\begin{enumerate}
+\item In linguistics, imperatives are expressed as an illocutionary act and are categorized from the perspective of the speaker and addressee \cite{imperatives}.
+\begin{sloppypar}
+\item Formalisms in imperative logic except that of Vranas' proposal translate imperatives to either fiats \cite{Hofstadter} or indicatives \cite{Jorgensen}. Beardsley (1944) and ChrisFox (2008) treat imperative as a fundamental unit. Beardsley attaches the satisfaction of the imperative to the desire of the addressee and ChrisFox uses a temporal operator to determine the truth value of the imperative in future and then maps it to the satisfaction value. \end{sloppypar}
+\item The change of facts through commands was proposed by van Eijeck (2000). The disadvantage with this approach is that it only checks for the fulfillment of commands and the purpose behind the execution of commands is not addressed.
+\item The combination of declaratives and imperatives are viewed as pseudo-imperatives \cite{Franke}, \cite{ChrisFox}.
+\item A trivalue logic to address imperatives was proposed by Vranas (2008). These trivalue behave similar to the truth values in propositional logic. 
+\item The action representation formalisms used in AI are typically worked out through the classical logic approach, where actions are determined through states. 
+\item \begin{sloppypar}Action representation based on situation calculus \cite{sc} and STRIPS \cite{STRIPS} allow only singular actions; while Linear logic \cite{kungas} and \cite{PDL} allow molecular actions.\end{sloppypar}   
+\item The command given to a robot is first converted to goal using temporal logic and then sequence of actions is determined using dynamic logic \cite{temporalrobot}. 
+\item In the theory of intention, both the speaker's notion while uttering the imperative and the hearer's intention to perform the action is captured \cite{cohen}. Using this theory, natural language instruction is interpreted, thereby guiding the agent to effectively perform actions to reach the goal \cite{eugenio}, \cite{dieugenio_thesis}. 
+\end{enumerate} 
+
+In the formalisms discussed above, imperatives or actions are viewed from the perspective of propositional content with a \textit{true} or \textit{false} value. However, according to Vranas (2008), an imperative is considered as a fundamental unit evaluating to the values of $S$, $V$ and $A$. In all these formalisms, the intention of achieving the goal has not been accommodated. Though the intention logic devised by Cohen and Levesque accommodates the intention of goal, the action representation is based on dynamic logic, which in turn translates the action to propositional content.
+
+\mimamsa, an Indian hermeneutics provides a detailed methodology for interpreting commands for successful execution of actions, thereby leading to the goal. An overview of mimamsa~principles adopted for this work is described in the next chapter.

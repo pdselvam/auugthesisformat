@@ -1,0 +1,81 @@
+\chapter*{LIST OF SYMBOLS AND ABBREVIATIONS}
+\addcontentsline{toc}{section}{\bfseries LIST OF SYMBOLS AND ABBREVIATIONS}
+
+\setlongtables
+\begin{longtable}
+  {>{\PBS\raggedright\hspace{0pt}}p{3cm}@{}%
+    >{\PBS\raggedright\hspace{0pt}}p{11.5cm}@{}}
+
+  $A$ & Set of attributes\\ 
+  $a_t$ & Time attribute\\
+  $BN_{R}(X)$ & Boundary region\\
+  $\beta$ & Certainty threshold\\ 
+  $\beta_{l}$ & Lower threshold\\
+  $\beta_{u}$ & Upper threshold\\
+  $d$ & Decision attribute\\
+  $d_m$ & Decision attribute in an LDS\\
+  $I$ & Information System\\
+  $I_i$ & Information system in $LIS_i$\\
+  $I_m$ & Information table in a mobile node\\
+  $M$ & Set of mobile nodes\\
+  $NEG_\beta(X)$ & $\beta$-negative region\\
+  $P(+ \mid [x_{R}])$ & Conditional probability that an element $x$ in the
+  elementary set $[x_{R}]$ is positive\\
+  $P(-\mid[x_{R}])$ & Conditional probability that an element $x$ 
+  in the elementary set $[x_{R}]$ is negative\\
+  $POS_\beta(X)$ & $\beta$-positive region\\  
+  $R$ & Indiscernibility relation\\
+  $\overline{R}X$ & Upper approximation\\ 
+  $\underline{R}X$ & Lower approximation\\ 
+  $\rho(x,a)$ & Information function\\ 
+  $S$ & Generic Temporal Information System\\
+  $T$ & Temporal Information System\\
+  $T_i$ & Information table at time $t_i$\\
+  $U$ & Universe of discourse\\
+  $V$ & Set of attribute values of all attributes\\
+  $V_a$ & Domain of attribute $a \in A$\\
+  $w_n$ & Weight assigned to elementary sets 
+  between time instances $t_{n-1}$
+  and $t_n$\\
+  $X$ & Concept in information system $I$\\
+  $[x]_{R}$ & Elementary set in an information system $I$\\
+  $[x]_{iR}$ & Elementary set in local information system $LIS_i$\\
+%
+  AODV & Adhoc On--demand Distance Vector\\  
+  ARP  & Address Resolution Protocol\\ 
+  BSD &  Berkeley Software Distribution\\
+  CBR  & Constant Bit Rate\\
+  DCF & Distributed Coordination Function\\
+  DSDV & Destination Sequenced Distance Vector\\
+  DSR & Dynamic Source Routing\\ 
+  GDS & Global Decision System\\
+  GIS & Global Information System\\
+  GTIS & Generic Temporal Information System\\
+  IEEE &  Institute of Electrical and Electronics Engineers\\ 
+  IP &  Internet Protocol\\
+  LET & Link Expiration Time\\
+  LDS & Local Decision System\\
+  LIS & Local Information System\\
+  LSP & Link State Packet\\
+  MAC & Medium Access Control\\
+  MANET & Mobile Ad hoc NETworks\\
+  MIB & Management Information Base\\
+  RERR & Route Error\\ 
+  RREP & Route Reply\\
+  RREQ & Route Request\\
+  RST & Rough Set Theory\\
+  SVM & Support Vector Machine\\
+  TCP & Transmission Control Protocol\\
+  TDS & Temporal Decision System\\
+  TIS & Temporal Information System\\
+  VINT & Virtual InterNetwork Testbed\\
+  VPRS & Variable Precision Rough Sets\\
+  WTIS & Weighted Temporal Information System\\
+  WTDS & Weighted Temporal Decision System\\
+
+
+
+
+
+\end{longtable}
+%\end{tabular}

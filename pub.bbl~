@@ -1,0 +1,36 @@
+\begin{thebibliography}{9}
+\setcounter{test}{1}
+\bibname{List of publications}
+\bibitem[Srinivasan and Parthasarathi 2010]{factors}
+Srinivasan, B. and Parthasarathi, R. (2010),
+\newblock `Towards a formalism of imperatives based on
+  {M}\={i}m\={a}\.{m}s\={a}',
+\newblock  {Proceedings of the National Conference on Theoretical Computer
+  Science and Applications}, B S Abdur Rahman University, Chennai, India.
+
+\bibitem[Srinivasan and Parthasarathi 2011]{mira}
+Srinivasan, B. and Parthasarathi, R. (2011),
+\newblock `{M}\={i}m\={a}\.{m}s\={a} inspired representation of actions
+  ({MIRA})',
+\newblock  {Proceedings of the Fifth Indian International Conference on
+  Artificial Intelligence}, Tumkur, India.
+
+\bibitem[Srinivasan and Parthasarathi 2012a]{brp}
+Srinivasan, B. and Parthasarathi, R. (2012a),
+\newblock `A formalism for action representation inspired by
+  {M}\={i}m\={a}\.{m}s\={a}',
+\newblock {Journal of Intelligent Systems}, 21:45--77.
+
+\bibitem[Srinivasan and Parthasarathi 2012b]{icreate}
+Srinivasan, B. and Parthasarathi, R. (2012b),
+\newblock `Task facilitator for special education using \uppercase{MIRA}',
+\newblock  {Proceedings of the Sixth Internation Convention of Rehabilitation
+  Engineering and Assistive Technology}, ETA East, Singapore.
+
+\bibitem[Srinivasan and Parthasarathi 2013]{jal}
+Srinivasan, B. and Parthasarathi, R. (2013),
+\newblock `An intelligent task analysis approach for special education based on
+  mira',
+\newblock {Journal of Applied Logic}, 11(1):137 -- 145.
+
+\end{thebibliography}

@@ -1,0 +1,16 @@
+\begin{thebibliography}{99}
+
+\bibitem[Fikes \& Nilsson 1971]{strips}
+Fikes, R.~E \& Nilsson, N.~J 1971,
+\newblock `\uppercase{STRIPS}: A new approach to the application of theorem
+  proving to problem solving',
+\newblock  {Proceedings of the 2nd international joint conference on Artificial
+  Intelligence}, London, England, pp.~608--620.
+
+\bibitem[Fischer \& Ladner 1979]{PDL}
+Fischer, M.~J \& Ladner, R.~E 1979,
+\newblock `Propositional Dynamic Logic of regular programs',
+\newblock {Journal of Computer and System Sciences}, vol. 18, no. 2, pp. 194--211.
+
+
+\end{thebibliography}

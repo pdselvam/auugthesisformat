@@ -1,0 +1,4 @@
+\chapter*{\uppercase{ABSTRACT}}
+\addcontentsline{toc}{section}{\bfseries Abstract}
+Abstract comes in here
+

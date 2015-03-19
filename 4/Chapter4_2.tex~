@@ -1,0 +1,64 @@
+% Chapter 4
+
+\chapter{Basis of MIRA} % Main chapter title
+\label{chap:basis} % For referencing the chapter elsewhere, use 
+A person guided by Vedic injunctions performs actions as stated in it, without the consideration of author/speaker. He assumes the stated injunctions to be consistent and knows that when performed exactly according to the injunctions, the desired objective would be achieved. This assumption is borrowed in this formalism, where the artificial agent is provided with a set of consistent instructions. The agent is expected to effectively execute these instructions in order to reach its goal. 
+
+For example, if the instructions given to an agent are ``\textit{Go near the block ($i_1$), then pick it up ($i_2$) to hold the block ($p$)}", then the agent is expected to move near the block first, then pick up the block. After executing these instructions ($i_1$ and $i_2$), the agent holds the block, which is the goal ($p$). 
+\\ \\
+For successful execution of instructions, \mimamsa~provides a formula with three requirements, namely Objective, Instruments and Auxiliaries. These requirements to \textit{\={a}rth\={i}bh\={a}van\={a}} (Section \ref{sec:bhavana}) are restated below.
+\begin{enumerate}
+\item Objective, which indicates the goal by executing the given set of instructions.
+\item Instrument through which the objective can be realized. The actual performance of actions act as the instrument to achieve the objective.
+\item Auxiliaries, which includes the required material and procedure for performing actions. The procedure includes instruction interpretation methodologies, which is substantiated by \mimamsa.
+\end{enumerate}
+
+Inspired by this notion of \textit{\={a}rth\={i}bh\={a}van\={a}}, the agent is assumed to be motivated to execute the given set of instructions. This motivational aspect arises from the agent's intention to achieve the goal, which is indicated by the objective of \textit{\={a}rth\={i}bh\={a}van\={a}}. Once motivated, the agent should perform actions flawlessly, which is indicated by the instrument of \textit{\={a}rth\={i}bh\={a}van\={a}} and before performing actions, the given set of instructions should be interpreted correctly. This is indicated by the auxiliaries of \textit{\={a}rth\={i}bh\={a}van\={a}}. Therefore three major factors form the basis of the MIRA formalism. These are (i) Motivation for action performance, (ii) Instruction Interpretation and (iii) Instruction Execution, which are described below.
+
+\section{Motivation for action performance} 
+The agent should first be motivated as to why the action should be performed. According to M\={i}m\={a}\.{m}s\={a}, motivation or intention to reach the goal (\textit{bh\={a}van\={a}}) plays a vital role in the performance of an action. In the absence of such an intention, the action is considered to be unworthy \cite{mimamsa3}. Inspired by this notion, the intention of the goal is identified as the prime requirement of instruction execution (performing an action). In other words, the performance of action is successful only if the agent has the intention to achieve the goal and executes the instruction thereof; If the agent does not intend to achieve the goal, the performance or non-performance of action is considered to be meaningless. Therefore, the basis of the MIRA formalism rests on the principle that \textbf{presence of the intention of goal is the most important criterion for successful execution of instruction}. 
+
+\section{Interpretation of Instructions} 
+Once motivated to perform actions, the agent needs to interpret instructions correctly. With M\={i}m\={a}\.{m}s\={a}'s methodologies, described in Chapter \ref{chap:mimamsa}, an injunction can be interpreted in the following ways.
+\begin{enumerate}
+\item A positive injunction (\textit{vidhi}) is considered as a \textbf{positive unconditional imperative} statement as in the example ``\textit{Do $<action~i>$}".
+\item A negative injunction or prohibitory statement (\textit{ni\d{s}edha}) is considered as a \textbf{negative unconditional imperative statement} as in the example ``\textit{Don't do $<action~i>$}" or ``\textit{Never do $<action~i>$}".
+\item An injunction enjoining result (\textit{phalavidhi}) is considered as a \textbf{conditional imperative enjoining goal (\textit{cig)}}, since this type of injunction also conveys the fruit of the action. E.g.,``\textit{To achieve $<goal~p>$, do $<action~i>$}".
+\item Causal relation between injunctive and non-injunctive statement (\textit{Hetu-hetumadbh\={a}va}) is considered as a \textbf{conditional imperative enjoining reason (\textit{cir})}, since the non-injunctive portion of the statement contains the reason or the condition for the performance of action. E.g., ``\textit{If $<condition~r>$, do $<action~i>$}"
+\item Explicit rendering of sequencing of actions (\textit{\'{s}rutikrama}) is considered to be the \textbf{conditional imperative enjoining temporal actions (\textit{cia})}, since this type of injunctive statement clearly specifies the sequence of action performance. E.g., ``\textit{Do $<action~i_1>$, then do $<action~i_2 >$}".
+\item In accordance with the obligatory rule of \mimamsa~(\textit{sa\d{m}uccaya\d{h}}), the operator of \textit{conjunction} is used. This operator ensures the mandatory performance of every stated instruction. The conjunction between instructions is possible when different instructions leading to different subgoals, which in turn lead to the same goal are specified. For instance, if the two statements ``\textit{Do $<action~i_1>$, to achieve $p_1$}", ``\textit{Do $<action~i_2>$, to achieve $p_2$}" occur in the instructional passage, which in turn lead to the same final goal ($P$), then these two imperative statements can be connected using the conjunction operator (and). This results in ``(\textit{Do $<action~i_1>$}) \textbf{and} (\textit{Do $<action~i_2>$})".
+\item In a set of instructional passage, if there is more than one instruction leading to the same purpose, then according to the optional rule (\textit{vikalpa}), one among those may be chosen. To denote this option, the disjunction operator `\textit{or}' is used. For instance, the disjunction operation is possible in imperatives of type \textit{``Do $<action~i_1>$ to achieve $p$"} \textbf{or} \textit{``Do $<action~i_2>$ to achieve $p$"}. 
+\item If there is a choice among two instructions (\textit{$<$Do action $i$ to achieve $p>$or $<$Do action $j$ to achieve $p>$}) and one of the instructions is mandatory (\textit{Do action $i$}), then that particular instruction $i$ should be executed according to restrictive injunction (\textit{niyamavidhi}); and the instruction $j$ should not be executed according to exclusive injunction (\textit{parisa\.{n}khy\={a}vidhi}.)
+\end{enumerate}
+\section{Execution of instructions}
+According to \mimamsa, the basis of the performance of action is the presence of intention to achieve the goal. Based on this criterion, the performance and non performance of actions are evaluated in the following manner:
+\begin{enumerate}
+\item If the agent intends to achieve the goal and executes the instruction, then the agent has successfully executed the instruction. The imperative is evaluated to `$S$' denoting \textit{Satisfaction}. 
+\item If the agent intends to achieve the goal and does not execute the instruction, the agent has violated the instruction. In this case, the imperative is evaluated to `$V$' denoting \textit{Violation}.
+\item If the agent does not intend to achieve the goal, the imperative is evaluated to `$N$', indicating the absence of intention to reach the goal.
+\end{enumerate}
+
+This evaluation of imperatives to three values $S$, $V$ and $N$ is inspired from Vranas (2008), who likewise uses three values $S$, $V$ and $A$ denoting $Satisfaction$, $Violation$ and $Avoidance$. According to Vranas, the value acquired by the negation of context (condition in conditional imperatives) is `$A$', whereas in this paper, the value indicating the absence of intention to achieve the goal is indicated by `$N$'. 
+
+Although two values $S$ and $V$ are sufficient to evaluate an imperative, the third value of $N$ is necessary to accommodate the fundamental premise of \mimamsa, which states that the intention of goal is necessary for the successful performance of action.The conditional imperatives enjoining reason and goal are evaluated to $S$, $V$ and $N$, based on the following assumptions.
+\begin{enumerate}
+\item \textbf{Conditional imperatives enjoining reason (\textit{cir})} (\textit{hetu-hetumatbh\={a}va}): In this type of imperative, the condition is indicated as the ground or reason, for an action to be performed. For instance, in the statement \textit{``If it is raining, take an umbrella"}, the condition is \textit{``If it is raining"} and the action is \textit{``take an umbrella"}. If the condition is \textit{true} and the action is performed, the imperative is evaluated to $S$; if the condition is \textit{true} and the action is not performed, the imperative is evaluated to $V$; and if the condition is \textit{false}, the imperative is evaluated to $N$, irrespective of whether the agent performs or does not perform the action. 
+\item \textbf{Conditional imperatives enjoining goal} (\textit{phalavidhi}): In this type of imperative, the condition indicates the intention of the goal explicitly. For instance, in the statement \textit{``If you want to create a simple scaffold, place the plank between two ladders"}, the condition is, \textit{``If you want to create a simple scaffold"}, which indicates the intention of goal on the agent's part. If this condition is \textit{true} (intention of goal is present) and the action is performed, the imperative is evaluated to $S$; if the condition is \textit{true} and the action is not performed, the imperative is evaluated to $V$; if the intention of goal is not present, the condition is considered to be \textit{false} and the performance or non performance of actions does not lead to the desired goal. In such a case, the imperative is evaluated to $N$. 
+\end{enumerate}
+
+Although the evaluations of \textit{imperative enjoining reason} and \textit{imperative enjoining goal} are similar, these cannot be combined as a single \textit{conditional imperative}, because the semantic sense is different in both types. This differentiation is essential for imperatives of type, \textit{``Since grandmother is weak, take this piece of cake, to strengthen her"}, where, \textit{``since grandmother is weak"}, \textit{``to strengthen her"} are the reason and goal, respectively for the instruction \textit{``take this piece of cake"}. 
+
+The evaluation of imperatives to $S$, $V$ and $N$ can be widely adopted in practical scenarios. To justify the use of these three values instead of two, two sample scenarios are presented below.
+\begin{enumerate}
+\item Assume that an agent is provided with an instruction $i_1$ to reach the goal $p_1$ and an instruction $i_2$ to reach the goal $p_2$. If the agent intends to achieve the goal $p_2$, and not $p_1$, but performs action according to $i_1$, then the goal $p_2$ cannot be reached. In this case, the instruction $i_1$ leading to goal $p_1$ is evaluated to $N$, although the agent performs the action (satisfies the instruction $i_1$). 
+
+If only two values are used, where $V$ is used instead of $N$, then the instruction evaluates to $V$. This leads to contradiction, because the agent has executed (satisfied) the instruction $i_1$, but the evaluation leads to $V$, which indicates the agent has violated the injunction. 
+\item In the scenario of AI plan execution and monitoring, if actions are represented through instructions, then $S$, $V$ and $N$ can be used to identify the location of failure. For example, if an intelligent agent \footnote{In AI, an intelligent agent is an autonomous entity that observes through sensors and acts upon an environment using actuators \cite{ai}.} is given an instruction in the form of \textit{$<$If $R$, do $i$$>$} and if $R$ is \textit{false}, then the instruction is evaluated to $N$; if $R$ is \textit{true} and the agent is not able to perform an action, then the instruction is evaluated to $V$. These two evaluation cases leading to $N$ and $V$ indicate the problem with environment and agent, respectively. If $V$ is used instead of $N$, then both evaluation-cases lead to $V$, which does not clearly specify the location of the failure.
+\end{enumerate}
+
+With the underpinnings of the aforementioned three factors, a formalism is constructed with the syntax and semantics. This is described in the next chapter. 
+
+%----------------------------------------------------------------------------------------
+
+
+

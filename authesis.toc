@@ -1,0 +1,23 @@
+\flushleft \bfseries CHAPTER NO. \hfill TITLE \hfill PAGE NO.\endgraf 
+\contentsline {section}{\bfseries \uppercase {Abstract}}{iii}{chapter*.2}
+\contentsline {section}{\bfseries \uppercase {Acknowledgement}}{iv}{chapter*.3}
+\contentsline {section}{\bfseries LIST OF TABLES}{vii}{chapter*.3}
+\contentsline {section}{\bfseries LIST OF FIGURES}{viii}{chapter*.3}
+\contentsline {section}{\bfseries LIST OF SYMBOLS AND ABBREVIATIONS}{ix}{chapter*.4}
+\contentsline {chapter}{\numberline {1}\uppercase {Introduction}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1} Section 1}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2} Section 2}{1}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1} Subsection 1}{1}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2} Subsection 2}{1}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}\uppercase {Literature Survey}}{2}{chapter.2}
+\contentsline {chapter}{\numberline {3}\uppercase {Synthetic use}}{3}{chapter.3}
+\contentsline {chapter}{\numberline {4}\uppercase {Comparison}}{4}{chapter.4}
+\contentsline {chapter}{\numberline {5}\uppercase {Applications}}{5}{chapter.5}
+\contentsline {chapter}{\numberline {6}\uppercase {Conclusion}}{6}{chapter.6}
+\contentsline {chapter}{APPENDIX}{7}{section*.5}
+\contentsline {chapter}{\numberline {1}Topic 1}{7}{appendix.A}
+\contentsline {section}{\numberline {1.1} Section 1}{7}{section.A.1}
+\contentsline {section}{\numberline {1.2} Section 2}{7}{section.A.2}
+\contentsline {chapter}{\numberline {2}Topic2}{8}{appendix.B}
+\contentsline {chapter}{\numberline {3}Topic3}{9}{appendix.C}
+\contentsline {chapter}{REFERENCES}{11}{section*.6}

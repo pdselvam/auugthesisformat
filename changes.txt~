@@ -1,0 +1,7 @@
+1. mira_pc.tex - adaptable in personal desktop
+2. To change the margin width from top of the page to Chapter, go to aureport.cls line 362 - \vspace*{10\p@}% and change to -20, -30 appropriately to shift upwards.
+3. To change the left margin, go to auphd.sty and change the odd side margin line 48
+
+4. For references, added apalikem to include the numbers from 1. In mira_pcm.tex, used the package aunatbib and apalikem.
+5. mira_pc2.tex is the latest version.
+6. 

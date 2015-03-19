@@ -1,0 +1,409 @@
+\chapter{Comparison of MIRA with other theories} % Main chapter title
+\label{chap:comparison} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+In this chapter, MIRA is compared with other similar approaches on the ground of imperative logic and the theory of actions. The criteria such as: fundamental or non fundamental imperatives; satisfaction of imperatives; agent reference; representation and evaluation of imperative and actions; and perspective of speaker or addressee or action performance are  compared against MIRA with all other formalisms, described in Chapter \ref{chap:survey}. The uniqueness of MIRA from the rest of other formalisms is also described in this chapter.
+
+\section{Fundamental and Non-fundamental imperatives}
+Hofstadter \& McKinsey (1939), J\"{o}rgensen (1937), and Ross (1941) treat indicatives as a basic unit and imperatives are considered inferior to it. However, Beardsley (1944), ChrisFox (2008) and Vranas (2008)  view imperatives as a fundamental unit (\ref{sec:implogic}). MIRA also treats imperatives as a fundamental unit, much in line with Vranas approach. 
+\section{Satisfaction Criteria in Imperatives}
+Satisfaction criteria vary in some formalisms. These are listed below:
+\begin{enumerate}
+\item Hofstadter and McKinsey (1939) present a logic of satisfaction of imperatives, wherein the satisfaction criteria is based on whether the imperative is satisfied and not based on agency.
+\item Motivated by the approach of Hare (1967) and Lappin (1982), ChrisFox (2008) in the work of logic of satisfaction of imperatives, uses a temporal operator to denote the proposition content and then maps it to the satisfaction of the imperative \ref{sec:fox}. 
+\item According to Beardsley (1944), satisfaction of an imperative is related to the satisfaction of the desire of the speaker, who is uttering the imperative. 
+\item Vranas (2008) provides three values $S$, $V$ and $A$ to address the satisfaction of an imperative. 
+\end{enumerate}
+MIRA relates imperative to action performance. Hence the satisfaction criteria of an imperative is in direct relation to the action performance, with the agent's intention of achieving the goal, i.e., if the action is performed, the imperative is evaluated to $S$; if not performed, it is evaluated to $V$; and if there is no intention to reach the goal, it is evaluated to $N$.
+\section{Agent Reference}
+In formalisms proposed by ChrisFox and Cohen and Leveque, the agent reference is explicitly stated. In the logic of imperatives proposed by ChrisFox (2008), the imperative is broken down to agentive property, which is indicative in nature. Using a temporal operator, this indicative statement is evaluated to a \textit{true} value (Section \ref{sec:fox}). The theory of intention explicitly refer the agent carrying out the action. This can be seen from Equation \ref{eq:pergoal}, where the agent is refered by the variable $i$. MIRA however, does not explicitly refer to the agent, although it encompasses the agent's intention of achieving the goal. 
+\section{Representation and Evaluation of Imperatives and Actions}
+Imperatives and actions are represented using various connectives. Table \ref{tab:conrepmira} lists these representation and the comparison with MIRA is described below:
+\subsection{Hofstadter \& McKinsey}
+Although MIRA combines imperatives in a similar fashion like Hofstadter \& McKinsey, it is different in these aspects:
+\begin{itemize}
+\item MIRA does not translate imperatives to propositions, unlike Hofstadter \& McKinsey, who adopt the unary operator `$!$' for translation (Section \ref{sec:fiat}).
+\item Hofstadter and McKinsey use the complementary operator $-$. But MIRA does not use the operator for negation, rather treats positive imperatives and negative imperatives as two different sets. 
+\item Conditional imperatives are categorized into three types in MIRA.
+\item MIRA explicitly handles the sequential operation of imperatives $\Rightarrow_i$, whereas  Hofstadter and McKinsey handle the operation of material inclusion.
+\item Exclusive disjunction is used in MIRA, whereas inclusive disjunction is adopted by Hofstadter and McKinsey.
+\end{itemize}
+\begin{landscape}
+\begin{center}
+\begin{longtable}{|p {3.3 cm}|p {0.5 cm}|p {1 cm}|p {1 cm}|p {2.5 cm}|p {1.5 cm}|p {2.5 cm}|p {1.5 cm}|p {2.5 cm}|p {2 cm}|}
+\caption{Representation of imperatives and actions} \label{tab:conrepmira}\\
+\hline
+\textbf{Formalism} & \textbf{Tr} & \textbf{Rep} & \textbf{Neg} & \textbf{$\vee$} & \textbf{$\wedge$} & \textbf{Conditional} & \textbf{Seq} & \textbf{Goal} & \textbf{Others}  \\
+\hline
+%\endfirsthead
+%\multicolumn{4}{c}%
+%{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+%\hline
+%\textbf{Formalism} & \textbf{Conversion to proposition} & \textbf{Repetition} & \textbf{Negation} & \textbf{Disjunction} & \textbf{Conjunction} & \textbf{Conditional} & \textbf5{Sequence} & \textbf{Goal} & \textbf{Comments} \\
+%\hline
+%\endhead
+%\hline 
+%\multicolumn{4}{c}%
+%{\textit{Continued on next page} }
+%\endfoot
+%\hline
+%\endlastfoot
+%1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+%\hline
+HM &! &- & yes & inclusive & yes & $S_1 \rightarrow C_1$ &- & - & $C_1>C_2$ \\
+\hline
+Beardsley &- &- &- &- &- & yes &- &same as cond &-  \\
+\hline
+ChrisFox &!,$\diamond$ &- & yes & free\&non-free & yes & $\varphi \rightarrow p!_\alpha$ & no &\small{pseudo-imperatives} &- \\
+\hline
+Vranas &- &- &yes & inclusive & yes & $\varphi \rightarrow i$ &- &- &- \\
+\hline
+ILL &- &! &-  & free\&non-free &- &$A \rightarrow B$ [$A$]  &- & $A \rightarrow B$ [$B$] & resources \\
+\hline
+PDL  &- &$\alpha^*$ &- & choice &- &$? \varphi$ & $\alpha_1;\alpha_2$ &$\varphi$ &- \\   
+\hline
+STRIPS &- &- &- &-&- &Precondition &- & Effect &- \\
+\hline
+Situation calculus &- &- &- &-&- &Possibility ax &- & Effect ax &- \\ 
+\hline
+M\={i}m\={a}\.{m}s\={a} &- &- &nishe \d{d}a & vikalpa &sa\d{m}uc caya\d{h} & hetu-hetumad bh\={a}va &krama & phalavidhi &bh\={a}vana\\
+\hline
+MIRA &- &- &yes & Exclusive & yes & $\rightarrow_r$ & $\rightarrow_i$ & $\rightarrow_p$ &- \\
+\hline
+\multicolumn{10}{|c|}{Tr-Translation, Rep- Repetition, Neg - Negation, $\vee$- Disjunction, $\wedge$ - conjunction, cond- conditional, seq-sequence} \\
+\multicolumn{10}{|c|}{HM - Hofstadter and McKinsey, $S,\varphi$ - Indicatives, $C,i$ - Imperatives, $\alpha$ - action, $[A],[B]$ - resources, ax- axiom} \\
+\hline
+\end{longtable}
+\end{center}
+\end{landscape}
+\subsection{Beardsley}
+Beardsley considers the occurrence of compound and complex imperatives. But distinction is not made between the propositional existence and goal. For example, the following three statements can be considered. 
+\begin{enumerate}
+ \item [] $S6_1$: \textit{If it is raining ($r$), hand me an umbrella ($i_1$)} 
+ \item [] $S6_2$: \textit{Do this or I'll tell your mother}
+ \item [] $S6_3$: \textit{Close the door and you'll be warmer}
+ \end{enumerate} 
+In the above statements, $S6_1$ illustrates the propositional existence (\textit{it is raining}); and $S6_2$, and $S6_3$ illustrates the goal (\textit{I'll tell your mother} and \textit{you'll be warmer}), which are claimed to be pseudo-imperatives \cite{Franke}, \cite{ChrisFox}. Beardsley argues that $S6_2$ and $S6_3$ can be treated as a conditional imperative, which are given as $S6_{2c}$ and $S6_{3c}$, respectively:
+
+\begin{enumerate}
+\item [] $S6_{2c}$ : \textit{If you do not do this ($i_2)$, I will tell your mother ($p_1$)} 
+\item [] $S6_{3c}$ : \textit{If you close the door ($i_3)$, you'll be warmer ($p_2$)}
+\end{enumerate} 
+
+MIRA however, treats these two categories separately and these statements can be formulated as shown by Equation \ref{eq:mirabeardsley}.
+\begin{eqnarray}
+\label{eq:mirabeardsley}
+S6_1 &:& r \rightarrow_r i_1 \nonumber \\
+S6_{2c} &:& i_2 \rightarrow_p p_1 \nonumber \\
+S6_{3c} &:& i_3 \rightarrow_p p_2 
+\end{eqnarray}
+\subsection{ChrisFox}
+Although the representation schemes of MIRA is similar to that of ChrisFox method (Section \ref{sec:fox}), following differences can be noted:
+\begin{enumerate}
+\item MIRA does not use a negation operator.
+\item While disjunction in MIRA is mutually exclusive, ChrisFox considers free and non-free choice.
+\item Pseudo-imperatives are considered as imperative enjoining goal in MIRA. 
+\item MIRA accounts for temporal sequence of actions, which was neglected by ChrisFox. For example, \textit{``put on a parachute ($i_1$) and jump out ($i_2$)"} can be represented by Equation \ref{eq:miravsfox}
+\begin{eqnarray}
+\label{eq:miravsfox}
+ i_1 \Rightarrow_i i_2
+ \end{eqnarray}
+\end{enumerate}
+
+\subsection{Vranas' imperative logic}
+Vranas formalised a logic for imperatives with three values viz., Satisfaction ($S$), Violation ($V$) and Avoidance ($A$) \cite{vranas2008}. For instance, the conditional imperative statement ``\textit{If X do Y}" indicates the condition as \textit{``If X"} and the imperative as \textit{``Do Y"}. The statement takes the value of $S$, if $X$ is \textit{true} and $Y$ is satisfied; takes the value of $V$, if $X$ is \textit{true} and $Y$ is violated; and takes the value of $A$, if $X$ is \textit{false}. Though MIRA is similar to this trivalue approach, it differs in these aspects:
+\begin{enumerate}
+\item MIRA focuses on goal-oriented action indicated by the imperative.
+\item The basic imperative in MIRA is unconditional, whereas Vranas treats it as a conditional imperative.
+\item Unlike Vranas' method, MIRA does not use a negation operator to relate the positive and negative imperatives. For instance, according to Vranas, the negation of \textit{``Take the umbrella"} is \textit{``Don't take the umbrella"}. But in MIRA, the positive and negative imperatives are treated separately as two different sets. The former is denoted as a set $I^{+}$ and the latter is denoted as a set $I'$. For instance, if there occurs a positive imperative, \textit{``Take the umbrella"} $\in$ $I^{+}$, then the corresponding negative imperative \textit{``Don't take the umbrella"} belongs to the set $I'$ and if there occurs a negative imperative  \textit{``Don't take the umbrella"} belonging to the set $I'$, then its corresponding positive imperative \textit{``Take the umbrella"} belongs to the set $I^{+}$. 
+\item Vranas treats a conditional imperative as a combination of a declarative antecedent with an imperative consequent. In MIRA the conditional imperative is categorized into three types. These are : (i) Conditional imperative enjoining reason, (ii) conditional imperative enjoining action and (iii) conditional imperative enjoining goal. The first two categories are a combination of imperative and declarative statement and the last category is a combination of two temporally related imperative statements.
+\item According to Vranas, the value acquired by the negation of context (condition in conditional imperatives) is Avoidance ($A$), whereas in MIRA, the value indicating the absence of goal is indicated by `$N$'. Since the basis of evaluation is different, the resulting values also vary when imperatives are connected by binary operators. This is described below.
+\end{enumerate}
+\subsubsection{Conditional Operation}
+Vranas considers conditional imperatives as a combination of declarative antecedent with imperative consequent, while MIRA categorizes the conditional imperatives into three types , which encompasses both declaratives and imperatives. The details of this variation are shown in Table \ref{ta:vary}. Although the values indicating Goal and Reason for both approaches are similar, MIRA does not combine these two conditions into one because of its expressive nature. For instance, consider the imperative statement, \textit{``If $\tau$, do $i$, to achieve $\theta$"}, which consists of both Reason ($\tau$) and Goal($\theta$) enjoining the imperative ($i$). While MIRA offers a mechanism to evaluate this kind of imperatives, the method proposed by Vranas treats this statement separately as \textit{``If $\tau$, do $i$"} ($k_1$) and \textit{``To achieve $\theta$, do $i$"} ($k_2$). If `$k_1$' and `$k_2$' are connected through the conjunction operator, then Vranas' method yields the value `$S$', when `$\tau = F$, $i = S$ and $\theta = T$'. But for the same values of `$\tau$', `$i$' and `$\theta$', MIRA evaluates to `$N$'. This is beneficial when dealing with goal oriented actions.
+\begin{table}[h]
+\caption{Comparison of conditional imperative values between Peter Vranas (2008) and MIRA}
+\label{ta:vary}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Goal}} & \multicolumn{3}{|c|}{\textbf{Reason}}& \multicolumn{3}{|c|}{\textbf{Action}} \\
+\hline
+$p$, $i$ & Vranas & MIRA & $r$, $i$ &Vranas & MIRA &$i_1$, $i_2$ &Vranas &MIRA \\
+\hline 
+$T$,$S$ & $S$ & $S$ & $T$, $S$ & $S$ & $S$ & $T/S$,$S$ & $S$ & $S$ \\
+\hline
+$T$,$V$&$V$&$V$ & $T$,$V$ & $V$ & $V$ & $T/S$, $V$ & $V$ & $V$ \\
+\hline
+$F$,$S$ & $A$ &$N$ & $F$, $S$ & $A$ & $N$ & $F/V$, $S$ & $A$ & $V$ \\
+\hline
+$F$, $V$ & $A$ & $N$ & $F$, $V$ & $A$ & $N$ & $F/V$, $V$ & $A$ & $V$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table} 
+\subsubsection{Conjunction}
+Evaluation of conjunction differs between Vranas' approach and MIRA's method. For instance, when two imperatives $\phi$ and $\psi$ are connected using the conjunction operator, with values $S$ and $A$ respectively, $\phi \& \psi$ results in value `$S$' according to Vranas. But, with values `$S$' and `$N$' for $\phi$ and $\psi$ respectively MIRA yields the value `$N$'. The details of this variation are shown in Table \ref{ta:convar}. \\
+\begin{table}
+\begin{center}
+\caption{Comparison of conjunction of imperatives}
+\label{ta:convar}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Vranas}}&\multicolumn{3}{|c|}{\textbf{MIRA}} \\
+\hline
+\textbf{$\phi$}& \textbf{$\psi$} &\textbf{$\phi \& \psi$} & \textbf{$\phi$}& \textbf{$\psi$} &\textbf{$\phi \wedge \psi$}\\
+\hline
+$S$&$A$&$S$&$S$&$N$&$N$ \\
+\hline
+$V$&$A$&$V$&$V$&$N$&$N$ \\
+\hline
+$A$&$S$&$S$&$N$&$S$&$N$ \\
+\hline
+$A$&$V$&$V$&$N$&$V$&$N$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsubsection{Disjunction}
+Disjunction according to Vranas is primarily based on \textit{on-choice offering imperative} whereas MIRA is \textit{alternate preserving} \cite{Rescher}, which is represented as an exclusive disjunction operator.
+If two imperatives $i_1 =S $ and $i_2 =S $ are connected with the disjunction operator, Vranas' formalism results in the value of `$S$', while for the same value of imperatives, MIRA results in `$V$'.
+
+\subsection{Situation Calculus and STRIPS}
+Actions in Situation calculus are described through \textit{possibility} and \textit{effect} axioms. In STRIPS, these are described with \textit{preconditions} and \textit{effects}. In both these formalisms, actions are represented through states and are atomic.
+
+MIRA, although supports states through the conditional operators $\rightarrow_r$ and $\rightarrow_p$, actions are represented through instructions, with the agent's perspective of intention to reach the goal. Also, it supports the representation of molecular actions using the operators, $\wedge$, $\rightarrow_i$ and $\oplus$. These enhance the representation of actions. The following example demonstrates the nature of specification of the intention in reaching the goal coupled with the representation of molecular actions.
+
+Figure \ref{fig:block_init_final} represents the initial and the final state of the block world. In the initial state, the three blocks A, B and C are kept on the table. In the final state, block C is on B, which in turn is on A. 
+\begin{figure}[h]
+\caption{Initial and Final state of block world}
+\centering
+\includegraphics[scale = 0.5]{6/block_init_final.png}
+\label{fig:block_init_final}
+\end{figure}
+The state-space according to the STRIPS for this example is given in figure \ref{fig:block_plan}. The operator $move(x,y)$ indicates block $x$ to be moved on to the top of block $y$, where $x$ = B,C and $y$ = A, table, C.
+\begin{figure}[h]
+\caption{State space of block world}
+\centering
+\includegraphics[scale = 0.5]{6/state_space_block.png}
+\label{fig:block_plan}
+\end{figure}
+The same example using MIRA can be represented as Equations \ref{eq:mira_block_example1}, \ref{eq:mira_block_example2} and \ref{eq:mira_block_example3}.
+\begin{eqnarray}
+\label{eq:mira_block_example1}
+([on(A,table) \wedge on(B,table) \wedge on(C,table)] \rightarrow_r [move(B,A) \rightarrow_i move(C,B)])\nonumber \\ \rightarrow_p  (on(A,table) \wedge on(B,A) \wedge on(C,B))~~ \\
+\label{eq:mira_block_example2}
+([on(A,table) \wedge on(B,table) \wedge on(C,table)] \rightarrow_r [move(B,A) \rightarrow_i move(B,table)])\nonumber \\ \rightarrow_p  (on(A,table) \wedge on(B,table) \wedge on(C,table))~~ \\
+\label{eq:mira_block_example3}
+([on(A,table) \wedge on(B,table) \wedge on(C,table)] \rightarrow_r [move(B,A) \rightarrow_i move(B,C)])\nonumber \\ \rightarrow_p  (on(A,table) \wedge on(C,table) \wedge on(B,C))~~ 
+\end{eqnarray}
+where the state $S_0$ = $[on(A,table) \wedge on(B,table) \wedge on(C,table)]$, $S_2$ = $(on(A,table) \wedge on(B,A) \wedge on(C,B))$ and $S_3$ = $(on(A,table) \wedge on(C,table) \wedge on(B,C))$.
+Given these three representations along with the intial and the final state, the intention of goal perspective of MIRA can be incorporated. 
+
+From the figures \ref{fig:block_init_final} and \ref{fig:block_plan}, it can be seen that $S_0$ is the initial state and $S_2$ is the final state. 
+Suppose the agent has the intention to reach the goal from the state $S_0$, and is not interested in reaching $S_3$ and $S_4$. This can be encoded in MIRA as $\mathcal{E}(S_0) = \mathcal{E}(S_2)= \top$, and $\mathcal{E}(S_3) = \mathcal{E}(S_4)  = \bot$. 
+
+\begin{theorem}
+\label{th:rimp}
+Let an imperative be given by $(\tau \rightarrow_r \varphi) \rightarrow_p \theta)$. It evaluates to $N$ if $\mathcal{E}(\theta) = \bot$; and evaluates to $S$ or $V$, if $\mathcal{E}(\theta) = \top$. \\
+(The proof for this theorem is given in Appendix \ref{sec:proofrip}.)
+\end{theorem}
+
+Using the theorem \ref{th:rimp}, Equations \ref{eq:mira_block_example2} and \ref{eq:mira_block_example3} evaluates to $N$, since the intention to reach $S_3$ and $S_4$ is not \textit{true}. However, Equation \ref{eq:mira_block_example1} evaluates to either $S$ or $V$, since $\mathcal{E}(S_0) = \mathcal{E}(S_2)= \top$. This indicates that in order to reach the goal, two actions namely $[move(B,A) \rightarrow_i move(C,B)]$ should be performed. 
+
+Thus MIRA can help in representing the actions in a more expressive manner. This is because, actions can be represented in a composite fashion along with perspective of the intention towards reaching the goal. 
+
+\subsection{ILL and PDL}
+Both ILL and PDL supports molecular action. MIRA differs from these formalism in the following aspects:
+\begin{enumerate}
+\item MIRA focuses on goal-oriented actions. The presence of the agent's intention to achieve the goal, and the performance of action together constitute the successful action. 
+\item The evaluation of action is based on imperative values \textit{S,V}, and \textit{N} and not based on states.
+\end{enumerate}
+In robots, temporal logic and dynamic logic are used to represent commands. Temporal operators are used to denote the goal and through it, the action sequence is derived using dynamic logic operators (Section \ref{sec:robot}). 
+
+The commands can be represented directly to represent action sequence and goal. Equations \ref{eq:ctl} and \ref{eq:pdl} using MIRA can be represented as Equation \ref{eq:robotmira}.
+\begin{eqnarray}
+\label{eq:robotmira}
+(goto\_breakroom \rightarrow_i report(location,bluebox)) \nonumber \\ \rightarrow_p (reported(location,bluebox))~~~
+\end{eqnarray}
+The intermediate goal $at(breakroom)$ is hidden in this representation. However, it can also be represented separately by Equation \ref{eq:interrobot}.
+\begin{eqnarray}
+\label{eq:interrobot}
+goto\_breakroom \rightarrow_p at(breakroom)
+\end{eqnarray}
+\subsection{Intention Logic}
+Cohen and Levesque describe intention at two levels $INTEND_1$ and $INTED_2$, denoting intention to perform an action and intention to achieve the result, respectively. They represent actions through dynamic logic operators. The successful performance of an action is denoted as $DONE~\alpha$, where $\alpha$ is an action (Section \ref{sec:cohen}).
+
+Intention to perform an action is not specified in MIRA. However, the intention to achieve the result is specified as a propositional formula $\theta$. The performance of actions is denoted through the values $S$ and $V$. 
+
+\subsection{Action representation and evaluation in MIRA vs other formalisms}
+In general, the representation of commands in imperative logic, except Vranas' is through classical logic, where these are evaluated to \textit{true} and \textit{false}. Situation Calculus, STRIPS/ADL and Dynamic Logic views action as a change of state or relation between the states, which is shown in Figure \ref{fig:other_representation}.  $S_1$ and $S_2$ are states and can be expressed as a propositional formula, and action is a transition between these two states. Accordingly, if the states $S_1$ and $S_2$ are \textit{true}, then the action is assumed to be performed. 
+\begin{figure}[h]
+\caption{Representation of actions in STRIPS/Situation Calculus/PDL}
+\centering
+\includegraphics[scale = 0.8]{6/other_representation.png}
+\label{fig:other_representation}
+\end{figure}
+
+MIRA specifies actions through instruction. The different ways of representation are listed below.
+\begin{enumerate}
+\item MIRA specifies an instruction or combination of instructions from the given state $S_1$ as conditional imperative enjoining the reason, shown in Figure \ref{fig:risvn}. 
+\begin{figure}[h]
+\caption{Representation of $\tau \rightarrow_r \varphi$}
+\centering
+\includegraphics[scale = 0.8]{6/risvn.png}
+\label{fig:risvn}
+\end{figure}
+\item A single instruction or a combination of instructions is represented as an unconditional imperative(s). These are  shown in Figure \ref{fig:isv}.
+\begin{figure}[h]
+\caption{Representation of $\rho$}
+\centering
+\includegraphics[scale = 0.8]{6/isv.png}
+\label{fig:isv}
+\end{figure}
+\item Instructions with an intention of achieving the goal, are represented as an imperative enjoining the goal, shown in Figure \ref{fig:gisvn}. Here, the goal is represented as a state $S_2$, which is evaluated to \textit{true} or \textit{false}. The instruction as a whole is evaluated to $S$, $V$ or $N$.
+\begin{figure}[h]
+\caption{Representation of $\phi \rightarrow_p \theta$}
+\centering
+\includegraphics[scale = 0.8]{6/gisvn.png}
+\label{fig:gisvn}
+\end{figure}
+\item An instruction or a combination of instructions from the given state $S_1$, with the intention of reaching the goal is evaluated to $S$, $V$ or $N$ (Figure \ref{fig:rgisvn}).
+\begin{figure}[h]
+\caption{Representation of $(\tau \rightarrow_r \phi) \rightarrow_p \theta$}
+\centering
+\includegraphics[scale = 0.8]{6/rgisvn.png}
+\label{fig:rgisvn}
+\end{figure}
+\end{enumerate}
+
+The approach of this action representation and reasoning in MIRA resolves certain issues. This is described in the next section.
+\subsection{Independent of J\"{o}rgensen's dilemma and Ross paradox}
+\label{sec:miraindependent}
+MIRA combines the propositional existence with imperative and treats this combination as an imperative, given as $\tau \rightarrow_r \varphi$ . This representation along with the conditional elimination rule $cne$ helps to resolve J\"{o}rgensen's dilemma. For example, let the same example listed in Section \ref{sec:jorgensen} be considered, which is restated below.
+\begin{center}
+\textit{$S_1$: If it is raining, hold an umbrella!} \\
+\textit{$S_2$: It is raining} \\
+\vspace{-0.9em}
+\line(1,0){200} \\
+\textit{$S_3$: Hold an umbrella}\\
+%\vspace{-0.9em} 
+\end{center}
+If $\tau$ = \textit{if it is raining}, $\varphi$ = \textit{hold an umbrella}, by using the rule $cne$, this example can be formulated to:
+\begin{center}
+\textit{$S_1$:} $\tau \rightarrow_r \varphi$ \\
+\textit{$S_2$:} $\tau$ \\
+\vspace{-0.9em}
+\line(1,0){200} \\
+\textit{$S_3$: $\varphi$ (By applying $cne$ to $S_1$ and $S_2$)}
+\end{center}
+Although $\tau$ is evaluated to $\top$ or $\bot$, $\varphi$ is evaluated to $S$, $V$ and $N$. Hence MIRA is independent of J\"{o}rgensen's dilemma. 
+
+Although MIRA has a rule for disjunction introduction, it is not paradoxical, unlike the case listed by Ross (Section \ref{sec:ross}). This is illustrated with the following example.
+
+Assume the goal of writing ($p$) can be accompolished using a pen ($i^{+}$) or pencil ($j^{+}$). In the set of instructions, suppose the statements $S_4$ and $S_5$ are given: 
+\begin{center}
+\textit{$S_4$:} \textit{Take pen to write} ($i^{+} \rightarrow_p p$) \\
+\textit{$S_5$:} \textit{Don't take pencil} ($j'$) \\
+\line(1,0){350} \\
+\textit{$S_6$:} \textit{Take pen to write} or \textit{Take pencil to write} $(i^{+} \rightarrow_p p) \oplus (j^{+} \rightarrow_p p)$.
+\end{center}
+Application of the disjunction introduction rule $di$ to $S_4$ and $S_5$ results in $S_6$, which is not paradoxical. 
+
+\section{Perspective of speaker/Addressee/Action}
+Imperatives can be seen as the utterance from the speaker to the addressee, for performing an action. Hence the formalisms listed in Chapter \ref{chap:survey} can be viewed from the perspective of the speaker, addressee and action. These are described below.
+\subsection{Speaker}
+The perspective of speaker is adopted in linguistics and the theories formulated by J\"{o}rgensen, Beardsley and Cohen \& Levesque, detailed as follows:
+\begin{itemize}
+\item The wish type and permission and invitation categories of imperatives are addressed based on the speaker's intention (Section \ref{sec:impling}). 
+\item While transforming the imperative to indicative, J\"{o}rgensen attributes the property of the statement, \textit{``such and such action is to be performed"} to the person who is issuing the command \cite[pp.~292-293]{Jorgensen}. 
+\item Beardsley (1939) attaches the desire of the speaker to the satisfaction of the imperative. 
+\item In the theory of intentions (TI), the perspective of the speaker while uttering the imperative is incorporated as shown in Equation \ref{eq:impcohen} \cite{cohen},\cite{dieugenio_thesis}. 
+\item Situation calculus, STRIPS, Dynamic logic and Intuitionistic linear logic addresses action based on the states, i.e., actions are defined as a transition operator or relation between the states.
+\end{itemize}
+\subsection{Addressee}
+The perspective of addressee in some of the formalisms are listed below:
+\begin{itemize}
+\item In linguistics, directives and disinterested advice indicate the addressee's view (Section \ref{sec:impling}). 
+\item ChrisFox (2008) formalises imperative with the propositional content of actions performed by the agent some time in future. ``For example, the imperative \textit{``shut the door"} addressed to an agent John would be satisfied by any action that is felicitously described by the propositional content of \textit{``John shuts the door"} in the salient future". 
+\item In the theory of intention, the hearer or the addressee's intention is taken into account. This is given by Equation \ref{eq:intend1} and \ref{eq:intend2} \cite{cohen}. 
+\item In MIRA, imperatives are formalised based on the addressee's intention in achieving the goal.  
+\end{itemize}
+\subsection{Action Performance}
+Some formalisms refer to actions. These are detailed below:
+\begin{itemize}
+\item Directives are imperatives, which denote an action to be performed. 
+\item Hofstadter and McKinsey (1944) consider fiats and the representation is not based on agency. The satisfaction in it indirectly helps to represent the performance of action. 
+\item J\"{o}rgensen refers to the indicative factor as the theme of demand, which denotes the action.
+\item Chrisfox proposes a logic of satisfaction, where the imperative when satisfied (agent performs the action in future) is mapped to the \textit{true} value (Section \ref{sec:fox}).
+\item van Eijck (2000) formalises imperatives in a way such that it is valid, if performed. 
+\item The theory of intention (TI) uses dynamic logic to represent actions. 
+\item Vranas (2008) proposes a trivalue logic for imperatives and according to this formalism, the imperative evaluates to the value of $S$ (Satisfaction), if the action is performed and; $V$ (Violation), if the action is not obliged. The perspective of addressee is not addressed in the formalism proposed by Vranas. 
+\item Situation calculus, STRIPS, Dynamic logic and Intuitionistic linear logic addresses action based on the states, i.e., actions are defined as a transition operator or relation between the states.
+\item Although MIRA is in line with Vranas method of evaluating action, it is different because MIRA evaluates action based on the addressee's intention in reaching the goal.
+\end{itemize}
+\begin{figure}[h]
+\caption{Overview of formalisms from the perspective of speaker, addressee and action}
+\centering
+\includegraphics[scale = 0.8]{6/venn.png}
+\label{fig:venn}
+\end{figure}
+These three perspectives of the formalisms are shown in Figure \ref{fig:venn}. In the theory of intention, all the three perspectives are addressed. Though Chrisfox's approach and MIRA include the perspective of addressee and action performance, only MIRA includes the intentional aspect of the addressee in reaching the goal, along with the evaluation of action performance with three values $S$, $V$ and $N$. This makes MIRA unique from all other formalisms. 
+
+\section{A summary of the unique features of MIRA}
+The uniqueness of MIRA can be noticed in Table \ref{tab:comparemirall}. This is same as that of Table \ref{tab:survey}, except for the last row, which depicts the features of MIRA with other relevant formalisms. 
+
+Using some of these features, an illustration in AI planning is described in the next chapter.
+\begin{landscape} 
+\begin{center}
+\begin{longtable}{|p {3 cm}|p {2.5 cm}|p {2 cm}|p {1.5 cm}|p {2.5 cm}|p {1 cm}|p {2.7 cm}|p {1.2 cm}|}
+\caption{Categorization of formalisms} \label{tab:comparemirall}\\
+\hline
+\textbf{Formalism/ Application} & \textbf{Fundamental/ Non-funda mental} & \textbf{Speaker/ Addressee/ Action} & \textbf{Agent reference} & \textbf{Imperative/ Actions} & \textbf{Goal Inten tion} & \textbf{Action representation} & \textbf{Values} \\
+\hline
+\endfirsthead
+\multicolumn{4}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+\textbf{Formalism/ Application} & \textbf{Fundamental/ Non-funda mental} & \textbf{Speaker/ Addressee/ Action} & \textbf{Agent reference} & \textbf{Imperative/ Actions} & \textbf{Goal Inten tion} & \textbf{Action representation} & \textbf{Values} \\
+\hline
+\endhead
+\hline 
+\multicolumn{4}{c}%
+{\textit{Continued on next page} }
+\endfoot
+\hline
+\endlastfoot
+%1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+Hofstadter \& McKinsey & Non Fundamental & Addressee\& actions & No & Imperative  & No & composite & $\top$, $\bot$ \\
+\hline
+J\"{o}rgensen & Non Fundamental & - & No & Imperative & No & - & $\top$, $\bot$ \\
+\hline
+Ross & Non Fundamental & - & No & Imperative & No & composite & $\top$, $\bot$ \\
+\hline
+Beardsley & Fundamental & Speaker & no & Imperative & yes & - & - \\
+\hline
+ChrisFox & Fundamental & Addressee\& actions & yes & Imperative  & no & composite & $\top$, $\bot$ \\
+\hline
+Vranas & Fundamental  &actions & no & Imperative  & no & composite & $S,V,A$ \\
+\hline
+Situation $~~~~~~$ Calculus & - & - & no & Only actions & no & atomic & $\top$, $\bot$ \\
+\hline
+STRIPS / ADL &-&-&no & Only actions & no &atomic & $\top$, $\bot$ \\
+\hline
+PDL & - & - &- &Only actions & no & composite & $\top$, $\bot$ \\
+\hline
+Logics of Change &Non fundamental & - &no & Imperative to actions & no &  \multicolumn{2}{c|}{same as PDL} \\
+\hline 
+ILL &-&-&-&actions&no&composite&$\top$,$\bot$ \\
+\hline
+Cohen \& Levesque &-&Speaker, addressee \& actions &yes&Imperative & yes & \multicolumn{2}{c|}{same as PDL} \\
+\hline
+Robot &-&-&-&Imperative \& actions & no & \multicolumn{2}{c|}{same as PDL} \\
+\hline
+MIRA & Fundamental & Addressee & no & Imperative to actions & yes & composite & $S,V,N$ \\
+\hline
+\end{longtable}
+\end{center}
+\end{landscape}
+
+

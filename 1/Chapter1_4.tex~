@@ -1,0 +1,132 @@
+\sloppy
+\newtheorem{theo}{Theorem}
+\newtheorem{exam}[theo]{Example}
+\chapter{INTRODUCTION}
+\label{intro}
+In the computational arena, interpretation of natural language instructions is of common interest due to the inevitable necessity of communicating with computers. Towards this end, research has been going on to address the various methods of understanding natural language instructions. In line with this trend, this dissertation aims at proposing a formalism for interpreting, reasoning and evaluating imperatives that denote actions.
+
+Imperatives can be seen widely in various fields, for instance, in mathematical proofs, ``\emph{Let $x$ be a variable}" \cite{Hofstadter}; moral instructions to children ``\emph{Respect your elders}"; task analysis in special education \textit{``Take the tooth brush, Open the tap"}, and instructions for mechanical assembly, ``\emph{Check to see whether the bolt is fixed}". As a part of International Organization for Standardization (ISO), documents of work-instructions are maintained by industries and these work-instructions help to organize tasks performed in the overall process. In computational intelligence, robots or artificial agents are guided through instructions. For example, the instruction \textit{``Go to the break room and report the location of the blue box"} guides the robot to \textit{go to the break room first and then find the location of the blue box}\cite{temporalrobot}.
+
+Hence imperatives are used in different ways such as : to command, to instruct, to request, to plead and appeal to a rule or law \cite{sosa1}. An imperative is referred to ``a sentence, the object of which is to express an immediate demand for action, but not to describe a fact" \cite{Ross}. An imperative thus can be viewed as a two step process: (i) expressing a demand  (ii) to perform an action. Accordingly, there has been various proposals from the angle of imperatives, actions and imperatives relating to actions. An outline of a few proposals are described below:
+\begin{enumerate}
+\item Imperatives are not facts and hence cannot be evaluated to \textit{true} or \textit{false}. Hence rules of classical logic cannot be directly applied to imperatives. However, several researchers brought imperatives to the scope of classical logic considering the attitude of the speaker \cite{Beardsley}, content \cite{Jorgensen}, action performance by the hearer \cite{ChrisFox}, permissions and obligations denoted by the imperative \cite{Wright} etc., 
+\item Actions when viewed separately is seen as a change of state or relation between the states \cite{strips}, \cite{PDL}. Two states are observed and if there is a change in both the states, then an action is performed. In some cases, from this change of state, the instruction to be executed is determined \cite{temporalrobot}. 
+\item Some researchers related imperatives to actions. But imperatives have been formalised borrowing the action representation schema. For instance, in logics of change \cite{Van} and theory of intention \cite{cohen}, dynamic logic is used to represent imperatives. The latter formalism also includes the notion of the intention behind performing an action by the hearer, such that the objective could be reached.
+\end{enumerate}
+From the computational perspective, the given instruction should be interpreted correctly, reason out and executed accordingly, so as to reach the final objective. This interpretation involves the representation of imperatives or actions. In this sense, some formalisms listed above specifically address only the representation of imperatives at the command level or at the action level and a very few address the performance of action separately. They also lack in giving the feedback of whether the instruction is executed or not. And while performing an action, the notion of intention in achieveing the goal is not considered in most of these formalisms. 
+
+This dissertation addresses these constraints by constructing a single formalism that caters to (i) instruction interpretation involving representation (ii) reasoning from the given set of instructions systematically and (iii) instruction execution with an intention to achieve the goal. The inspiration for this work is derived from \mimamsa, an Indian philosophical system. A short description on \mimamsa~is provided in the next section.
+
+\section {\uppercase{Inspiration}}
+\label{sec:inspiration}
+\begin{sloppypar}
+Indian scripture categorizes knowledge into fourteen domains. These are: (i) the four Vedas (\textit{Rigveda}, \textit{Yajurveda}, \textit{S\={a}maveda} and \textit{Atharvaveda}); (ii) six auxiliaries to Veda known as \textit{Ved\={a}ngas}; (iii) a discussion on Vedas, Mim\={a}\.{m}s\={a}; (iv) logic, \textit{ny\={a}ya}; (v) mythology, \textit{Puran\={a}s}; (vi) and epics, \textit{itih\={a}sa} \cite{vedas}. Among these, Vedas are considered to be the supreme authority. It is believed to be eternal (\textit{an\={a}di}) and of non-human origin (\textit{apouru\d{s}eya}) and provides guidance for performing the right action, pertaining to rituals. The guidance is provided in the form of Vedic\footnote{Vedic - Pertaining to Veda.} injunctions or commands. The interpretation of Vedas is done through \mimamsa, which was written in the style of aphorisms (\textit{s\={u}tra}) by Sage Jaimini, who is believed to have lived during third century B.C. An exposition of Jaimini's \mimamsa~s\={u}tras was written by Kum\={a}rila Bha\d{t}\d{t}a, (620-703 A.D.) and Pr\={a}bh\={a}kara Mi\'{s}ra, (650-700 A.D.), respectively leading to two schools of thought in \mimamsa~\cite[pp.xxv--xxvi]{mimamsa1}.
+\end{sloppypar}
+
+The interpretation methodologies prescribed by \mimamsa~are not only found useful for resolving ambiguities in Vedic passages, but are also used for interpreting other scriptures such as \textit{Dharma\'{s}\={a}stra} and \textit{ved\={a}nta}. As a more recent approach, \mimamsa~principles have been used in judicial systems to arrive at the correct judgement \cite[p.~619]{mimamsa1}. The methodology of \mimamsa, when incorporated in Ayurvedic education is shown to be effective in pedagogy \cite{ayurveda}. There are also proposals indicating the natural language processing capabilities from this philosophy \cite{nlp}.
+
+According to \mimamsa, motivation (\textit{bh\={a}vana}) forms the central theme to perform any action. This motivation arises from the final objective of the action. Actions to be performed are stated through injunctions in Veda. \mimamsa~lays down several criteria for interpreting these injunctions. These include the occurrence of injunctions with goal (\textit{phalavidhi}), conditional injunction, where the condition is an indicative statement \textit{hetu-hetumatbh\={a}va}, mutual-exclusive injunctions (\textit{vikalpa}), conjunction (\textit{\textit{sa\d{m}uccaya\d{h}}}) and  injunctions that denote the sequence (\textit{\'srutikrama}).
+
+
+The motivational aspect along with a few of the above interpretation techniques from \mimamsa~are borrowed to develop a formalism namely, MIRA (\mimamsa~Inspired Representation of Actions) for interpreting, reasoning and executing instructions computationally. These are discussed below.
+
+\section{\uppercase{Interpretation}}
+In this dissertation, instructions are interpreted to be either atomic or composite. An atomic instruction is a single instruction and a composite instruction is one, which combines with other instructions or declarative statements. A few examples are given below: 
+\begin{enumerate}
+\item [] $S_1$: \textit{Take the paper}
+\item [] $S_2$: \textit{Don't take pencil}
+\item [] $S_3$: \textit{Take pen and paper}
+\item [] $S_4$: \textit{Write on paper and fold it}
+\item [] $S_5$: \textit{If it is raining, take an umbrella}
+\item [] $S_6$: \textit{Use a pen to write on paper}
+\item [] $S_7$: \textit{To write, take the pen or pencil}
+\item [] $S_8$: \textit{Since grandmother is weak, take this piece of cake, to strengthen her}
+\item [] $S_{9}$: \textit{To write, take the pen and to draw, take the pencil}
+\item [] $S_{10}$: \textit{If it is raining, take an umbrella and wear a raincoat"}.
+\item [] $S_{11}$: \textit{``If it is raining, take an umbrella and if it is not raining, don't take an umbrella"}.
+\end{enumerate}
+Here, $S_1$ and $S_2$ are atomic and $S_3$- $S_{11}$ are composite instructions.
+These instructions are interpreted as positive or negative imperatives; mandatory or optional imperatives; and imperatives enjoining reason, sequence of actions and goal. These are described below. 
+\begin{enumerate}
+\item Positive and negative imperatives: $S_1$ and $S_2$ are positive and negative imperatives, respectively, since $S_1$ indicates an action to be performed and $S_2$, an action that is prohibited.
+\item Mandatory imperatives: Sometimes two imperatives are combined using $and$, which indicates the mandatory performance of two actions. Eg., $S_3$, $S_4$, $S_9$, $S_{10}$ and $S_{11}$ include two imperatives connected by $and$ indicating the manadatory performance of actions.
+\item Imperative enjoining sequence of actions: Two imperatives indicate a sequence of actions as shown in $S_4$. 
+\item Imperative enjoining a reason: An imperative indicates an action to be performed under specific condition. E.g., $S_5$ indicates an action of \textit{"taking an umbrella"}, under the condition \textit{``if it is raining"}. $S_8$, $_{10}$ and $S_{11}$ also belong to this category.
+\item Imperative enjoining goal: An imperative may occur with the perspective of goal. For example $S_6$ indicates an action of \textit{``using a pen"} to achieve the goal of \textit{``writing on paper"}. $S_8$, $S_9$ and $S_{10}$ also belong to this category.
+\item Optional or Mutually exclusive imperatives: Two imperatives denoting an option to achieve the same goal is interpreted as an optional imperative. E.g., $S_7$ indicates one of the two actions (\textit{``taking pen or pencil"}) to be performed inorder to achieve the goal of \textit{``writing"}.
+\end{enumerate}
+Positive and negative imperatives such as $S_1$ and $S_2$ are considered as an unconditional imperative; and imperatives enjoining reason, sequence of actions, and goal are considered as conditional imperatives.
+\section{\uppercase{Reasoning}}
+From the interpreted imperatives, reasoning can be carried out. The reasoning process involves deriving an imperative or goal from the given set of imperatives. This process of reasoning is inbuilt within the formalism of MIRA, which offers a multitude of advantages. A few benefits of this reasoning are: sequencing from a jumbled set of instructions, resolving ambiguities and incorporating intelligence to reach the goal. These are explained below:
+\subsection{Sequencing from a jumbled set of instructions}
+A set of instructions provided may not be in sequence and are often jumbled. For example, consider the following set of jumbled instructions, along with the start and goal, for writing an assessment:
+\begin{enumerate}
+\item [ ]$S_{j1}$: \textit{Use a pen to write on paper}.
+\item [ ]$S_{j2}$: \textit{Take paper}.
+\item [ ]$S_{j3}$: \textit{After writing, fold the paper}.
+\item [ ]$S_{j4}$: \textit{Take a pen}.
+\item [ ]$S_{j5}$: \textit{Return the paper}.
+\end{enumerate} 
+Using MIRA's reasoning process, the above instructions can be sequenced into: 
+\begin{enumerate}
+\item [ ]$S_{c1}$: \textit{Take a pen}.
+\item [ ]$S_{c2}$: \textit{Take a paper}.
+\item [ ]$S_{c3}$: \textit{Use a pen to write on paper}.
+\item [ ]$S_{c4}$: \textit{Write and fold the paper}.
+\item [ ]$S_{c5}$: \textit{Return the paper}.
+\end{enumerate}
+\subsection{Resolving ambiguities}
+The given instruction may appear to be contradictory. For example, if there is an availability of pen and pencil to write, instruction $S_{c1}$ can be expanded to:  
+\begin{enumerate}
+\item [ ]$S_{a1}$: \textit{Take a pen or pencil to write} 
+\item [ ]$S_{a2}$: \textit{Don't take pencil}
+\end{enumerate}
+Here, $S_{a1}$ and $_{a2}$ are contradictory to each other because $S_{a1}$ suggests to \textit{take a pen or pencil}, but $S_{a2}$ suggests \textit{not to take the pencil}. MIRA's reasoning process resolves this contradiction by suggesting the imperative \textit{``Take a pen"}.
+\subsection{Incorporating intelligence to reach the goal}
+Once the given instructions are interpreted correctly, the agent should have the capability to reason out those before execution i.e., it should possess the intelligence to detect whether the given set of instructions, when executed leads to the goal or not. For example, if an agent is provided with two instructions, \textit{``Take route A, to reach city C"}  and \textit{``Take route B, to reach city D"}, then the agent is expected to choose one of the two instructions. If the agent chooses the first instruction, then with the intention of \textit{``reaching the city C"} it has to execute the instruction of \textit{``taking the route A"}. Instead, if the agent intends to \textit{``land in City D"}, but \textit{``takes the route A"}, then it may not reach the intended goal. 
+
+MIRA is based on the motive that intention of goal is the basic requirement for the effective performance of action. This notion helps to identify the correct path in the above problem. 
+\section{\uppercase{Execution}}
+Instruction execution is evaluated based on three values, $S$, $V$ and $N$ in the formalism of MIRA. An imperative is evaluated to:
+\begin{enumerate}
+\item $S$ (Satisfaction), if the instruction is executed. For instance in $S_{j1}$, if the intention to achieve the goal of \textit{writing} is present and the action is performed (\textit{``pen is taken"}), then the instruction is evaluated to $S$.
+\item $V$ (Violation), if the instruction is not executed. For instance in $S_{j1}$, if the intention to achieve the goal of \textit{writing} is present and the action is not performed (\textit{``pen is not taken"}), then the instruction is evaluated to $V$.
+\item $N$, if the agent does not have the intention to reach the goal. In this case, whether the action is performed or not, the instruction is evaluated to $N$. For instance, in $S_{j1}$, if there is no intention to achieve the goal (\textit{no intention of writing the assessment}), then the instruction is evaluated to $N$.
+\end{enumerate}
+
+With this basis of interpretation, reasoning and execution, a formalism with syntax and semantics is constructed. An overview of the construction is given below.
+\section{\uppercase{MIRA: Syntax and Semantics}}
+The interpretation and reasoning of imperatives are addressed through the formation and deduction rules, respectively. The different ways of representation such as positive and negative imperatives, mandatory and optional imperatives, and imperatives enjoining reason, instruction and goal are addressed in the formation rules. Using these, deduction rules such as conjunction introduction and elimination, disjunction introduction and elimination, conditional introduction and elimination are provided, that help in the reasoning process.
+
+In semantics, execution of instructions is addressed. An unconditional imperative is evaluated to $S$ or $V$. In the conditional imperative enjoining reason and goal, the reason and goal are indicative parts attached to the imperative. The former denotes the condition for the execution of instruction, and the latter the presence or absence of intention of the goal in the mind of the agent/person, who is performing the action. For example in this conditional imperative \textit{``If there is a pen, take it"}, the reason \textit{``there is a pen"} can be evaluated to \textit{true} or \textit{false}. Similarly in the statement \textit{``Take a pen to write"}, the goal is \textit{``to write"} and the intention of this goal may either be present or absent, which can be evaluated to \textit{true} or \textit{false}. 
+
+Hence along with these indicative values (\textit{true} and \textit{false}), the conditional imperatives enjoining reason and goal are evaluated to $S$, $V$ and $N$. The imperative enjoining sequence of actions, which includes two imperatives is also evaluated to $S$, $V$ and $N$. These values are evaluated through action performance tables, which are analogous to the \textit{truth tables} in classical logic. The connection between syntax and semantics is provided through soundness, where deduction rules are proved to be sound using the action performance table. 
+
+\section{\uppercase{MIRA Applications}}
+In this dissertation, two areas namely, AI planning and Task analysis in special education are chosen to illustrate the effectiveness of MIRA. 
+
+In AI planning, a plan is generated from the given set of action descriptions. These action description formalisms are generally atomic, where for a single action the \textit{preconditions} and \textit{postconditions} are specified. These act as states and a plan is generated indirectly using the states. Owing to the expressive nature, MIRA can help in the derivation of the action sequence in AI planning. 
+
+People with behavior disabilities have difficulty in processing and adapting simple tasks like brushing the teeth and washing hands. To help them, the process of task analysis is used, where the tasks are broken down in finite chunks of smaller subtasks. This is a laborious process, since it not only involves an in-depth understanding of the tasks, but also the links of the generated subtasks should be well preserved. Using MIRA formalism, the logical sequence of tasks are generated automatically from the jumbled set of instructions. The formalism also acts as a task verifier to check whether the generated tasks lead to the prescribed goal. 
+
+Hence MIRA formalism offers a unique approach to represent and evaluate actions through instructions. A summary of the findings that resulted from this exploration and construction of the formalism is listed in the next section.
+\section{\uppercase{Contributions}}
+\begin{sloppypar}
+The construction of the logical formalism MIRA with trivalue is the first of its kind inspired from \mimamsa. A gist of the contributions that resulted from this construction is given below.
+\begin{enumerate}
+\item A few tenets from \mimamsa~are borrowed for representing the instructions. Particularly, \textit{\={a}rthibh\={a}vana} from \mimamsa~is used as the guiding principle for MIRA, apart from other interpretation techniques.
+\item The logical formalism is presented with syntax and semantic structure, along with the proof of soundness.
+\item The effectiveness of MIRA is illustrated in AI planning and task analysis for special education. 
+\end{enumerate}
+\end{sloppypar}
+\section{\uppercase{Outline}}
+The rest of this dissertation is organized as follows:
+\begin{itemize}
+\item In Chapter \ref{chap:survey}, an overview of imperatives from linguistics and formalisms in imperative logic are provided. From the computational front, action representation schema including Situation calculus, STRIPS and Dynamic logic and intuitionistic linear logic are presented. 
+\item A few principles from \mimamsa~that help towards the construction of MIRA is described in Chapter \ref{chap:mimamsa}. Following the inspiration from \mimamsa~principles, the basis of the formalism is detailed in the same chapter through three factors: (i) motivation to perform an action (ii) instruction interpretation and instruction execution.
+\item MIRA is constructed logically with a syntactic and semantic structure in Chapter \ref{chap:mira}. Formation rules and deduction rules are formulated in syntax, which addresses action representation through instructions. In semantics, action performance tables are provided, which evaluates instructions through three values $S$, $V$ and $N$. 
+\item MIRA is compared against the existing formalisms from the perspective of imperative logic and action representation formalisms in Chapter \ref{chap:comparison}.
+\item The generation of action sequence in AI planning using MIRA is described in Chapter \ref{chap:aiplanning}, with the help of case studies.
+\item In chapter \ref{chap:taskanalysis}, MIRA is used for the task analysis procedure in special education.
+\item A brief overview of the findings is provided, along with the future directions in Chapter \ref{chap:conclusion}.
+\end{itemize}

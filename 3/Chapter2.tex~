@@ -1,0 +1,144 @@
+% Chapter 1
+
+\chapter{M\={i}m\={a}\.{m}s\={a}} % Main chapter title
+
+\label{ch:mimamsa} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\begin{sloppypar}
+\mimamsa~provides an exhaustive methodology to specify and interpret instructions unambiguously in order to correctly perform Vedic rituals. The Vedic statements in general are categorized into five groups \cite[pp.~xxvi--xxxi]{arthasamgraha} as under:
+\end{sloppypar} 
+\begin{enumerate}
+\begin{sloppypar}
+\item Injunctive statements (\textit{Vidhi}): These direct a person to perform actions. \mimamsa~also specifies when the given command is not considered as \textit{Vidhi}. If a person is able to perform an action without being commanded, then the corresponding cause for action is not \textit{Vidhi} (M\={i}m\={a}\.{m}sakas define \textit{Vidhi} as ``\textit{Apr\={a}ptapr\={a}pako vidhih}'' \cite[p.~600]{mimamsa1}). For instance `\textit{Observe non-violence}' and \textit{`Tell the truth'} are \textit{Vidhi}. `\textit{Eat when you are hungry}' and `\textit{Drink when you are thirsty}' are not \textit{Vidhi}.  
+\end{sloppypar}
+\item Prohibitory statements (\textit{Ni\d{s}edha}): These are similar to \textit{vidhi}, but prohibit a person from performing an action. Example, `\textit{Do not covet the property of others}'.
+\item Hymns (\textit{mantra}): Recitations that form a part of Vedic rituals.
+\item Name (\textit{N\={a}\.{m}adheya}): An account of names of ritual activities, categorization of paraphernalia etc., 
+ \item Corroborative Statements (\textit{Arthav\={a}da}): These encourage actions stipulated by injunctions (\textit{Vidhi}) or discourage actions stated by the prohibitory statements (\textit{Ni\d{s}edha}). 
+\end{enumerate}
+
+For each of these categories, \mimamsa~explains the interpretation methodology in detail. The interpretation is carried out at word level, sentence level and at discourse level. In this work, a few methodologies pertaining to the \textit{Vidhi} at the sentence level are considered from the perspective of instructions given to a machine/artificial agent. Specifically, the aspects of  Injunctive statement (\textit{Vidhi}) classification and ordering (\textit{Krama}), motivation (\textit{bh\={a}van\={a}}), connection between injunctive and non-injunctive statements (\textit{hetu-hetumadbh\={a}va})  and two rules of interpretation (\textit{samucchya} and \textit{vikalpa}) are considered in this work. These are explained in the following sections in the same order.
+
+\section{Classification and ordering of injunctions}
+\begin{sloppypar}
+According to \mimamsa, every act should have a purpose. \textit{Pr\={a}bh\={a}kara}, one of the commentators of \mimamsa, expressed the importance of purpose as ``\textit{Artha} must mean \textit{Prayojana} (Purpose), as purpose is the most important factor; all the words in the sentence must be related to that important factor" \cite[p.~594]{mimamsa1}, \cite[p.~88]{mimamsa2}.  
+\end{sloppypar} 
+\begin{sloppypar}
+In \mimamsa, an injunctive statement (\textit{Vidhi}) or a command provides a direction for the person to undertake a particular action. M\={i}m\={a}\.{m}s\={a} classifies injunctions in various ways. In one type of classification, injunctions are divided into four basic categories. These are \cite[p.~xxvii]{arthasamgraha}:
+\end{sloppypar}
+\begin{enumerate}
+
+\item \begin{sloppypar}Principal injunctions (\textit{Utpattividhi}): Injunctions that enjoin an act belong to this category. E.g., In the statement,`\textit{One should perform the agnihotra}' (\textit{agnihotra\.{m} juhoti}), the \textit{agnihotra} sacrifice is enjoined with the action of performing the sacrifice \cite[p.~179]{mimamsa1}. \end{sloppypar}
+\item \begin{sloppypar}Injunctions enjoining auxiliaries (\textit{Viniyogavidhi}): Injunctions that include auxiliaries belong to this category. E.g., In the statement, ``\textit{perform the agnihotra sacrifice with curd} (\textit{dadhn\={a} juhoti})", curd acts as an auxiliary to the main action namely, ``\textit{perform the agnihotra sacrifice}". \end{sloppypar}
+\item \begin{sloppypar}Procedural injunctions (\textit{Prayogavidhi}): This type of injunctions convey the overall process and specify the order of performance of the sacrifice. Here, \mimamsa~lays down six criteria to ascertain the order. These are \cite[pp.~208--209]{mimamsa1}:\end{sloppypar}
+\begin{enumerate}
+\item Direct assertion (\textit{\'{S}rutikrama}): denotes the direct expression of the sequence. 
+\item Meaning (\textit{Arthakrama}): indicates the sequence based on the meaning.
+\item Reading (\textit{P\={a}\d{t}hakrama}): points to the sequence based on the order mentioned in the text. 
+\item Position (\textit{Sth\={a}nakrama}): considers the sequence based on place. 
+\item Principal rite (\textit{Mukyakrama}): conveys the order of the subsidiary sacrifice as per the order of main sacrifice and 
+\item Procedure (\textit{Pravrithikrama}): denotes a series of actions to be performed in an iterative manner.
+\end{enumerate}
+\item Injunction of qualification (\textit{Adhik\={a}ravidhi}): This type indicates the authority of the person to perform the sacrifice.
+\end{enumerate}
+In another classification, injunctions are classified into \cite[p.~617]{mimamsa1}:
+\begin{enumerate}
+\item \begin{sloppypar}Restrictive injunction (\textit{Niyamavidhi}): When two or more methods are provided to reach the goal, making one of these mandatory is a restrictive injunction. E.g.: In the statement \textit{``pound the corn to remove the husk"}, the \textit{husk} can be removed in more than one way. However, this injunction specifies that the \textit{husk is to be removed only by the action of pounding.} \end{sloppypar}
+\item \begin{sloppypar}Exclusive injunction (\textit{Parisa\.{n}khy\={a}vidhi}): Exclusion of one from two items that are present simultaneously is an exclusive injunction. For example, the statement ``\textit{Only five animals with five toes may be eaten"}, implies five-toed animals other than the stipulated five must not be eaten.\end{sloppypar}
+\end{enumerate}
+Apart from these, injunctions such as \textit{``One who desires heaven should perform fire-sacrifice"} exemplifies the connection of the sacrifice to the result. These are categorized as injunctions setting forth result (\textit{phalavidhi)} \cite[p.~5]{mimamsa2}.
+
+Since Vedas are considered to be of non human origin, there is no person ordaining an act. Instead the verbal endings of injunctive statements (\textit{Vidhi}) prompt a person to perform actions. For example, the verbal root \textit{yajeta} and optative termination \textit{li\d{n}} in the statement, \textit{``svargak\={a}mo yajeta'' } indicate the motivation (\textit{bh\={a}van\={a}}) to perform the sacrifice. 
+
+\mimamsa~holds that the motivation to act (\textit{bh\={a}van\={a}}) is the centre of semantic organization \cite[p.~154]{mimamsa1}. This aspect is quoted in the work of hierarchial organization of \mimamsa~as, ``For M\={i}m\={a}\d{m}sakas, \textit{bh\={a}van\={a}} in a sentence is more predominant and all other words in the sentence are subordinate to it" \cite{lawrence}. This motivational aspect is explained in the next section.
+\section{Motivation}
+\label{sec:bhavana}
+\begin{sloppypar}
+Traditionally two schools of thought have existed after the sage Jaimini: One was proposed by Kum\={a}rila Bha\d{t}\d{t}a and the other by Pr\={a}bh\={a}kara. The followers of the former were Bh\={a}\d{t}\d{t}a M\={i}m\={a}\.{m}sakas and the followers of the latter were Pr\={a}bh\={a}kara M\={i}m\={a}\'{m}sakas. The notion of motivation differs between these two sects and is described below. 
+\end{sloppypar}
+\subsection{Bh\={a}van\={a} according to Bh\={a}\d{t}\d{t}a M\={i}m\={a}\.{m}sakas}
+Bh\={a}\d{t}\d{t}a M\={i}m\={a}\.{m}sakas categorized \textit{Bh\={a}van\={a}} into two types. These are \cite[p.~179]{mimamsa1}:
+\begin{enumerate}
+ \item \begin{sloppypar}\textit{prera\d{n}\={a}}, which creates an interest in the person to perform action indicated by the optative suffix or the verbal endings in imperatives or commands. This resides at linguistic and psychological level, and is known as \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}}. \end{sloppypar}
+\item \begin{sloppypar}\textit{prav\d{r}tti}, which prompts or initiates a person to perform the action. This level represents the actual activity to reach towards the intended objective, known as \textit{\={a}rth\={i}bh\={a}van\={a}}. \end{sloppypar}
+\end{enumerate}
+\begin{sloppypar}
+\mimamsa~specifies a formula with three requirements to implement the sacrifice. These are: (i) Objective (\textit{s\={a}dhya} or \textit{phala}), (ii) Instrument (\textit{s\={a}dhana} or \textit{kara\d{n}a}) and (iii) Auxiliaries (\textit{itikartavyat\={a}}).  These three requirements are elicited by three questions, namely: (i) What is the objective? (ii) What are the means or instruments to achieve the objective? and (iii) What are the aids or auxiliaries to perform these actions? ({``\textit{k\.{i}m bh\={a}vayet, kena bh\={a}vayet, katha\.{m} bh\={a}vayet}) \cite[p.~179]{mimamsa1}}.
+\end{sloppypar}
+\begin{sloppypar}
+This formula is applied to Vedic injunctions for the effective performance of the sacrifice. The formula as applied to the two senses (\textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} and \textit{\={a}rth\={i}bh\={a}van\={a}}) is given in table \ref{ta:bhavana}. 
+\end{sloppypar}
+\begin{table}[h]
+\caption{Three requirements for \textit{bh\={a}van\={a}}}
+\label{ta:bhavana}
+\begin{center}
+\begin{tabular}{|p{2.5 cm}|p{2.5 cm}|p{ 3 cm}|p{3.5 cm}|}
+\hline
+\textbf{Type of \textit{bh\={a}van\={a}}}  & \textbf{Objective} & \textbf{Instrument} & \textbf{Auxiliaries} \\
+\hline
+\textbf{\textit{\'{S}\={a}bd\={i}bh\={a}van\={a}}} & Generating \textit{\={a}rth\={i}bh\={a}van\={a}} & Knowledge of verbal termination \textit{li\.{n}} & \textit{Arthav\={a}da} (Eulogy or Criticism)  \\
+\hline
+\textbf{\textit{\={A}rth\={i}bh\={a}van\={a}}} & Objective of sacrifice  & Actual Performance & Procedure that involves instruction interpretation \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+The objective of \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} is to initate the activity (generating \textit{\={a}rth\={i}bh\={a}van\={a}}); knowledge of verbal termination, \textit{li\.{n}} in an injunction, serves as an instrument; and \textit{arthav\={a}da} (eulogy) acts as an aid for \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}}, since it strengthens the stated injunction. 
+
+ For \textit{\={A}rth\={i}bh\={a}van\={a}}, the objective is the end result of the performance of sacrifice; the actual performance of the sacrifice serves as an instrument; and the procedure involving interpretation methodologies to perform the sacrifice act as auxiliaries \cite[pp.~179--180]{mimamsa1}. 
+
+\subsection{Bh\={a}van\={a} according to Pr\={a}bh\={a}kara M\={i}m\={a}\'{m}sakas}
+\begin{sloppypar}
+Pr\={a}bh\={a}kara M\={i}m\={a}\'{m}sakas, however, do not treat  \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} and \textit{\={a}rth\={i}bh\={a}van\={a}} as two separate categories. According to them, ``an injunctive termination \textit{li\.{n}} conveys the action to be performed, along with the initiative". This task is both the subject and the instrument \cite[p.~180]{mimamsa1}. 
+\end{sloppypar}
+\section{Connection between injunctive and non-injunctive statements}
+\begin{sloppypar}
+The actions to be performed are denoted through injunctions. Along with these injunctions,  narrative statements (\textit{arthav\={a}das}) also occur in the Vedic literature. These do not convey any action, but merely support the injunction by means of praise or censure and are connected with injunctions by the concept of sentence-unity.
+\end{sloppypar}
+\begin{sloppypar} 
+Jaimini defines the sentence-unity as \textit{``If it were a case that an expression (or expressions) serve a single purpose (or that expresses a single composite meaning) and if it were a case that on separation of any constituent of the expressions, the separated constituents become expectant of each other, then that expression or those expressions can be said to form sentence-unity or a single sentence"} (\textit{Arthaikatv\={a}d ekam v\={a}kyam s\={a}k\={a}\.{n}k\d{s}a\.{m} ced vibh\={a}ge sy\={a}t} - Jaimini Sutra 2.1.46) \cite[p.~372]{mimamsa1}. 
+\end{sloppypar}
+\begin{sloppypar}
+There are several instances where this concept of sentence-unity is used. In one instance, Mur\={a}ri Mi\'{s}ra \footnote{Mur\={a}ri Mi\'{s}ra is the exponent of a third school of M\={i}m\={a}\.{m}s\={a} and wrote a full-fledged commentary on \textit{Jaimini s\={u}tra} during the twelfth century A.D.}  explains the unity of the two sentences having different verbal forms related by the concept of \textbf{\textit{hetu-hetumadbh\={a}va}} (The relation between the cause and one that proceeds from the cause). In this type of connection, one part of the sentence denotes the reason and the other an injunction. For example, in this sentence `\textit{``Your body is dirty, you should take bath}", the two parts have different verbal forms. The first part of the sentence (\textit{your body is dirty}) expresses ground or reason (\textit{hetu}) for the second part (\textit{you should take bath}), an injunction \cite[p.~374]{mimamsa1}.
+\end{sloppypar}
+
+\section{Interpretation rules}
+\label{sec:rules}
+\begin{sloppypar}
+\mimamsa~specifies several interpretation rules for a set of injunctions occurring in a passage. Out of these rules, two rules will presently be considered. These are given below.
+\end{sloppypar}
+\begin{sloppypar}
+When several methods are stated to perform actions, \mimamsa~specifies the criteria as to when all the stated methods should be followed. It also specifies the condition when a single stated method is sufficient. This is described below.
+\end{sloppypar}
+\begin{enumerate}
+\item \begin{sloppypar}\textbf{Obligatory Rule} (\textit{sa\d{m}uccaya\d{h}}): If several accessories in the form of instructions are detailed, leading to a single purpose, \mimamsa$~$ suggests performing all those. This is given as follows: \\ ``\textit{ye ekasmin karmani gun\={a}\d{h} bahava\d{h} \'{s}isyante tes\={a}\.{m} sarve\d{s}\={a}\.{m}} \\
+\textit{kriy\={a} sy\={a}t ev\={a}\.{m} sa\d{m}uccaya\d{h} sarve\d{s}\={a}\.{m} \'{s}:asanam arthavad bhavi\d{s}yati.}" \\
+``When several details are laid down in connection with the same sacrifice, there should be performance of all" \cite[pp.~599--600]{mimamsa1}. \end{sloppypar}
+\begin{sloppypar}
+\mimamsa~allows repetition of instructions. If the instruction is repeated, then performance of that particular action should also be repeated \cite[p.~995]{mimamsa2}.
+\end{sloppypar}
+\item \begin{sloppypar}\textbf{Optional Rule} (\textit{vikalpa}): If several optional instructions are laid out to achieve the same purpose, \mimamsa$~$ suggests choosing one among those instructions. This is given as: \\
+``\textit{Ek\={a}rth\={a}stu vikalpyeran. \\ Smuccaye hy\={a}v\d{r}thi\d{h} syat pradhanasya}": Jaimini 12-3-10 \\ ``When several details (procedures) serving the same purpose are prescribed, there should be an option to do one and not all")\cite[p.~599]{mimamsa1}. \end{sloppypar}
+\end{enumerate}
+\section{Discussion}
+These methodologies from \mimamsa~can be applied to the interpretation of instructions given to a machine. These are summarized below.
+\begin{enumerate}
+\item To perform any action, motivation is essential according to \mimamsa. This motivational aspect is addressed at the psychological level (\textit{\'{s}\={a}bd\={i}bh\={a}van\={a}}) and at the actual activity level (\textit{\={a}rth\={i}bh\={a}van\={a}}). 
+\item The motivational aspect at the actual activity level when applied to the formula of three requirements (objective, instrument and auxiliaries) yield the following:
+\begin{itemize}
+\item The objective is the end result of the performance of actions.
+\item The actual action performance act as the instrument.
+\item The auxiliaries are the interpretation of instructions that denote actions.
+\end{itemize}
+\item Instructions are categorized into different types and one among those is the instruction that occurs with the fruit of action (\textit{phalavidhi}).
+\item Instruction can occur with declaratives. One such instance is the instruction that occur with reason or condition (\textit{hetu-hetumatbh\={a}va}).
+\item For a given set of instructions, \mimamsa~ advises to execute all those instructions(Obligatory rule). However, if there exists an option to execute an instruction from the given set of instructions, then the optional rule may be followed.
+\item \mimamsa~ specifies six criteria for ordering the given set of instructions. One among those is the explicit indication of the temporal ordering of instructions (\textit{\'{S}rutikrama}).
+\end{enumerate} 
+
+
+%\lhead{Chapter 1. \emph{Chapter Title Here}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+
+

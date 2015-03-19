@@ -1,0 +1,778 @@
+% Chapter 1
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{define}{Definition}
+\chapter{\uppercase{MIRA-Syntax and Semantics}} % Main chapter title
+\label{chap:mira} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+This chapter describes the syntax with the formation rules and deduction rules, semantics in the form of action performance tables analogous to truth tables, and soundness through the deduction rules and action performance tables.   
+\section{\uppercase{Syntax}}
+\label{sec:syntax}
+\begin{sloppypar}
+Let $\mathcal{L}_i$=$\langle I, R, P, B \rangle $ be the language of imperatives and let $I$ = $(I^v \cup I^n)$, where $I^v$ denotes positive unconditional imperatives (\textit{vidhi}), \\ $\{i^{+}_1,i^{+}_2,\cdots,i^{+}_n\}$ ; $I^n$ denotes negative unconditional imperatives (\textit{ni\d{s}edha}) $\{i'_1,i'_2,\cdots,i'_n\}$; and $I$ includes both $I^v$ and $I^n$. $R$ denotes Reasons, $ \{r_1,r_2,\cdots,r_n\}$, $P$ denotes Purpose, in terms of Goals $\{p_1,p_2,\cdots,p_n\} $ and $B$ indicates the binary connectives  $\{\wedge,\oplus, \rightarrow_r, \Rightarrow_i, \rightarrow_p\}$. $R$ and $P$ are sets of formulas from the language of propositional logic. `$B$' includes connectives that connect two statements. In what follows, $\tau$ and $\theta$ are used to indicate $R$ and $P$, respectively. 
+
+`$\wedge$' and `$\oplus$' stand for conjunction and exclusive disjunction of imperatives, respectively; the conditional imperative that enjoins reason is represented using `$\rightarrow_r$'; the conditional imperative that enjoins temporal action is represented using `$\Rightarrow_i$'; and the conditional imperative enjoining goal is represented using `$\rightarrow_p$' ($\rightarrow_r$, $\Rightarrow_i$ and $\rightarrow_p$ can be read as \textit{implied by r, implied by i} and \textit{implied by p}, respectively).
+\end{sloppypar}
+
+Given the vocabulary of the language $\mathcal{L}_i$, two formulas - one dealing with unconditional imperatives and the other dealing with both unconditional and conditional imperatives are categorized as \textit{imperative formula} $\mathcal{F}_{uci}$ and $\mathcal{F}_{i}$, respectively. These formulas are defined as follows:
+\begin{define}
+The imperative formula ($\mathcal{F}_{uci}$) is formed from the operation of binary connectives $\wedge$, $\Rightarrow_i$ on the set $I$ (unconditional imperatives). 
+\end{define}
+\begin{define}
+The imperative formula ($\mathcal{F}_{i}$) is formed from the operation of binary connectives $\wedge$, $\oplus$, $\rightarrow_r$, $\Rightarrow_i$, and $\rightarrow_p$ on the set $R$, $I$ and $P$. 
+\end{define}
+
+The difference between these two formulas is that $\mathcal{F}_{uci}$ includes only the operation of unconditional imperatives and $\mathcal{F}_{i}$ includes the operation of both unconditional and conditional imperatives. This categorization helps in the valuation of imperatives, which is described later in Section \ref{sec:semantics}.
+
+The different ways in which the imperatives can be combined are described in the next section.
+
+\subsection{Formation rules}
+\label{sec:formation_rules}
+ These formulas are given by the following formation rules:
+\begin{enumerate}
+\item  \label{itm:vton}If $i$ $\in$ $I^v$, then $i'$ $\in$ $I^n$
+\item  If \label{itm:ntov}$i$ $\in$ $I^n$, then $i^{+}$ $\in$ $I^v$
+\item \label{itm:unv}If $i$ $\in$ $I$, then $i$ $\in$ $\mathcal{F}_{uci}$
+\item \label{itm:iandi} If $i$ $\in$ $I$, and $j$ $\in$ $I$, then $i \wedge j$ $\in$ $\mathcal{F}_{uci}$, where $i \neq j$.
+\item \label{itm:iti} If $i$ $\in$ $I$, and $j$ $\in$ $I$, then $i \Rightarrow_i j$ $\in$ $\mathcal{F}_{uci}$, where $i \neq j$.
+\item \label{itm:fafb}If $\rho$ $\in$ $\mathcal{F}_{uci}$, then $\rho$ $\in$ $\mathcal{F}_{i}$.
+\item \label{itm:ri} If $\tau\in R$ and $\varphi \in \mathcal{F}_{i}$, then $\tau \rightarrow_r \varphi \in \mathcal{F}_{i} $.
+\item \label{itm:ip} If $\varphi \in \mathcal{F}_{i}$ and $\theta \in P$, then $\varphi \rightarrow_p \theta \in \mathcal{F}_{i}$.
+\item \label{itm:temporal} If $\varphi \in \mathcal{F}_{i}$ and $\psi \in \mathcal{F}_{i}$, then $\varphi \Rightarrow_i \psi \in \mathcal{F}_{i}$.
+\item \label{itm:and} If $\varphi \in \mathcal{F}_{i}$, $\psi \in \mathcal{F}_{i}$, $\theta_1$ $\in$ $P$, and $\theta_2$ $\in$ $P$, then  $(\varphi \rightarrow_p \theta_1) \wedge (\psi \rightarrow_p \theta_2) \in \mathcal{F}_{i}$, where $\theta_1 \neq \theta_2$.
+\item \label{itm:orvv} If $i \in I$, $j \in I$, and $\theta \in P$, then $(i \rightarrow_p \theta) \oplus (j \rightarrow_p \theta) \in \mathcal{F}_{i}$, where $i \neq j$.
+\end{enumerate}
+
+If a positive imperative such as \textit{``Do A''} ($i^{+}$) appears in $I^v$, then its corresponding negative imperative \textit{``Don't do A"} ($i'$) occurs in the set $I^n$ (formation rule \ref{itm:vton}); and if a negative imperative such as \textit{``Don't do A"} appears in $I^n$, then its corresponding positive imperative occurs in the set $I^v$ (formation rule \ref{itm:ntov}).  A positive unconditional imperative such as \textit{``Do A"}  and the negative unconditional imperative such as \textit{``Don't do A"} are imperative formulas. This is denoted as `$i \in \mathcal{F}_{uci}$' (formation rule \ref{itm:unv}). 
+The operator `$\wedge$' connects the two imperatives when :
+\begin{enumerate}
+\item both are unconditional imperatives ($i,j \in I$), given by the formation rule \ref{itm:iandi}. E.g., \textit{Do A $\wedge$ Do B}.
+\item both are conditional imperatives having different goals ($\varphi \rightarrow_p \theta_1$, $\psi \rightarrow_p \theta_2$), given by the formation rule \ref {itm:and}. E.g., \textit{(Do A to achieve $\theta_1$) $\wedge$ (Do B to achieve $\theta_2)$}, where $\theta_1$ and $\theta_2$ together are leading to the same final goal.
+\end{enumerate}   
+
+Any imperative formula, $\mathcal{F}_{uci}$ is also an imperative formula $\mathcal{F}_{i}$ (formation rule \ref{itm:fafb}). If there occurs a proposition indicating reason or condition $\tau$ specified by an imperative formula $\varphi$, the statement is denoted as a conditional imperative of type \textit{``If $<$condition or reason$>$, then $<$do action$>$''}. This is denoted as $\tau \rightarrow_r \varphi$ (formation rule \ref{itm:ri}). E.g., \textit{If there is a pencil, take it}.
+
+If an imperative $\varphi$ explicitly enjoins a propositional formula from the set `$P$', indicating the goal $\theta$,  it forms a conditional imperative of type \textit{``Do A to achieve $\theta$"}. This is denoted as $\varphi \rightarrow_p \theta$, where $\varphi$ = \textit{``do A"} (formation rule \ref{itm:ip}). E.g., \textit{``Take the pen to write the assessment"}. Here, it is assumed that with the intention of goal, if the agent performs an action ($\varphi$), then the goal ($\theta$) could be achieved. This notion is incorporated in the action performance table of imperative enjoining goal in Section \ref{sec:cig}. Since the achievement of goal occurs after the action is performed, $\varphi$ is formulated as the antecedent and $\theta$ as the consequent.
+
+The operator $\oplus$ connects the two imperatives when the two unconditional imperatives ($i$ and $j$) lead to the same goal $\theta$ (formation rule \ref{itm:orvv}). E.g., \textit{Take pencil to write or Take pen to write}.
+
+The operator `$\Rightarrow_i$' connects the two imperatives when:
+\begin{enumerate}
+\item both are unconditional imperatives ($i,j \in I$) indicating a sequence, given by the formation rule \ref{itm:iti}. E.g., \textit{Do A, then Do B}.
+\item both are conditional imperatives ($\varphi$, $\psi$) indicating a sequence, given by the formation rule \ref{itm:temporal}. E.g., \textit{(If $\tau_1$, do A), then (if $\tau_2$, do B)}, where $\tau_1$, $\tau_2$ $\in$ $R$;  \textit{(do A to achieve $\theta_1$), then (do B to achieve $\theta_2$)}, where $\theta_1$, $\theta_2$ $\in$ $P$.
+\end{enumerate}
+
+Using these imperative formulas, new formulas can be deduced. The deduction rules that help in this process are detailed in the next section.
+\subsection{Deduction rules}
+\label{sec:deduction}
+Let $ i^{+},j^{+}  \in I^{+}; i', j' \in I^{n}; \tau \in R; \varphi, \psi$ $\in$ $\mathcal{F}_{i}; ~and~\theta \in P$.\\
+ A set of deduction rules is formulated as follows:
+
+\begin{enumerate}
+\item \textbf{Conjunction Introduction} ($ci$): This rule follows \textit{sa\d{m}ucchya\d{h}} from \mimamsa~and connects the two imperatives with a conjunction operator. 
+\begin{center}
+\AxiomC{$\varphi$}
+\AxiomC{$\psi$}
+\RightLabel{\small{$ci$}}
+\BinaryInfC{$\varphi \wedge \psi$}
+\DisplayProof
+\end{center}
+Example: 
+\begin{center}
+\AxiomC{\textit{Take pen}}
+\AxiomC{\textit{Take paper}}
+\RightLabel{\small{$ci$}}
+\BinaryInfC{\textit{Take pen} $\wedge$ \textit{Take paper}}
+\DisplayProof
+\end{center}
+\item \textbf{Conjunction Elimination} ($ce$): If the two imperatives are connected by the conjunction operator, one of the imperatives can be deduced. This rule functions in a manner similar to the conjunction elimination in propositional logic and is given as follows:
+\begin{center}
+\AxiomC{$\varphi \wedge \psi$}
+\RightLabel{\small{$ce_1$}}
+\UnaryInfC{$\varphi$}
+\DisplayProof
+\hspace{24pt}
+\AxiomC{$\varphi \wedge \psi$}
+\RightLabel{\small{$ce_2$}}
+\UnaryInfC{$\psi$}
+\DisplayProof
+\end{center}
+Example:
+\begin{center}
+\AxiomC{\textit{Take pen} $\wedge$ \textit{Take paper}}
+\RightLabel{\small{$ce_1$}}
+\UnaryInfC{\textit{Take pen}}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{\textit{Take pen} $\wedge$ \textit{Take paper}}
+\RightLabel{\small{$ce_2$}}
+\UnaryInfC{\textit{Take paper}}
+\DisplayProof
+\end{center}
+\item \textbf{Disjunction Introduction}($di$): If ($i^{+} \rightarrow_p p$) occurs with $j'$, then $(i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p)$ can be deduced ($di_1$). Similarly, if ($j^{+} \rightarrow_p p$) occurs with $i'$, then $(i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p)$ can be deduced ($di_2$). These two rules are possible, only when $i^{+}$ and $j^{+}$ are equivalent means leading to the same goal $p$.
+\begin{center}
+\AxiomC{$(i^{+} \rightarrow_p p)$}
+\AxiomC{$j'$}
+\RightLabel{\small{$di_1$}}
+\BinaryInfC{$(i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p)$}
+\DisplayProof
+\hspace{5pt}
+\AxiomC{$(j^{+} \rightarrow_p p)$}
+\AxiomC{$i'$}
+\RightLabel{\small{$di_2$}}
+\BinaryInfC{$(i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p)$}
+\DisplayProof
+\end{center}
+Example:
+\begin{center}
+\AxiomC{\textit{Take pen to write}}
+\AxiomC{\textit{Don't take pencil}}
+\RightLabel{\small{$di_1$}}
+\BinaryInfC{(\textit{Take pen to write}) $\vee$ (\textit{Take pencil to write})}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{\textit{Take pencil to write}}
+\AxiomC{\textit{Don't take pen}}
+\RightLabel{\small{$di_2$}}
+\BinaryInfC{(\textit{Take pen to write}) $\vee$ (\textit{Take pencil to write})}
+\DisplayProof
+\end{center}
+\item \label{itm:de} \textbf{Disjunction Elimination} ($de\_pv$,~$de\_nv$): If $(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$ occurs with $i^{+}$ in the set of premises, then $j'$ can be deduced. This is drawn from restrictive injunction (\textit{niyamavidhi}) of \mimamsa. Similarly if $(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$ occurs with $j'$ in the set of premises, then $i^{+}$ can be deduced. This is drawn from exclusive injunction (\textit{parisa\d{n}khyavidhi}). 
+\begin{center}
+\AxiomC{$(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$}
+\AxiomC{$i^{+}$}
+\RightLabel{\small{$de\_nv$}}
+\BinaryInfC{$j'$}
+\DisplayProof
+\end{center}
+\begin{center}
+\hspace{5pt}
+\AxiomC{$(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$}
+\AxiomC{$j'$}
+\RightLabel{\small{$de\_pv$}}
+\BinaryInfC{$i^{+}$}
+\DisplayProof
+\end{center}
+Example:
+\begin{center}
+\AxiomC{(\textit{Take pen to write}) $\vee$ (\textit{Take pencil to write})}
+\AxiomC{\textit{Take pen to write}}
+\RightLabel{\small{$de\_nv$}}
+\BinaryInfC{\textit{Don't take pencil}}
+\DisplayProof
+\end{center}
+\begin{center}
+\hspace{5pt}
+\AxiomC{(\textit{Take pen to write}) $\vee$ (\textit{Take pencil to write})}
+\AxiomC{\textit{Don't take pencil}}
+\RightLabel{\small{$de\_pv$}}
+\BinaryInfC{\textit{Take pen}}
+\DisplayProof
+\end{center}
+\item \label{itm:ci} \textbf{Conditional Introduction} ($cni$): Three cases can be considered as shown below.
+\begin{enumerate}
+\item For conditional imperative enjoning reason ($cir$) $\tau \rightarrow_r \varphi$, let $X$ = $\tau$, $Y$ = $\varphi$ and $w$ = $r$.
+\item For conditional imperative enjoining action ($cia$) $\varphi \Rightarrow_i \psi$, let $X$ = $\varphi$, $Y$ = $\psi$ and $w$ = $i$.
+\item For conditional imperative enjoining goal ($cig$) $\varphi \rightarrow_p \theta$, let $X$ = $\varphi$, $Y$ = $\theta$ and $w$ = $p$.
+\end{enumerate}
+If $X$ is assumed, leading towards $Y$ in all these three cases, then $X \rightarrow_w Y$ can be deduced. 
+\begin{center}
+\AxiomC{$[X]$}
+\noLine
+\UnaryInfC{$\vdots$}
+\noLine
+\UnaryInfC{$Y$}
+\RightLabel{\small{$cni$}}
+\UnaryInfC{$X \rightarrow_w Y$}
+\DisplayProof
+\end{center}
+Example:
+\begin{center}
+\AxiomC{[\textit{The pen is nearby}]}
+\noLine
+\UnaryInfC{$\vdots$}
+\noLine
+\UnaryInfC{\textit{Take the pen}}
+\RightLabel{\small{$cni\_cir$}}
+\UnaryInfC{\textit{The pen is nearby} $\rightarrow_r$ \textit{Take the pen}}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{[\textit{Write on paper}]}
+\noLine
+\UnaryInfC{$\vdots$}
+\noLine
+\UnaryInfC{\textit{Then fold the paper}}
+\RightLabel{\small{$cni\_cia$}}
+\UnaryInfC{\textit{Write on paper} $\rightarrow_i$ \textit{Then fold it}}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{[\textit{Take the pen}]}
+\noLine
+\UnaryInfC{$\vdots$}
+\noLine
+\UnaryInfC{\textit{Pen is in the hand}}
+\RightLabel{\small{$cni\_cig$}}
+\UnaryInfC{\textit{Take the pen} $\rightarrow_p$ \textit{Pen is in the hand}}
+\DisplayProof
+\end{center}
+\item \textbf{Conditional Elimination} ($cne$): With the previous assumption of $X$, $Y$ and $w$, the conditional elimination rule is given as:
+\begin{center}
+\AxiomC{$X$}
+\AxiomC{$X \rightarrow_w Y$}
+\RightLabel{\small{$cne$}}
+\BinaryInfC{$Y$}
+\DisplayProof
+\end{center}
+Example:
+\begin{center}
+\AxiomC{\textit{The pen is nearby}}
+\AxiomC{\textit{The pen is nearby} $\rightarrow_r$ \textit{Take the pen}}
+\RightLabel{\small{$cne\_cir$}}
+\BinaryInfC{\textit{Take the pen}}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{\textit{Write on paper}}
+\AxiomC{\textit{Write on paper} $\rightarrow_i$ \textit{Then fold it}}
+\RightLabel{\small{$cne\_cia$}}
+\BinaryInfC{\textit{Then fold it}}
+\DisplayProof
+\end{center}
+\begin{center}
+\AxiomC{\textit{Take the pen}}
+\AxiomC{\textit{Take the pen} $\rightarrow_p$ \textit{Pen is in the hand}}
+\RightLabel{\small{$cne\_cig$}}
+\BinaryInfC{\textit{Pen is in the hand}}
+\DisplayProof
+\end{center}
+\end{enumerate}
+These deduction rules can be used in deriving the conclusion from a given set of premises. The definition for this proof is given as follows:
+\begin{define}
+If $\varphi_1$, $\varphi_2$,$\cdots$,$\varphi_n$ are premises, and $\psi$ is the conclusion, then by repeated application of deduction rules, a proof for `$\psi$' can be obtained. If the premise is from the sets $R$ and $P$ and the conclusion from the set $P$, propositional deduction rules apply. 
+
+This process of deriving the conclusion from the given premises is given by Equation \ref{eq:seq}.
+\begin{equation}
+\label{eq:seq}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash \psi
+\end{equation}
+\end{define}
+
+\subsection{Proofs using the deduction rules}
+A few examples demonstrating the methodology to obtain the proofs from the given premises to the conclusion are shown below. 
+
+\textbf{Example 1}: According to \mimamsa, if options are available, optional rule (\textit{vikalpa}) suggests to choose one option and not all (Section \ref{sec:rules}). This rule can be derived from the rules $de$ and $ci$ as shown below.
+\begin{center}
+\AxiomC{$(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$}
+\AxiomC{$i^{+}$}
+\RightLabel{\small{$de\_nv$}}
+\BinaryInfC{$j'$}
+		\AxiomC{$(i^{+} \rightarrow_p \theta) \vee (j^{+} \rightarrow_p \theta)$}
+		\AxiomC{$j'$}
+		\RightLabel{\small{$de\_pv$}}
+		\BinaryInfC{$i^{+}$}
+	\RightLabel{$ci$}
+	\BinaryInfC{$j' \wedge i^{+}$}
+				
+\DisplayProof
+\end{center}
+For instance, using $de\_nv$ and $de\_pv$ \textit{``Don't take pencil"} and \textit{``Take pen"} can be derived as shown in item \ref{itm:de}. The application of the rule $ci$ to these statements are given below.
+\begin{center}
+\AxiomC{\textit{Don't take pencil}}
+\AxiomC{\textit{Take pen}}
+\RightLabel{$ci$}
+\BinaryInfC{(\textit{Don't take pencil}) $\wedge$ (\textit{Take pen})}				
+\DisplayProof
+\end{center}
+
+\textbf{Example 2:} $i_1, i_2, (i_1 \rightarrow_p p_1), (i_2 \rightarrow_p p_2) \vdash p_1 \wedge p_2$
+\begin{center}
+\AxiomC{$i_1$}
+\AxiomC{$(i_1 \rightarrow_p p_1)$}
+\RightLabel{\small{$cne\_cig$}}
+\BinaryInfC{$p_1$}
+		\AxiomC{$i_2$}
+		\AxiomC{$(i_2 \rightarrow_p p_2$)}
+		\RightLabel{\small{$cne\_cig$}}
+		\BinaryInfC{$p_2$}
+	\RightLabel{\small{$\wedge_i$ \textit{from propositional logic}}}
+	\BinaryInfC{$p_1 \wedge p_2$}
+				
+\DisplayProof
+\end{center}
+
+\textbf{Example 3}: $\tau, (\tau \rightarrow_r i_1), (i_1 \Rightarrow_i i_2), (i_2 \rightarrow_p \theta) \vdash \theta$
+\begin{center}
+\AxiomC{$\tau$}
+\AxiomC{$(\tau \rightarrow_r i_1)$}
+\RightLabel{\small{$cne\_cir$}}
+\BinaryInfC{$i_1$}
+\AxiomC{$(i_1 \Rightarrow_i i_2)$}
+\RightLabel{\small{$cne\_cia$}}
+\BinaryInfC{$i_2$}
+\AxiomC{$(i_2 \rightarrow_p \theta)$}
+\RightLabel{\small{$cne\_cig$}}
+\BinaryInfC{$\theta$}
+\DisplayProof
+\end{center}
+
+\textbf{Example 4}: $i_1 \wedge i_2,~i_2 \wedge i_3~\vdash i_1 \wedge i_3$
+\begin{center}
+\AxiomC{$i_1 \wedge i_2$}
+\RightLabel{\small{$ce_1$}}
+\UnaryInfC{$i_1$}
+\AxiomC{$i_2 \wedge i_3$}
+\RightLabel{\small{$ce_2$}}
+\UnaryInfC{$i_3$}
+\RightLabel{\small{$ci$}}
+\BinaryInfC{$i_1 \wedge i_3$}
+\DisplayProof
+\end{center}
+
+\textbf{Example 5}: $r, r \rightarrow_r i_1, i_2 \vdash i_1 \wedge i_2$
+\begin{center}
+\AxiomC{$r$}
+\AxiomC{$r \rightarrow_r i_1$}
+\RightLabel{\small{$cne_{cir}$}}
+\BinaryInfC{$i_1$}
+\AxiomC{$i_2$}
+\RightLabel{\small{$ci$}}
+\BinaryInfC{$i_1 \wedge i_2$}
+\DisplayProof
+\end{center}
+
+\textbf{Example 6}: $(i_1 \wedge i_2) \rightarrow_p p \vdash (i_1 \rightarrow_p p) \wedge (i_2 \rightarrow_p p)$
+\begin{center}
+\AxiomC{$(i_1 \wedge i_2) \rightarrow_p p$}
+\RightLabel{\small{$ce_1$}}
+\UnaryInfC{$i_1 \rightarrow_p p$}
+\AxiomC{$(i_1 \wedge i_2) \rightarrow_p p$}
+\RightLabel{\small{$ce_2$}}
+\UnaryInfC{$i_2 \rightarrow_p p$}
+\RightLabel{\small{$ci$}}
+\BinaryInfC{$(i_1 \rightarrow_p p) \wedge (i_2 \rightarrow_p p)$}
+\DisplayProof
+\end{center}
+
+\section{\uppercase{Semantics}}
+\label{sec:semantics}
+The syntax (Section \ref{sec:syntax}) describes the various ways in which imperatives could be formulated and deduced. These imperatives acquire the values $S$, $V$ and $N$ based on the performance or non-performance of actions. This section describes the evaluation of imperatives in terms of the values, $S$, $V$ and $N$.
+
+Imperatives from the set $I$ belonging to the formula $\mathcal{F}_{uci}$ take the values of $S$ or $V$ and imperatives belonging to the formula $\mathcal{F}_{i}$ take the values of $S$, $V$ and $N$. 
+The valuation $\mathcal{E(\varphi)}$, where $\varphi \in \mathcal{F}_i$, and valuation $\mathcal{E(\rho)}$, where $\rho \in \mathcal{F}_{uci}$ are given by Equations \ref{eq:valcond} and \ref{eq:valuncond}, respectively. 
+\begin{equation}
+\label{eq:valcond}
+\mathcal{E(\varphi)} = \{S,V,N\}
+\end{equation}
+\begin{equation}
+\label{eq:valuncond}
+\mathcal{E(\rho)} = \{S,V\}
+\end{equation} 
+Valuation $\mathcal{E(\tau)}$ and $\mathcal{E(\theta)}$, where  $\tau \in R$ and $\theta \in P$ are given by Equation \ref{eq:valrg}, where $\top$ = \textit{true} and $\bot$ = \textit{false}.
+\begin{equation}
+\label{eq:valrg}
+\mathcal{E(\tau)} = \mathcal{E(\theta)} = \{\top,\bot\}
+\end{equation}
+
+The evaluation of imperatives to $S$, $V$ and $N$ for the various formation rules listed in Section \ref{sec:formation_rules} are described in the following sections.
+\subsection{Relation between $i^{+}$ and $i'$}
+ Let $i^{+} \in I^v$ and $i' \in I^n$; $\tau \in R; \theta \in P$. The relation between $i^{+}$ and $i'$ is given by the definitions \ref{def:vnv} and \ref{def:cnv}.
+\begin{define}
+\label{def:vnv}
+In unconditional imperatives, satisfaction of $i^{+}$ is the violation of $i'$ and the violation of $i^{+}$ is the satisfaction of $i'$. 
+\end{define}
+For instance, let $i^{+}$ be \textit{``Do A"} and the counterpart $i'$  be \textit{``Do not do A"}. If the action according to $i^{+}$ is performed, then it acquires the value of $S$. This performance of action implies the non-performance of the action according to $i'$. Therefore this imperative acquires the value $V$. Similarly, when $i'$ acquires the value of $S$, $i^{+}$ gets the value $V$. This is shown in Table \ref{tab:nv} and an example is given in Table \ref{tab:nveg}.
+\begin{table}[h]
+\caption{Relation between $i^{+}$ and $i'$ in unconditional imperatives}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$i^{+}$ & $i'$ \\
+\hline
+S & V \\
+\hline
+V  & S \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:nv}
+\end{table}
+\begin{table}[h]
+\caption{Relation between $i^{+}$ and $i'$ :Example}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textit{Take a pen}($i^{+})$ & \textit{Don't take the pen}($i'$) \\
+\hline
+\textit{Pen is taken} (S) & \textit{Pen is not taken} (V) \\
+\hline
+\textit{Pen is not taken} (V) & \textit{Pen is taken} (S)\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:nveg}
+\end{table}
+\begin{define}
+\label{def:cnv}
+In the case of conditional imperatives, if goal $\theta$ or reason $\tau$ is \textit{true},  then the satisfaction of $i^{+}$ is the violation of $i'$ and the violation of $i^{+}$ is the satisfaction of $i'$; if $\theta$ or $\tau$ is \textit{false}, then values of both $i^{+}$ and $i'$ are $N$.
+\end{define}
+
+For instance, let the imperatives be ``\textit{To achieve $\theta$, Do A}" and ``\textit{If $\tau$, then Do A}". If the goal or reason is true ($\mathcal{E(\tau)} = \mathcal{E(\theta)} = \top$), then the satisfaction of ``\textit{Do A}" implies the violation of ``\textit{Don't do A}". Similarly the violation of ``\textit{Do A}" implies the satisfaction of ``\textit{Don't do A}". However, if the goal or reason is false ($\mathcal{E(\tau)} = \mathcal{E(\theta)} = \bot$), the performance or non-performance of actions do not yield the desired objective. Hence, the value in this case leads to $N$. This is shown in Table \ref{ta:tfsv} and examples in Tables \ref{ta:tfsvthetaeg} and \ref{ta:tfsvtaueg}.
+\begin{table}[h]
+\caption{Relation between $i^{+}$ and $i'$ in conditional imperatives with $\tau/\theta$}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$\tau/\theta$&$i^{+}$ & $i'$ \\
+\hline
+$\top$ & S & V \\
+\hline
+$\top$ & V  & S \\
+\hline
+$\bot$ & N & N \\
+\hline
+\end{tabular}
+\end{center}
+\label{ta:tfsv}
+\end{table}
+\begin{table}[h]
+\caption{Relation between $i^{+}$ and $i'$ with $\theta$: Example}
+\begin{center}
+\begin{tabular}{|p{4 cm}|p{3.8 cm}|p{3.8 cm}|}
+\hline
+\textit{Intention to stay dry} ($\theta$)& \textit{Take an umbrella} ($i^{+}$) & \textit{Don't take an umbrella} ($i'$) \\
+\hline
+\textit{Intention to stay dry is true} ($\top$) & \textit{taken an umbrella} (S) & \textit{not taken the umbrella} (V) \\
+\hline
+\textit{Intention to stay dry is true} ($\top$) & \textit{not taken the umbrella} (V)  & \textit{taken an umbrella} (S) \\
+\hline
+\textit{Intention to stay dry is false} ($\bot$) & \textit{no intention to stay dry} (N) & \textit{no intention to stay dry} (N) \\
+\hline
+\end{tabular}
+\end{center}
+\label{ta:tfsvthetaeg}
+\end{table}
+\begin{table}[h]
+\caption{Relation between $i^{+}$ and $i'$ with $\tau$: Example}
+\begin{center}
+\begin{tabular}{|p{3.7 cm}|p{3.7 cm} |p{4 cm}|}
+\hline
+\textit{It is raining} ($\tau$)&\textit{take an umbrella} ($i^{+}$) & \textit{don't take an umbrella}($i'$) \\
+\hline
+\textit{It is raining} ($\top$) & \textit{taken an umbrella} (S) & \textit{umbrella not taken}(V) \\
+\hline
+\textit{It is raining} ($\top$) & \textit{umbrella not taken} (V)  & \textit{taken an umbrella} (S) \\
+\hline
+\textit{It is not raining} ($\bot$) & \textit{no intention to stay dry} (N) & \textit{no intention to stay dry} (N) \\
+\hline
+\end{tabular}
+\end{center}
+\label{ta:tfsvtaueg}
+\end{table}
+The evaluation of imperative statements varies when connected with binary operators. This evaluation is described in detail below. 
+
+\subsection{Imperative enjoining goal ($\varphi \rightarrow_p \theta$)}
+\label{sec:cig}
+ An imperative enjoining goal ($\varphi \rightarrow_p \theta$) evaluates to $S$ if the intention to reach towards the goal is true ($\mathcal{E(\theta)} = \top$) and the imperative is satisfied ($\mathcal{E(\varphi)} = S)$. It evaluates to $V$, if the intention to reach towards the goal is true ($\mathcal{E(\theta)} = \top$) and the imperative is violated ($\mathcal{E(\varphi)} = V$). It evaluates to $N$, if there does not exist an intention to reach towards the goal ($\mathcal{E(\theta)} = \bot$), regardless of the imperative remaining at $S$ or $V$. If $\mathcal{E(\varphi)} = N$, then it evaluates to $N$. This is given by Equation \ref{eq:pur} and shown in Table \ref{ta:goal}.  
+\begin{eqnarray}
+\label{eq:pur}
+S \rightarrow_p T &=& S \nonumber \\
+V \rightarrow_p T &=& V \nonumber \\
+S \rightarrow_p F &=& V \rightarrow_p F = N \rightarrow_p T = N \rightarrow_p F = N
+\end{eqnarray}
+\begin{table}
+\begin{center}
+\caption{Conditional imperative enjoining goal}
+\label{ta:goal}
+\begin{tabular}{|c|c|c|}
+\hline
+$\varphi$ & $\theta$ &  $\varphi$ $\rightarrow_p$ \\
+\hline
+$S$ & $\top$ & $S$  \\
+\hline
+$S$ & $\bot$ & $N$  \\
+\hline
+$V$ & $\top$ & $V$  \\
+\hline
+$V$ & $\bot$ & $N$ \\
+\hline
+$N$ & $\top$ & $N$  \\
+\hline
+$N$ & $\bot$ & $N$  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Example:
+Let $\varphi$ = \textit{``If the pen is nearby, take it"} and $\theta$ = \textit{``pen in hand"}. Two cases can be considered here, i.e., \textit{the pen is nearby} and \textit{the pen is not nearby}, which are analysed below.
+\begin{enumerate}
+\item \textit{The pen is nearby}: If the agent has the intention to have the \textit{pen in hand} and then if it performs the action of \textit{taking the pen}, then $\mathcal{E}(\varphi$ $\rightarrow_p$ $\theta$) = $S$. If the agent has the intention to have the \textit{pen in hand}, but does not perform the action of \textit{taking the pen}, then $\mathcal{E}(\varphi$ $\rightarrow_p$ $\theta$) = $V$. If the agent does not have the intention to have the \textit{pen in hand}, then $\mathcal{E}(\varphi$ $\rightarrow_p$ $\theta$) = $N$. This imperative is evaluated to $N$, even if the agent performs or does not perform the action. 
+\item \textit{The pen is not nearby}: In this case $\mathcal{E}(\varphi) = N$ (Section \ref{sec:imr}. Even if the intention of goal is present, $\mathcal{E}(\varphi$ $\rightarrow_p$ $\theta$) = $N$
+\end{enumerate}
+\subsection{Imperative enjoining reason ($ \tau \rightarrow_r \varphi$)}
+\label{sec:imr}
+This type of conditional imperative enjoins reason ($\tau$) for performing an action, indicated by the imperative ($\varphi$). The conditional imperative ($ \tau \rightarrow_r \varphi$ ) evaluates to $S$ if the reason is true ($\mathcal{E(\tau)} = \top$) and the imperative is satisfied ($\mathcal{E(\varphi)} = S$). It evaluates to $V$ if the reason is true ($\mathcal{E(\tau)} = \top$) and imperative is violated ($\mathcal{E(\varphi)} = V$). If the reason is false ($\mathcal{E(\tau)} = \bot$), it is assumed that performance or non performance of action does not fetch the desired result. In such cases, this conditional imperative evaluates to $N$. If $\mathcal{E(\varphi)} = N$, then $ \tau \rightarrow_r \varphi$ evaluates to $N$. This is given by Equation \ref{eq:reason} and is shown in Table \ref{ta:reason}.
+\begin{eqnarray}
+\label{eq:reason}
+T \rightarrow_r S &=& S \nonumber \\
+T \rightarrow_r V &=& V \nonumber \\
+T \rightarrow_r N &=& F \rightarrow_r S = F \rightarrow_r V  = F \rightarrow_r N =N 
+\end{eqnarray}
+\begin{table}
+\begin{center}
+\caption{Conditional imperatives enjoining reason}
+\label{ta:reason}
+\begin{tabular}{|c|c|c|}
+\hline
+ $\tau$ & $\varphi$& $\tau$ $\rightarrow_r$ $\varphi$  \\
+\hline
+ $\top$ & $S$ & $S$  \\
+\hline
+ $\top$ & $V$ & $V$ \\
+\hline
+ $\top$ & $N$ & $N$  \\
+\hline
+ $\bot$ & $S$ & $N$ \\
+\hline
+$\bot$ &$V$&$N$ \\
+\hline
+$\bot$ &$N$ &$N$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Using conditional imperative enjoining reason and goal, statements of type ``\textit{If $\tau$, do action $\varphi$, to achieve $\theta$}" can be expressed as $\tau \rightarrow_r \varphi$. 
+For example, \textit{``Since grandmother is weak ($\tau$), take this piece of cake ($\varphi$) to strengthen her ($\theta$)"}  can be expressed as `($\tau \rightarrow_r \varphi) \rightarrow_p \theta$'. Two cases can be analysed here, when: (i) the intention to \textit{strengthen the grandmother} is present and (ii) the intention to \textit{strengthen the grandmother} is not present. These are described below.
+\begin{enumerate}
+\item Intention to \textit{strengthen the grandmother} is \textit{true}: If \textit{the grandmother is weak} and the \textit{cake is taken}, then $\mathcal{E}((\tau \rightarrow_r \varphi) \rightarrow_p \theta$) = $S$. If \textit{the grandmother is weak} and the \textit{cake is not taken}, then $\mathcal{E}((\tau \rightarrow_r \varphi) \rightarrow_p \theta$) = $V$. If \textit{the grandmother is not weak}, then $\mathcal{E}((\tau \rightarrow_r \varphi) \rightarrow_p \theta$) = $N$. 
+\item Intention to \textit{strengthen the grandmother} is \textit{false}: Regardless of whether \textit{the grandmother is sick or not} and whether the action is performed or not, $\mathcal{E}((\tau \rightarrow_r \varphi) \rightarrow_p \theta$) = $N$. This is because the intention to achieve the goal is \textit{false} in the first place.    
+\end{enumerate}
+
+\subsection{Imperatives enjoining sequence of actions ($\varphi \Rightarrow_i \psi$)}
+An imperative ($\varphi$) enjoining another imperative ($\psi$) indicating the temporal nature of actions evaluates to $S$ when both imperatives take the value of $S$; and evaluates to $V$, when one of the imperatives takes the value of $V$; it evaluates to $N$ if one or both imperatives take the value of $N$. This is given by Equation \ref{eq:imperative} and represented in Table \ref{ta:action}.
+\begin{eqnarray}
+\label{eq:imperative}
+S \Rightarrow_i S &=& S \nonumber\\
+S \Rightarrow_i V &=& V \Rightarrow_i S = V \Rightarrow_i V = V \nonumber\\
+N \Rightarrow_i S &=& S \Rightarrow_i N = N \nonumber \\
+N \Rightarrow_i V &=& V \Rightarrow_i N = N \Rightarrow_i N = N
+\end{eqnarray}
+\begin{table}
+\begin{center}
+\caption{Imperatives enjoining sequence of actions}
+\label{ta:action}
+\begin{tabular}{|c|c|c|}
+\hline
+$\varphi$ & $\psi$ &  $\varphi \Rightarrow_i \psi $ \\
+\hline
+ $S$ & $S$ & $S$ \\
+\hline
+$S$ & $V$ & $V$ \\
+\hline
+$V$ & $S$ & $V$ \\
+\hline
+ $V$ & $V$ & $V$ \\
+\hline
+ $N$ & $S/V/N$ & $N$ \\
+\hline
+ $S/V/N$ & $N$ & $N$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Example: Two cases can be considered here, where $\varphi$, $\psi$ are (i) unconditional and (ii) are conditional imperatives. These are described below.
+\begin{enumerate}
+\item Let $\varphi$ = \textit{``Write on paper"} and \textit{``Then fold it"}. If both these actions are performed one following the other (\textit{writing on paper}, \textit{then folding it}), then $\mathcal{E}(\varphi \Rightarrow_i \psi) = S$. Else, it is evaluated to $V$.
+\item Let $\varphi$ = ``\textit{Write on paper} $\rightarrow_p$ \textit{Assessment written}" and $\psi$ = ``\textit{Then fold it} $\rightarrow_p$ \textit{Completed the assessment}". $\varphi \Rightarrow_i \psi$ is evaluated to $S$ and $V$ in a similar sense mentioned above. However, if $\mathcal{E}(\varphi) = N$ or $\mathcal{E}(\psi) = N$, then $\mathcal{E}(\varphi \Rightarrow_i \psi) = N$, i.e., if the intention to achieve the goal is \textit{false} (\textit{there is no intention to complete the assessment}) in either one or both imperatives $\varphi$ and $\psi$, then $\mathcal{E}(\varphi \Rightarrow_i \psi) = N$.
+\end{enumerate}
+
+\subsection{Conjunction ($\varphi \wedge \psi$)}
+Conjunction of two unconditional imperatives takes the value $S$ if both imperatives are satisfied; and takes the value $V$ otherwise. Conjunction of two conditional imperatives take the value of $N$, if either one or both imperatives take the value of $N$. This operation is shown in Table \ref{ta:condis} and is given by Equation \ref{eq:con}.
+\begin{table}
+\caption{Conjunction and Disjunction of Imperatives}
+\label{ta:condis}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\varphi$ & $\psi$ & $\varphi \wedge \psi$ & $\varphi \oplus \psi$ \\
+$~$ & $~$ & \textbf{Conjunction} & \textbf{Disjunction} \\
+\hline
+$S$ & $S$ & $S$ & $V$ \\
+\hline
+$S$ & $V$ & $V$ & $S$ \\
+\hline
+$S$ & $N$ & $N$ & $S$ \\
+\hline
+$V$ & $S$ & $V$ & $S$ \\
+\hline
+$V$ & $V$ & $V$ & $V$ \\
+\hline
+$V$ & $N$ & $N$ & $V$ \\
+\hline
+$N$ & $S$ & $N$ & $S$ \\
+\hline
+$N$ & $V$ & $N$ & $V$ \\
+\hline
+$N$ & $N$ & $N$ & $N$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{eqnarray}
+\label{eq:con}
+S \wedge S &=& S \nonumber\\
+S \wedge V &=& V\wedge S =  V \wedge V = V  \nonumber\\
+S \wedge N &=& N\wedge S = N \nonumber\\
+V \wedge N &=& N \wedge V = N \wedge N = N
+\end{eqnarray}
+
+Although the operation results in the same value as that of $\varphi \Rightarrow_i \psi$, differences can be seen in the usage of connectives $\Rightarrow_i$ and $\wedge$. The former specifies the temporal perspective of two actions that are to be performed in a sequence (\textit{\'{S}rutikrama in \mimamsa}) and the latter indicates the necessity of performance of two actions irrespective of any sequence (\textit{sa\d{m}uccaya\d{h}}). The differentiation of these two connectives can also be seen in the respective deduction rules, where rules $cni$ and $cne$ are applicable for imperatives enjoining actions and rules $ci$ and $ce$ are applicable for conjunction (Section \ref{sec:deduction}).
+
+Conjunction of unconditional and conditional imperatives through examples is described below.
+\begin{enumerate}
+\item Unconditional imperative: Let $\varphi$ = \textit{``Take the pen"} and $\psi$ = \textit{``Take the paper"}. If both actions (\textit{taking the pen}, \textit{taking the paper}) are performed, then $\mathcal{E}(\varphi \wedge \psi) = S$; else $\mathcal{E}(\varphi \wedge \psi) = V$.
+\item Conditional imperative: Let $\varphi$ = \textit{``Take the pen $\rightarrow_p$ pen in hand"} and $\psi$ = \textit{``(Take the paper $\Rightarrow_i$ keep it on table) $\rightarrow_p$ paper on table"}. $\varphi \wedge \psi$ is evaluated to $S$ and $V$ in a similar sense mentioned above. If either one or both of the imperatives has a $N$ value, i.e., if there is no intention to reach one of the two goals or both goals, $\mathcal{E}(\varphi \wedge \psi) = N$.
+\end{enumerate} 
+
+The operation of conjunction is commutative and associative. This is denoted by equation \ref{eq:commutative} and \ref{eq:associative}, where $\varphi, \psi, \Gamma \in \mathcal{F}_i$. 
+\begin{eqnarray}
+\label{eq:commutative}
+\varphi \wedge \psi = \psi \wedge \varphi \\
+\label{eq:associative}
+\varphi \wedge (\psi \wedge \Gamma) = (\varphi \wedge \psi) \wedge \Gamma
+\end{eqnarray}
+
+\subsection{Disjunction}
+\begin{sloppypar}
+This connective is in accordance with the optional rule (\textit{vikalpa}) of \mimamsa, which suggests the choice of one imperative among the two imperatives. Disjunction behaves in a way analogous to exclusive disjunction in propositional logic formalisms, which is \textit{alternate preserving} in nature \cite{Rescher}. When two imperatives are joined by disjunction, the statement evaluates to $S$ if either one of the two imperatives take the value of $S$; evaluates to $N$ if both disjuncts have the same value of $N$; and  evaluates to $V$ when one imperative has the value of $V$ and the other has $N$, or both imperatives take the value of $V$ or $S$. The operation of disjunction is shown in Table \ref{ta:condis} and given by Equation \ref{eq:dis}.
+\end{sloppypar}
+\begin{eqnarray}
+\label{eq:dis}
+S \oplus V &=& V \oplus S = S \oplus N = N \oplus S = S \nonumber \\
+S \oplus S &=& V \oplus V = V \oplus N = N \oplus V = V \nonumber \\
+N \oplus N &=& N
+\end{eqnarray}
+
+For example, let $\varphi$  = \textit{``Take pen $\rightarrow_p$ to write an assessment"} and $\psi$ = \textit{``Take pencil $\rightarrow_p$ to write an assessment"}. Here, performance of one of the two actions is sufficient to reach the goal. Hence, with the intention achieving the goal, if one of the two actions is performed, i.e., either \textit{pen or pencil is taken}, then $\mathcal{E}(\varphi \oplus \psi) = S$; if both actions are performed or not performed, $\mathcal{E}(\varphi \oplus \psi) = V$; and if there is no intention of \textit{writing the assessment}, then $\mathcal{E}(\varphi \oplus \psi) = N$.
+
+The operation of disjunction is commutative and associative. This is denoted by Equation \ref{eq:discommutative} and \ref{eq:disassociative}, where $i, j, k \in \mathcal{F}_{uci}$ and $\theta \in P$. 
+\begin{eqnarray}
+\label{eq:discommutative}
+(i \rightarrow_p \theta) \oplus (j \rightarrow_p \theta) &=& (j \rightarrow_p \theta) \oplus (i \rightarrow_p \theta) \\
+\label{eq:disassociative}
+(i \rightarrow_p \theta) \oplus ((j \rightarrow_p \theta) \oplus (k \rightarrow_p \theta)) &=& ((i \rightarrow_p \theta) \oplus (j \rightarrow_p \theta)) \oplus \nonumber \\&~&~~~~~~~~~~~~~~~ (k \rightarrow_p \theta)
+\end{eqnarray}
+
+Using these semantic values, the deduction rules can be proved to be valid, in terms of satisfaction. This is demonstrated in the next section.
+
+\section{\uppercase{Soundness}}
+Deduction rules help to derive the conclusion ($\psi$) from the premises ($\varphi_1$,$\varphi_2$,$\cdots$,$\varphi_n$). Here, premises and conclusion can be imperative or propositional formulas. Imperative formulas take the value of $S,V,N$; if the premises are the propositional formula from the sets $R$ and $P$ or the conclusion is a propositional formula from the set $P$, then these take the value of $\top, \bot$. The deduction rules of the propositional logic apply within each of the sets $R$ and $P$. 
+
+A claim can be made that there does not exist a case where the derived conclusion holds the value of $V$ or $N$ or $\bot$, when the given premises stands satisfied ($S$) or true ($\top$). This section demonstrates this claim.
+
+\begin{define}
+ If for all evaluations of $\varphi$ in which $\varphi_1,\varphi_2,\cdots,\varphi_n$ evaluates to $S$ or $\top$, $\psi$ evaluates to $S$ or $\top$, then it can be said that $\varphi_1,\varphi_2,\cdots,\varphi_n$ semantically entail $\psi$. This is given by Equation \ref{eq:entail}.
+\begin{eqnarray}
+\label{eq:entail}
+\varphi_1,\varphi_2,\cdots,\varphi_n \models \psi
+\end{eqnarray}
+\end{define}
+\begin{theorem}
+\label{th:sound}
+ Let $\varphi_1,\varphi_2,\cdots,\varphi_n$  and $\psi$ be imperative or propositional formulas. If $\varphi_1,\varphi_2,\cdots,\varphi_n \vdash \psi$ is valid, then $\varphi_1,\varphi_2,\cdots,\varphi_n \models \psi$ holds.
+\end{theorem}
+\begin{proof}
+This proof is shown as an induction, on the size (number of lines) of the deduction process. 
+
+Let $\varphi$ = $\varphi_1, \varphi_2,\cdots,\varphi_n$ and let $\varphi \supset (\varphi_{s1} \cup \varphi_{s2})$. Let $k$ be the number of lines of the deduction process in the expression $\varphi$ $\vdash$ $\psi$, where $k$ is some natural number. Let $k_1$ and $k_2$ be natural numbers such that $k_1 < k$ and $k_2 < k$, where $k_1 \neq k_2$. At line $k-1$, where $k > 1$ (before the last line of the proof), let the premises yield the conclusion $\chi$ as given in Equation \ref{eq:previous}.
+\begin{equation}
+\label{eq:previous}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash \chi
+\end{equation} 
+
+ If $\varphi_{s1} \vdash \alpha$, $\varphi \vdash \alpha$ and if $\varphi_{s2} \vdash \beta$, then $\varphi \vdash \beta$, where elements in $\varphi_{s1}$ and $\varphi_{s2}$ may be disjoint or overlapped. These two cases are illustrated below with an example:
+ \begin{enumerate}
+\item \textbf{Disjoint}: Let $\varphi$ = $r_1, r_1 \rightarrow_r i_1, r_2, r_2 \rightarrow_r i_2, i_3$, where $\varphi_{s_1}$ = $r_1, r_1 \rightarrow_r i_1$ and $\varphi_{s_2}$ = $r_2, r_2 \rightarrow_r i_2$. Applying the rule $cne (cir)$ to $\varphi_{s_1}$ and $\varphi_{s_2}$, yields $\varphi_{s_1} \vdash i_1$ and $\varphi_{s_2} \vdash i_2$ respectively. Applying the rule $ci$, $\varphi_{s_1}, \varphi_{s_2} \vdash (i_1 \wedge i_2)$. On application of rules $cne (cir)$ at lines $k_1$ and $k_2$, it can be seen that $\varphi \vdash i_1$ and $\varphi \vdash i_2$. At the next line of the proof, by applying the rule $ci$, it can be seen that $\varphi \vdash (i_1 \wedge i_2)$.
+\item \textbf{Overlapped}: Let $\varphi$ = $r_1, r_1 \rightarrow_r i_1, r_2, r_2 \rightarrow_r i_2, i_3$, where $\varphi_{s_1} = r_1, r_1 \rightarrow_r i_1$ and $\varphi_{s_2} = r_2, r_2 \rightarrow_r i_2, r_1 \rightarrow_r i_1$. Applying the rule $cne (cir)$ to $\varphi_{s_1}$ and $\varphi_{s_2}$, yields $\varphi_{s_1} \vdash i_1$ and $\varphi_{s_2} \vdash i_2$ respectively. Applying the rule $ci$, $\varphi_{s_1}, \varphi_{s_2} \vdash (i_1 \wedge i_2)$. On application of rules $cne (cir)$ at lines $k_1$ and $k_2$, it can be seen that $\varphi \vdash i_1$ and $\varphi \vdash i_2$. At the next line of the proof, by applying the rule $ci$, it can be seen that $\varphi \vdash (i_1 \wedge i_2)$.
+\end{enumerate} 
+
+\begin{sloppypar}
+From Equation \ref{eq:previous}, by the induction hypothesis at line $k-1$, $\varphi_1, \varphi_2,\cdots,\varphi_n$ $\models$ $\chi$. Now, at line $k$, any one of the deduction rules may be applied. Using the action performance tables, we can show that whenever the premises take the value of $S$ or $\top$, the conclusion also takes the value of $S$ or $\top$.  
+\end{sloppypar}
+
+\textbf{Base Case}:
+If  $k = 1$, then $\varphi \vdash \varphi$. From the action performance table, whenever $\varphi$ = $S$, $\varphi$ = $S$ as well. Therefore,  $\varphi$ $\models$ $\varphi$. 
+We proceed with the list of deduction rules.
+
+\begin{enumerate}
+\item \textbf{Rule ($ci$)}:\\
+Let at length $k_1$, $\varphi \vdash \alpha$ and at length $k_2$, $\varphi \vdash \beta$. By the induction hypothesis, $\varphi \models \alpha$ and $\varphi \models \beta$. \\
+At line $k$, when the rule `$ci$' is applied, it results in Equation \ref{eq:deduce1}. 
+\begin{eqnarray} 
+\label{eq:deduce1}
+\varphi_1, \varphi_2,\dots,\varphi_n \vdash \alpha \wedge \beta
+\end{eqnarray}
+From the action performance table \ref{ta:condis}, it can be seen that whenever, $\mathcal{E}(\alpha)$ = $S$ and $\mathcal{E}(\beta)$ = $S$, $\mathcal{E}(\alpha \wedge \beta)$ = $S$. Hence, when ($\varphi_1, \varphi_2,\cdots,\varphi_n) \vdash (\alpha \wedge \beta$), ($\varphi_1, \varphi_2,\cdots,\varphi_n) \models (\alpha \wedge \beta$).
+
+\item \textbf{Rule ($ce$)}:\\
+Let at length $k-1$, ($\varphi_1,\varphi_2,\cdots,\varphi_n) \vdash (\alpha \wedge \beta$). By the induction hypothesis, ($\varphi_1,\varphi_2,\cdots,\varphi_n) \models (\alpha \wedge \beta$). \\
+At line $k$, when the rule `$ce_1$' is applied, it results in Equation \ref{eq:deduce2}.  
+\begin{eqnarray}
+\label{eq:deduce2}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash \alpha
+\end{eqnarray}
+From the action performance table \ref{ta:condis}, it can be seen that whenever, $\mathcal{E}(\alpha \wedge \beta)$ = $S$, $\mathcal{E}(\alpha)$ = $S$ as well. Hence, when ($\varphi_1, \varphi_2,\cdots,\varphi_n) \vdash \alpha$,  $(\varphi_1, \varphi_2,\cdots,\varphi_n) \models \alpha$.
+Similarly on application of rule $ce_2$, it can be shown that when $(\varphi_1, \varphi_2,\cdots,\varphi_n) \vdash \beta$, $(\varphi_1, \varphi_2,\cdots,\varphi_n) \models \beta$
+\item \textbf{Rule ($di$)}:\\
+Let at length $k_1$, $\varphi \vdash \ (i^{+} \rightarrow_p p)$ and at line $k_2$, $\varphi \vdash j'$, based on the assumption that $j^{+}$ leads to $p$. By the induction hypothesis $\varphi_{k1} \models \ (i^{+} \rightarrow_p p)$ and $\varphi_{k2} \models j'$. At line $k$, when the rule $di_1$ is applied, it results in Equation \ref{eq:deducedi}
+\begin{eqnarray}
+\label{eq:deducedi}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash (i^{+} \rightarrow_p p ) \vee (j^{+} \rightarrow_p p)
+\end{eqnarray}
+From the action performance table (Table \ref{ta:condis}), when $\mathcal{E}(i^{+} \rightarrow_p p)$ = $S$ and $\mathcal{E}(j')$ = $S$, $\mathcal{E}((i^{+} \rightarrow_p p ) \vee (j^{+} \rightarrow_p p))$ = $S$. Hence, it can be shown that when $\varphi_1, \varphi_2,\cdots,\varphi_n \vdash (i^{+} \rightarrow_p p ) \vee (j^{+} \rightarrow_p p)$, $\varphi_1, \varphi_2,\cdots,\varphi_n \models (i^{+} \rightarrow_p p ) \vee (j^{+} \rightarrow_p p)$. Similarly using the rule $di_2$, it can be shown that $\varphi_1, \varphi_2,\dots,\varphi_n \models (i^{+} \rightarrow_p p ) \vee (j^{+} \rightarrow_p p)$.
+\item \textbf{Rule ($de$)}:\\
+Assume that one of the premises, $\varphi_i$ = $(i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p)$ and at line $k_1$, $(\varphi_1,\varphi_2,\cdots,\varphi_n) \vdash i^{+}$. 
+At line $k$, if the rule $de\_nv$ is applied, it results in $j'$ and if the rule $de\_pv$ is applied it results in $i^{+}$.  
+
+From the action performance table (Table \ref{ta:condis}), when $\mathcal{E}((i^{+} \rightarrow_p p) \vee (j^{+} \rightarrow_p p$)) = $S$ and $\mathcal{E}(i^{+})$ = $S$, $\mathcal{E}(i^{+})$ = $S$ and $\mathcal{E}(j')$ = $S$. 
+
+Hence, it can be shown that when  $(\varphi_1,\varphi_2,\cdots,\varphi_n)\vdash i^{+}$, $(\varphi_1,\varphi_2,\cdots,\varphi_n) \models i^{+}$ and when  $(\varphi_1,\varphi_2,\cdots,\varphi_n) \vdash j'$, $(\varphi_1,\varphi_2,\cdots,\varphi_n)\models j'$.
+\item\textbf{Rule ($cni$)} \\
+Let at length $k_1$, $\varphi \vdash X$ and at length $k_2$, $\varphi \vdash Y$, where: 
+\begin{enumerate}
+\item $X=\tau$ and $Y=\varphi$ for \textit{cir}, 
+\item $X=\varphi$ and $Y= \psi$ for \textit{cia},
+\item $X = \varphi$ and $Y= \theta$ for \textit{cig}.
+\end{enumerate}
+By the induction hypothesis, $\varphi \models X$ and $\varphi \models Y$. At line $k$, when the rule $cni$ is applied, it results in Equation \ref{eq:deduce4}.
+\begin{eqnarray}
+\label{eq:deduce4}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash (X \rightarrow_w Y)
+\end{eqnarray}
+where $w$ = $r$, $i$ and $p$ in the case of \textit{cir}, \textit{cia} and \textit{cig}, respectively. From the action performance tables (Table \ref{ta:goal}, \ref{ta:reason} and \ref{ta:action}), it can be seen that whenever:
+\begin{enumerate}
+\item $\mathcal{E}(X)$ = $\top$ and $\mathcal{E}(Y)$ = $S$, $\mathcal{E}(X \rightarrow_w Y)$ = $S$ (\textit{cir}),
+\item $\mathcal{E}(X)$ = $S$ and $\mathcal{E}(Y)$ = $S$, $\mathcal{E}(X \rightarrow_w Y)$ = $S$ (\textit{cia}),
+\item $\mathcal{E}(X)$ = $S$ and $\mathcal{E}(Y)$ = $\top$, $\mathcal{E}(X \rightarrow_w Y)$ = $S$ (\textit{cig})
+\end{enumerate} 
+Therefore, when \\ $(\varphi_1,\varphi_2,\cdots,\varphi_n) \vdash (X \rightarrow_w Y)$, $(\varphi_1,\varphi_2,\cdots,\varphi_n) \models (X \rightarrow_w Y)$.
+\item \textbf{Rule ($cne$)}: \\
+Let at length $k_1$, $\varphi \vdash X$ and at length $k_2$, $\varphi \vdash (X \rightarrow_w Y)$. By the induction hypothesis, $\varphi \models X$ and $\varphi \models (X \rightarrow_w Y)$. At the length $k$ if the rule $cne$ is applied, it results in Equation \ref{eq:deducecne}.
+\begin{eqnarray}
+\label{eq:deducecne}
+\varphi_1, \varphi_2,\cdots,\varphi_n \vdash Y
+\end{eqnarray}
+From the action performance table (Table \ref{ta:goal}, \ref{ta:reason} and \ref{ta:action}), whenever:
+\begin{enumerate}
+\item $\mathcal{E}(X)$ = $\top$ and $\mathcal{E}(X \rightarrow_w Y) = S$, $\mathcal{E}(Y)$ = $S$ (\textit{cir}),
+\item $\mathcal{E}(X)$ = $S$ and $\mathcal{E}(X \rightarrow_w Y) = S$, $\mathcal{E}(Y)$ = $S$ (\textit{cia}) and
+\item $\mathcal{E}(X)$ = $S$ and $\mathcal{E}(X \rightarrow_w Y) = S$, $\mathcal{E}(Y)$ = $\top$ (\textit{cig})
+\end{enumerate} 
+Therefore when $(\varphi_1, \varphi_2,\cdots,\varphi_n) \vdash X$ and $(\varphi_1, \varphi_2,\cdots,\varphi_n) \vdash (X \rightarrow_w Y)$, $(\varphi_1, \varphi_2,\cdots,\varphi_n) \models Y$.
+\end{enumerate}
+Hence, it is shown that when ($\varphi_1,\cdots,\varphi_n) \vdash \psi$, ($\varphi_1,\cdots,\varphi_n) \models \psi$.
+\end{proof}
+
+The representation of commands along with the deduction rules connects the action performation through the three semantic values $S$, $V$ and $N$. The advantage of this feature over other theories is described in the next chapter.
+

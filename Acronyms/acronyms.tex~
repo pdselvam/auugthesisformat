@@ -1,0 +1,23 @@
+\chapter*{LIST OF SYMBOLS AND ABBREVIATIONS}
+\addcontentsline{toc}{section}{\bfseries LIST OF SYMBOLS AND ABBREVIATIONS}
+
+\setlongtables
+\begin{longtable}
+  {>{\PBS\raggedright\hspace{0pt}}p{3cm}@{}%
+    >{\PBS\raggedright\hspace{0pt}}p{11.5cm}@{}}
+
+  %$A$ & Set of attributes\\ 
+  %$a_t$ & Time attribute\\
+  $!$ & Conversion operator from proposition to imperative in imperative logic; Repetitive actions in dynamic logic  \\
+  $-$, $\neg$, $\sim$  & Negation operator \\
+  $+$, $\vee$, $\cup$ & Disjunction operator \\
+  $X$, $\wedge$ & Conjunction operator \\
+  $;$ & Operator indicating sequence in dynamic logic \\
+  $\rightarrow$ & Conditional operator \\
+  $\leftrightarrow$ & Biconditional operator \\
+  $\diamond$ & Future tense modal operator\\
+  $\alpha$ & Action \\
+  $i^+$ & Positive unconditional imperative \\
+  $i'$ & Negative unconditional imperative \\    
+  \end{longtable}
+%\end{tabular}

@@ -1,0 +1,7 @@
+% Chapter 2
+
+\chapter{\uppercase{Literature Survey}} % Main chapter title
+
+\label{survey} % For referencing
+
+In the work, it is shown that theory is effective \cite{author:06}.

@@ -1,0 +1,128 @@
+% Chapter 1
+
+\chapter{Introduction} % Main chapter title
+
+\label{intro} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%\lhead{Chapter 1. \emph{Chapter Title Here}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Problem Statement}
+This dissertation develops a formalism for representing and evaluating unambiguous instructions specified to a machine/artificial agent. The types of instruction that this work focusses on, are listed in Section \ref{sec:type}.
+\section{Inspiration}
+\begin{sloppypar}
+Indian scripture categorize knowledge into fourteen domains. These are: (i) the four Vedas (\textit{Rigveda}, \textit{Yajurveda}, \textit{S\={a}maveda} and \textit{Atharvaveda}); (ii) six auxiliaries to Veda known as \textit{Vedaangas}; (iii) a discussion on Vedas, Mim\={a}\.{m}s\={a}; (iv) logic, \textit{ny\={a}ya}; (v) mythology, \textit{Puran\={a}s}; (vi) and epics, \textit{itih\={a}sa} \cite{vedas}. Among these, Vedas are considered to be the supreme authority. It is believed to be eternal (\textit{an\={a}di}) and of non-human origin (\textit{apouru\d{s}eya}) and provides guidance for performing the right action, pertaining to rituals. The guidance is provided in the form of Vedic \footnote{Vedic - Pertaining to Veda.} injunctions or commands. The interpretation of Vedas is done through \mimamsa, which was written in the style of aphorisms (\textit{s\={u}tra}) by Sage Jaimini, who is believed to have lived during third century B.C. The exposition of Jaimini's \mimamsa~s\={u}tras was written by Kum\={a}rila Bha\d{t}\d{t}a, (620-703 A.D.) and Pr\={a}bh\={a}kara Mi\'{s}ra, (650-700 A.D.), respectively leading to two schools of thought in \mimamsa~\cite[pp.xxv--xxvi]{mimamsa1}.
+\end{sloppypar}
+
+The interpretation methodologies prescribed by \mimamsa~are not only found useful for resolving ambiguities in Vedic passages, but are also used for interpreting other scriptures such as \textit{Dharma\'{s}\={a}stra} and \textit{ved\={a}nta}. The rules from \mimamsa~have also been used to handle a number of cases in Indian judicial systems \cite[p.619]{mimamsa1}. 
+
+According to \mimamsa, motivation forms the central theme to perform any action. This motivation arises from the final objective of the performance of action. Actions to be performed are stated through injunctions in Veda. \mimamsa~lays down several criteria for interpreting these injunctions. A few instances from a gamut of interpretation techniques are listed below.
+\begin{enumerate}
+\item Injunction can be seen with goal (\textit{phalavidhi}).
+\item Injuction can be combined with other statement indicating a condition or reason to perform an action (\textit{hetu-hetumadbh\={a}va}).
+\item Injunction may occur with other statement indicating the order of performing the action (\textit{\'{s}rutikrama}).
+\end{enumerate}
+These instances can be easily correlated to the natural language instructions given to an artificial agent or robot. For example, consider these instructions:
+\begin{enumerate}
+\item \textit{Cut the square in half to create two triangles}.
+\item \textit{If there is a wall to your left, turn right}
+\item \textit{Go to the breakroom and report the location of the blue box}.
+\end{enumerate}
+The first instruction includes the goal namely ``\textit{to create two triangles}''. There can be many ways, in which the \textit{square could be cut in half}. However, the goal restrics the choice of performing the action \cite{eugenio}. The second instruction is given to a robot in the work of natural language interaction with robots \cite{walker}. This statement holds the condition namely, ``\textit{if there is a wall to your left}'', for performing the action ``\textit{turn right}''. 
+The third instruction is used in the work of translating the natural language directives into Temporal and Dynamic Logic representation for Goal Management and Action Execution \cite{temporalrobot}. This statement indicates two actions to be performed in sequence (\textit{go to the breakroom, then report the location of the blue box}).
+
+These instances indicate that the use of interpretation techniques from \mimamsa~ can ease the representation of instructions given to an artificial agent. Inspired by this philosophy, this dissertation explores the possibility of using \mimamsa~ principles to develop a formalism for representing and evaluating instructions, which denote actions.
+\section{Terminology}
+\label{sec:terminology}
+This section describes the meaning of terms used in this dissertation.
+\subsection{Artificial Agent}
+An agent is intended to be artificial such as a physical robot acting in a real environment or an entity in a virtual environment.
+\subsection{Imperative, Injunction and Instruction}
+According to Oxford Advanced Learner's Dictionary, imperatives, injunctions and instructions are defined as follows:
+\begin{enumerate}
+\item Imperative: ``\textit{The form of a verb that expresses an order; a verb in this form: In 'Go away!' the verb is in the imperative. 'Go away!' is an imperative.}".
+\item Injunction: ``\textit{An official order given by a court of law which demands that sth must or must not be done}".
+\item Instructions: ``\textit{Detailed information on how to do something}".
+\end{enumerate} 
+These words indicate the action to be performed. In this sense, the dissertation uses imperatives, injunctions, commands and instructions interchageably. 
+\subsection{Positive Imperative}
+An imperative statement which specifies the execution of an action is a positive imperative. Eg.,``\textit{Come Little Red Cap}".
+\subsection{Prohibitive statement or Negative Injunction}
+An imperative statement which prohibits a person to do something is a prohibitive statement or negative imperative. Eg., \textit{``Don't talk to strangers"}.
+\subsection{Proposition or Declarative sentences}
+The sentence which can be evaluated to \textit{true} or \textit{false} is a proposition or declarative sentence. Example, ``\textit{The sum of the numbers 3 and 5 equals 8}" \cite{huth}.
+\subsection{Imperative enjoining Reason}
+A statement denoting a \textit{condition} or \textit{reason} that occurs along with the imperative is \textit{imperative enjoining reason}. In this example, ``\textit{Since grandmother is weak, take this piece of cake}", ``\textit{since grandmother is weak}" is the \textit{reason} or \textit{condition} for the imperative ``\textit{take this piece of cake}".
+\subsection{Imperative enjoining Goal}
+A statement that has an imperative along with the goal is \textit{imperative enjoining goal}. Eg., In the statement ``\textit{Take this piece of cake, to strengthen your grandmother}" the imperative \textit{``take this piece of cake"} denotes the goal \textit{``to strengthen your grandmother"}. 
+\subsection{Imperative enjoining temporal action}
+A statement that has two imperatives denoting a sequence of actions is \textit{imperative enjoining temporal action}. Eg., The imperative statement \textit{``Take the pen and write neatly"}, indicates the actions \textit{``Take pen"}, followed by \textit{``write neatly"}. The temporal aspect here refers to the relative sequence between one action and the other and not with respect to the time. 
+\subsection{Types of instructions}
+\label{sec:type}
+The developed formalism is  capable of handling these type of instructions.
+\begin{enumerate}
+\item \label{itm:simple} Simple clear-cut imperatives (\cite{ChrisFox}), such as \textit{``Shut the door"}.
+\item Negative imperatives (\cite{ChrisFox}), like \textit{``Don't come to the party"}.
+\item Imperatives that denote a sequence \cite{Hare}, such as \textit{``Put on a parachute and jump out"}.
+\item Imperatives that denote the condition or reason, like \textit{``If it is raining, take an umbrella"}.
+\item Imperatives that indicate the goal, like \textit{``Exercise well to stay healthy"}.
+\item Imperatives that indicate both reason and goal, like \textit{``Since grandmother is weak, take this piece of cake, to strengthen her"}.
+\item Imperatives that occur with \textit{or}, like \textit{``To write, take the pen or pencil"}.
+\item Imperatives that occur with \textit{and}, such as:
+\begin{itemize}
+\item \textit{``Shut the window and close the door"}.
+\item \textit{``To write, take the pen and to draw, take the pencil"}.
+\item \textit{``If it is raining, take an umbrella and wear a raincoat"}.
+\item \textit{``If it is raining, take an umbrella and if it is not raining, don't take an umbrella"}.
+\end{itemize}
+\end{enumerate}
+\section{Desiderata}
+\label{sec:desire}
+Imperatives can be seen widely in various fields, for instance, in mathematical proofs, ``\emph{Let $x$ be a variable}"; moral instructions to children ``\emph{Respect your elders}";  and instructions for mechanical assembly, ``\emph{Check to see whether the bolt is fixed}". As a part of ISO (International organization for standards), documents of work-instructions are maintained by industries and these work-instructions help to organize tasks performed in the overall process. Though imperatives form an indispensable part in all these areas, not much work has been attempted in recent days to analyse the structure of imperatives \cite{vranas2008}.  
+
+This work aims at analysing the structure of imperatives and develop a formalism that caters to a wide range of fields. The desiderata can be discussed in terms of the representation and reasoning of imperatives that denote actions.
+\subsection{Representation}
+The developed formalism should encompass the instructions seen in every day world. These instructions include simple instructions such as \textit{``Shut the door"} and the prohibitive instructions such as \textit{``Don't shut the door"}. These instructions can be seen as compound instructions such as \textit{``Shut the door and close the window"} and \textit{``Take route A or route B, to reach the destination"}.
+
+Sometimes the imperatives can occur along with propositions like \textit{``If there is rain, take an umbrella"} and \textit{``To strengthen the grandmother, take this piece of cake"}. This combination results in a propositional or imperative evaluation or both \cite{ChrisFox}. 
+
+Imperatives also indicate a temporal ordering as in \textit{``Put on the parachute and jump"} \cite{ChrisFox}. In this example, \textit{``and"} indicates the sequence which is different from the notion of \textit{``conjunction"} used in propositional formulas. 
+
+The proposed formalism should accomodate these categories.
+\label{sec:representation}
+\subsection{Reasoning}
+Imperatives do not hold the value of \textit{true} or \textit{false}. But the behavior of inference resembles propositions \cite{Jorgensen}, \cite{Ross}, \cite{Wright}, \cite{Hare}, \cite{Chellas}, \cite{Segerberg}. For example, from the imperative \textit{``Shut the door and close the window"}, we can infer \textit{``Shut the door"}. This is similar to the propositional conjunction elimination rule. However, the inference capabilities suffer from \textit{Ross Paradox} and \textit{Jorgensen's dielemma} \cite{ChrisFox}, which are described in Section~\ref{sec:jorgensen}. The proposed formalism should be free from these issues.
+
+Researchers have sought different ways to bring these imperatives into the formal logical approach. The reductionist approach translate these imperatives to indicatives in some form so that it lie in accordance with the truth conditions. 
+
+For example, one approach is to predict the imperative such that it will happen in future. For example, \textit{``shut the door"} is converted to the statement \textit{``You will shut the door"}, using the future tense operator. According to Green, this approach can be erroneous, since predictions are made without any formulations of the directive \cite{Green}. 
+
+In another approach the desire is incorporated. For example, \textit{``shut the door"} is converted to the statement \textit{``I want you to shut the door"}, which includes the intention of the person, who issues the command. The problem with this approach is that though the intention may be true, but the actual action implied by the imperative might not actually be performed. Hence it may pose a serious problem in the computational area. For example, if a robot is provided with an instruction \textit{``Bring a cup"}. This gets translated to \textit{``I want you to bring a cup"} and the robot computes this statement as \textit{``true"}, without performing the action of \textit{``bringing the cup"}. 
+
+Several other approaches include the conversion of imperative to deontic logic formalisms,  pseudoimperatives and proof theoretic formalisms. An overview of various approaches and issues is described in Section \ref{sec:implogic}. 
+
+In all these approaches, the truth value is evaluated and then the semantic behavior of the imperative is captured. Instead, a straight forward approach is desired to evaluate the imperative. 
+
+Imperatives denote actions. If an agent is provided with different instructions, leading towards different goals, first it has to determine the goal it has to achieve and then follow that particular instruction. For example, if an agent is provided with two instructions, \textit{``Take route A, to reach city C"}  and \textit{``Take route B, to reach city D"}, then the agent is expected to choose one of the instructions. If the agent chooses the first instruction, then with the intention of \textit{``reaching the city C"}, it has to execute the instruction of \textit{``taking the route A"}. Instead, if the agent intends to \textit{``land in City D"}, but \textit{``takes the route A"}, then it may not reach the intended goal. A formalism to capture this aspect of intentionality in achieving the goal is highly desirable.
+ 
+
+In AI planning, a plan is generated from the given set of action descriptions. These action description formalisms are generally atomic, where for a single action the \textit{preconditions} and \textit{postconditions} are specified. These act as states and a plan is generated indirectly using the states. The details of the available formalisms are described in Section \ref{sec:aiplanaction}. The desired formalism should not only be capable of deriving an action sequence for AI planning, but also should accomodate the representation of concurrent actions and temporal ordering of actions within the formalism itself. 
+
+If an agent is provided with a set of jumbled instructions, it should be able to order those in sequence and execute those to reach the goal. A formalism which helps this process is highly desirable, especially in the areas of task analysis.
+\section{Approach}
+The developed formalisms addresses the aforementioned criteria by incorporating \mimamsa~principles. A few methodologies from \mimamsa~are considered in this work. In particular, the motivation to perform an action (\textit{arthibh\={a}vana}), categorization of injunctions, relation between injunctive and non-injunctive statements (\textit{hetu-hetumadbh\={a}va}), sequencing or ordering of instructions (\textit{\'{s}rutikrama}) and two interpretation rules (\textit{sa\d{m}ucchya\d{h}} and \textit{vikalpa}) from \mimamsa~are borrowed for the construction of the formalism. 
+
+These methodologies serve as a reference point for the basis of the formalism, MIRA (\mimamsa~Inspired Representation of Actions), which deals with instructions that denote actions. It is built with the logical syntactical and semantic structure that consist of formation rules, deduction rules and semantic tables (analogous to truth tables). The syntactic structure operate at the instruction level and the semantics at the level of action performance i.e., in semantics, the instruction is evaluated to three values $S$, $V$ and $N$ denoting $Satisfaction$, $Violation$ and $No~intention~to~reach~the~goal$, respectively. The deduction rules are then proved to be valid using the semantic tables.
+
+The effectiveness of MIRA is illustrated in two areas: (i) AI planning, where MIRA is used for both representation and reasoning and (ii) Task Analysis in Special education, where MIRA acts as a task verifier and reorders the given instructions from a jumbled set of instructions.
+\section{Outline}
+The rest of the dissertation is organized as follows: \\
+Chapter 2: \mimamsa \\
+Chapter 3: Survey of formalisms \\
+Chapter 4: Background of MIRA \\
+Chapter 5: Syntax, Semantics, Soundness, Comparison \\
+Chapter 6: AI planning and Execution \\
+Chater 7: Task analysis in Special Education \\
+Chapter 8: Conclusion \\
+

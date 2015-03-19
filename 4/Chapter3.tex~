@@ -1,0 +1,66 @@
+% Chapter 1
+
+\chapter{Basis of MIRA} % Main chapter title
+
+\label{rw} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+A person guided by Vedic injunctions performs actions as stated in it without the consideration of author/speaker. He assumes the stated injunctions to be consistent and knows that when performed exactly according to the injunctions, the desired objective would be achieved. This assumption is borrowed in this formalism, where the artificial agent is provided with a set of consistent instructions. The agent is expected to effectively execute these instructions in order to reach its goal. 
+
+For example, if the instructions given to an agent are ``\textit{Go near the block ($i_1$), then pick it up ($i_2$) to hold the block ($p$)}", then the agent is expected to move near the block first, then pickup the block. After executing these instructions ($i_1$ and $i_2$), the agent holds the block, which is the goal ($p$). 
+\\ \\
+For successful execution of instructions, \mimamsa~ provides a formula with three requirements, namely Objective, Instruments and Auxiliaries. These requirements to \textit{\={a}rth\={i}bh\={a}van\={a}} (Section \ref{sec:mimamsa}) are restated below.
+\begin{enumerate}
+\item Objective, which indicates the goal by executing the given set of instructions.
+\item Instrument through which the objective can be realised. The actual performance of actions act as the instrument to achieve the objective.
+\item Auxiliaries, which includes the required material and procedure for performing actions. The procedure includes instruction interpretation methodologies, which is substantiated by \mimamsa.
+\end{enumerate}
+
+Inspired by this notion of \textit{\={a}rth\={i}bh\={a}van\={a}}, we assume that the agent is motivated first to execute the given set of instructions. This motivational aspect arises from the agent's intention to achieve the goal, which is indicated by the objective of \textit{\={a}rth\={i}bh\={a}van\={a}}. Once motivated, the agent should perform actions flawlessly, which is indicated by the Instrument of \textit{\={a}rth\={i}bh\={a}van\={a}} and before performing actions, the given set of instructions should be interpreted correctly. This is indicated by the Auxiliaries of \textit{\={a}rth\={i}bh\={a}van\={a}}. Therefore three major factors form the base of the MIRA formalism. These are (i) Motivation, (ii) Instruction Interpretation and (iii) Instructions Execution. The first two factors are addressed according to M\={i}m\={a}\.{m}s\={a}'s methodologies and the third factor is modeled based on imperative logic proposed by Vranas \citeyear{vranas}). These are described below.
+
+\begin{enumerate}
+\item \textbf{Motivation} \\
+The agent should first be motivated as to why the action should be performed. According to M\={i}m\={a}\.{m}s\={a}, motivation or intention to reach the goal (\textit{bh\={a}van\={a}}) plays a vital role in the performance of an action. In the absence of such intention, the action is considered to be unworthy \cite{mimamsa3}. Inspired by this notion, the intention of the goal is identified as the prime requirement of instruction execution (performing an action). Therefore, the basis of the MIRA formalism rests on the principle that \textbf{instructions are executed only with the intention of achieving the goal}. 
+
+\item \textbf{Interpretation of Instructions} \\
+Once motivated to perform actions, the agent needs to interpret instructions correctly. With M\={i}m\={a}\.{m}s\={a}'s methodologies, described in Section \ref{sec:mimamsa}, an injunction can be interpreted in the following ways.
+\begin{enumerate}
+\item A positive injunction (\textit{vidhi}) is considered as a \textbf{positive unconditional imperative} statement as in the example ``\textit{Do $<action~i>$}".
+\item A negative injunction or prohibitory statement (\textit{ni\d{s}edha} is considered as a \textbf{negative unconditional imperative statement} as in the example ``\textit{Don't do $<action~i>$}" or ``\textit{Never do $<action~i>$}".
+\item An injunction enjoining result (\textit{phalavidhi}) is considered as a \textbf{conditional imperative enjoining goal}, since this type of injunction also conveys the fruit of the action. Eg.,``\textit{To achieve $<goal~p>$, do $<action~i>$}".
+\item Causal relation between injunctive and non-injunctive statement (\textit{Hetu-hetumadbh\={a}va}) is considered as a \textbf{conditional imperative enjoining reason}, since the non-injunctive portion of the statement contains the reason or the condition for the performance of action. Eg., ``\textit{If $<condition~r>$, do $<action~i>$}"
+\item Explicit rendering of sequencing of actions (\textit{\'{S}rutikrama}) is considered to be the \textbf{conditional imperative enjoining temporal actions}, since this type of injunctive statement clearly specifies the sequence of action performance. Eg., ``\textit{Do $<action~i_1>$, then do $<action~i_2 >$}" 
+\item In accordance with the obligatory rule of \mimamsa, the operator of \textit{conjunction} is used. This operator ensures the mandatory performance of every stated instruction. The conjunction between instructions is possible when different instructions leading to different purposes, which in turn lead to the same goal are specified. For instance, if the two statements ``\textit{Do $<action~i_1>$, to achieve $p_1$}", ``\textit{Do $<action~i_2>$, to achieve $p_2$}" occur in the instructional passage, which in turn lead to the same final goal ($P$) is specified, then these two imperative statements can be connected using the conjunction operator (and). This results in ``(\textit{Do $<action~i_1>$}) \textbf{and} (\textit{Do $<action~i_2>$})".
+
+\item In a set of instructional passage, if there are more than one instruction leading to the same purpose, then according to the rule of Option (Section \ref{sec:mimamsa}), one among those may be chosen. To denote this rule, the disjunction operator `\textit{or}' is used. For instance, the disjunction operation is possible in imperatives of type \textit{``Do $<action~i_1>$ to achieve $p$"} \textbf{or} \textit{``Do $<action~i_2>$ to achieve $p$"}.  
+\end{enumerate}
+\item \textbf{Execution of instructions}\\
+To evaluate the performance of each action, instructions are formalized in an approach similar to that of imperative logic proposed by Vranas (\citeyear{vranas}) in the following ways: 
+\begin{enumerate}
+\item Unconditional imperative statements are treated as the fundamental units or atoms.
+\item Like Vranas' method, this formalism evaluates imperatives to three values namely, `$S$', `$V$' and `$G_n$'. While `$S$' and `$V$' are in line with Vranas' imperative logic, `$G_n$' indicates the absence of intention to reach the desired objective.
+\item Imperative statements are connected using conjunction, disjunction and conditionals in both methods.
+\end{enumerate}
+However, we differ from Vranas'(\citeyear{vranas}) in the following aspects:
+\begin{enumerate}
+\item This formalism focuses on goal oriented action indicated by the imperative.
+\item According to M\={i}m\={a}\.{m}s\={a}, negative imperative (\textit{Ni\d{s}edha}) is an imperative itself, which prohibits a person from performing an action. Following this notion, in this proposed formalism, the negative imperatives ("\textit{Do not pluck flowers}") are treated in a similar fashion like positive imperatives ("\textit{Take the umbrella}"). However, unlike Vranas' method, the proposed formalism does not use a negation operator to relate the positive and negative imperatives. For instance, according to Vranas, the negation of \textit{``Take the umbrella"} is \textit{``Don't take the umbrella"}. But in this proposed formalism, the positive and negative imperatives are treated separately as two different sets. The former is denoted as a set $I^{+}$ and the latter is denoted as a set $I'$. For instance, if there occurs a positive imperative, \textit{``Take the umbrella"} $\in$ $I^{+}$, then the corresponding negative imperative \textit{``Don't take the umbrella"} belongs to the set $I'$ and if there occurs a negative imperative  \textit{``Don't take the umbrella"} belonging to the set $I'$, then its corresponding positive imperative \textit{``Take the umbrella"} belongs to the set $I^{+}$. 
+\item Vranas treats conditional imperative as a combination of declarative antecedent with imperative consequent. But from the perspective of M\={i}m\={a}\.{m}s\={a}, it can be seen that the conditional imperatives not only occur as a mixture of declarative antecedent with imperative consequent, but also as a combination of two imperatives indicating the temporal nature of actions (\textit{\'{S}rutikrama}). Moreover, in many cases, the declarative part of the antecedent can be seen to hold the explicit indication of the \textbf{intention of goal} and \textbf{reason}. While the former is considered to be the prime requirement behind this proposed formalism, the latter specifies the ground or the reason for an action (specified by the imperative) to be performed. Hence conditional imperatives are categorized into three types in this paper. These are:
+\begin{enumerate}
+\item \textbf{Imperative enjoining goal:} In this type of imperative, the condition indicates the intention of goal explicitly. For instance, in the statement \textit{``If you want to create a simple scaffold, place the plank between two ladders"}, the condition is \textit{``If you want to create a simple scaffold"}, indicating the intention of goal on the agent's part. 
+\item \textbf{Imperative enjoining reason:} The condition is indicated as the ground or reason, for an action to be performed. For instance in the statement \textit{``If it is raining, take an umbrella"}, the condition is \textit{``it is raining"}. 
+\item \textbf{Imperative enjoining temporal actions:} This type of statement enjoins two actions that should be carried out in a sequence as in the statement \textit{``Eat food and drink water"}, which could be recast as \textit{``If you eat food, then drink water"}, where the condition itself is an action specified by the imperative \textit{``Eat food"}. 
+\end{enumerate}
+
+This categorization of imperatives makes it viable for representing actions as preconditions and effects respectively in the field of AI, as detailed in Section \ref{sec:aiplan}. 
+
+\item An unconditional imperative is evaluated to `$S$' or `$V$'. However, since the proposed formalism rests on the intention of goal as the prime factor behind any action, a third value indicating absence of goal\footnote{Absence of goal is to be taken as the absence of intention to reach the goal} ($G_n$) is suggested in addition to `$S$' and `$V$'. This value is different from that of Avoidance ($A$) suggested by Vranas (\citeyear{vranas}) in terms of semantic interpretation. According to Vranas, the value acquired by the negation of context (condition in conditional imperatives) is Avoidance ($A$), whereas in this paper, the value indicating the absence of goal is indicated by `$G_n$'. Since the basis of evaluation is different between the two methods, the resulting values also vary when imperatives are connected by binary operators. This variation was detailed in the MIRA formalism \cite{jis}.
+
+\end{enumerate}
+\end{enumerate}
+
+
+%\lhead{Chapter 1. \emph{Chapter Title Here}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+
+

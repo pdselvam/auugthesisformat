@@ -1,0 +1,56 @@
+\begin{thebibliography}{99}
+
+\bibitem[Author and Author 2006]{author:06}
+Author, F. and Author, S. (2006),
+\newblock
+\newblock `Some publication title' \cite{conference:06}, p 330—331.
+
+\bibitem[Biran{\c c}on et~al. 1994]{BMM94}
+Biran{\c c}on, J., Maisonobe, P., and Merle, M. (1994),
+\newblock `Localisation de syst\`emes diff\'erentiels, stratifications de
+  {W}hitney et condition de {T}hom',
+\newblock {Invent. Math.}, 117:531--550.
+
+\bibitem[Editor and Editor 2006]{conference:06}
+Editor, F. and Editor, S., editors (2006),
+\newblock {`Proceedings of the Xth Conference on XYZ'}.
+
+\bibitem[Fulton 1983]{Ful83}
+Fulton, W. (1983),
+\newblock `Introduction to intersection theory in algebraic geometry',
+\newblock  {Regional Conference Series in Mathematics}, number~54.
+
+\bibitem[Goresky and MacPherson 1981]{GMP81}
+Goresky, M. and MacPherson, R. (1981),
+\newblock `On the topology of complex algebraic maps',
+\newblock  {Algebraic Geometry Proceedings, La R\'abida, Lecture Notes in
+  Mathematics}, number 961.
+
+\bibitem[Kwieci\'nski 1987]{Kwi97}
+Kwieci\'nski, M. (1987),
+\newblock `Mac{P}herson's graph construction',
+\newblock  {Algebraic Geometry, Lecture Notes in Pure and Applied Mathematics},
+  Sert{\"o}z, S., editor, volume 193.
+
+\bibitem[Parusi\'nski and Pragacz 1998]{PP98}
+Parusi\'nski, A. and Pragacz, P. (1998),
+\newblock `Characteristic classes of hypersurfaces and characteristic cycles',
+\newblock preprint.
+
+\bibitem[Pati 1985]{Pat85}
+Pati, V. (1985),
+\newblock {`What is the title??'},
+\newblock PhD thesis, Princeton.
+
+\bibitem[Trang and Mebkhout 1983]{TM83}
+Trang, L.~D. and Mebkhout, Z. (1983),
+\newblock `Vari\'et\'es caract\'er\-istiques et vari\'et\'es polaires',
+\newblock {C. R. Acad. Sc. Paris}, 296:129--132.
+
+\bibitem[von Hicks 2001]{hicks2001}
+von Hicks, III, M. (2001),
+\newblock {`Design of a Carbon Fiber Composite Grid Structure for the GLAST
+  Spacecraft Using a Novel Manufacturing Technique'},
+\newblock Stanford Press, Palo Alto, 1st edition.
+
+\end{thebibliography}

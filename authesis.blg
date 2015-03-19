@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: authesis.aux
+A level-1 auxiliary file: Abstract/abstract.aux
+A level-1 auxiliary file: acknowl.aux
+A level-1 auxiliary file: Acronyms/acronyms.aux
+A level-1 auxiliary file: 1/Chapter1.aux
+A level-1 auxiliary file: 2/Chapter2.aux
+A level-1 auxiliary file: 3/Chapter3.aux
+A level-1 auxiliary file: 5/Chapter5.aux
+A level-1 auxiliary file: 6/Chapter6.aux
+A level-1 auxiliary file: Conclusion/conclusion.aux
+A level-1 auxiliary file: Appendix/appendix.aux
+The style file: auapalike.bst
+A level-1 auxiliary file: lpub/lpub.aux
+Database file #1: references.bib
+You can't pop an empty literal stack for entry author:06
+while executing---line 2201 of file auapalike.bst
+Warning--there's a number but no series in Ful83
+Warning--there's a number but no series in GMP81
+You've used 10 entries,
+            1940 wiz_defined-function locations,
+            547 strings with 5135 characters,
+and the built_in function-call counts, 3511 in all, are:
+= -- 349
+> -- 116
+< -- 13
++ -- 35
+- -- 35
+* -- 295
+:= -- 610
+add.period$ -- 10
+call.type$ -- 10
+change.case$ -- 65
+chr.to.int$ -- 10
+cite$ -- 12
+duplicate$ -- 162
+empty$ -- 250
+format.name$ -- 55
+if$ -- 697
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 8
+newline$ -- 52
+num.names$ -- 33
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 67
+quote$ -- 0
+skip$ -- 124
+stack$ -- 0
+substring$ -- 188
+swap$ -- 30
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 58
+warning$ -- 2
+while$ -- 26
+width$ -- 0
+write$ -- 129
+(There was 1 error message)

@@ -1,0 +1,248 @@
+% Chapter 1
+
+\chapter{\uppercase{M\={i}m\={a}\.{m}s\={a} and The basis for MIRA}} % Main chapter title
+ % For referencing the chapter elsewhere, use \ref{Chapter1} 
+ \label{chap:mimamsa}
+In this chapter, a few concepts from \mimamsa~are described, followed by the background of the formalism.
+\begin{sloppypar}
+\section{\uppercase{M\={i}m\={a}\.{m}s\={a}}
+\label{sec:mimamsa}
+Derived from the sanskrit root \textit{man}, which means ``to \textit{examine} or \textit{investigate}", \mimamsa~investigates the purport and significance of Vedas \cite{vedas}. 
+The Vedic statements in general are categorized into five groups \cite[pp.~xxvi--xxxi]{arthasamgraha} as under:
+\end{sloppypar} 
+\begin{enumerate}
+\item Injunctive statements (\textit{Vidhi}): An injunctive statement directs a person to perform actions. 
+\item Prohibitory statements (\textit{Ni\d{s}edha}): These are similar to \textit{vidhi}, but prohibit a person from performing an action. Example, `\textit{Do not covet the property of others}'.
+\item Hymns (\textit{mantra}): Recitations that form a part of Vedic rituals, which help to remember the actions to be carried out.
+\item Name (\textit{N\={a}\.{m}adheya}): An account of titles of rituals, which are similar to definitions and clauses in modern legislation \cite[p.~603]{mimamsa1}. 
+ \item Corroborative Statements (\textit{Arthav\={a}da}): These encourage actions stipulated by injunctions (\textit{Vidhi}) or discourage actions stated by the prohibitory statements (\textit{Ni\d{s}edha}). 
+\end{enumerate}
+The same vedic statement at different places yield conflicting meanings. Hence it is difficult to interpret these statements directly. To surpass this difficulty, Sage Jaimini composed a number of short aphorisms (\textit{s\={u}tra}), which later came to be known as \textbf{P\={u}rvam\={i}m\={a}\.{m}s\={a} s\={u}tra of Jaimini}. This work has been arranged into twelve chapters. These twelve chapters are divided into various sections (\textit{p\={a}d\={a}s}), which are again split into \textit{adhikar\d{n}as}, each dealing with one subject. In each \textit{adhikar\d{n}a}, a selected single vedic utterance is examined according to the five step process to resolve the conflict. These five steps are \cite[p.~177]{vedas}.
+\begin{enumerate}
+\item First, the subject matter is considered (\textit{vi\'{s}ayav\={a}kya}).
+\item Doubts are raised regarding the meaning of the utterance (\textit{sam\'{s}aya}).
+\item Argument in favor of the subject matter is placed (\textit{p\={u}rvapak\'{s}a}).
+\item Rebuttals are provided against the arguments (\textit{uttarapak\'{s}a}).
+\item Considering the pros and cons, conclusion is determined (\textit{siddh\={a}nta}).
+\end{enumerate}
+
+The first verse in the first \textit{adhikar\d{n}a} deals with the enquiry of duty - 
+\textit{``atath\={a}to dharma jig\d{n}y\={a}s\={a}"} (Now, therefore, an enquiry into the nature of duty). Following this, Sage Jaimini defines the duty as: \\
+``\textit{coda\d{n}\={a} lak\d{s}a\d{n}a\d{h} artha\d{h} dharma\d{h}"} (Duty, which is desirable is indicated by the command or vedic injunction) \cite[p.~1]{mimamsa2}. To this verse, there are objections because \textit{dharma} cannot be known directly. Refuting this argument, Jaimini arrives at the conclusion that \textit{dharma} can be known through Vedic injunctions.
+
+The highest form of knowledge is the verbal testimony according to \mimamsa~and this knowledge for the performance of right action comes from Veda. Since Vedas are considered to be of non human origin, there is no person ordaining an act. Instead the verbal endings of injunctive statements (\textit{Vidhi}) prompt a person to perform actions. For example, the verbal root \textit{yajeta} and optative termination \textit{li\d{n}} in the statement, \textit{``svargak\={a}mo yajeta'' } indicate the motivation (\textit{bh\={a}van\={a}}) to perform the sacrifice. 
+Thus \mimamsa~holds that the motivation to act (\textit{bh\={a}van\={a}}) is the centre of semantic organization \cite[p.~154]{mimamsa1}. This feature has also been noticed by McCrea in the work of hierarchial organization in \mimamsa~as, ``For M\={i}m\={a}\d{m}sakas, \textit{bh\={a}van\={a}} in a sentence is more predominant and all other words in the sentence are subordinate to it" \cite{lawrence}. 
+
+\mimamsa~categorizes injunction into different types, thereby helping in the interpretation of Vedas. In one classification, it is categorized into originative injunction, applicatory injunction, injunction denoting qualification and procedural injunction. These four injunctions describe: the acts that are enjoined, the manner they are performed, the appropriateness of person in performing the sacrifice, and ordering the subordinate acts such that it leads to the final principal result, respectively. The applicatory injunction conveys the connection of a subsidiary with the principal act. For example, in the statement \textit{``He sacrifices with curd"}, \textit{curd} is a subsidiary object to the principal act of \textit{sacrificing}. To ascertain the relation between principal and subsidiary objects or acts, six criteria are laid out. These are direct statement (\textit{\'{s}ruti}), indicatory mark (\textit{li\.{n}ga}), sentence (syntactical connection or \textit{v\={a}ka}), context (\textit{prakara\d{n}a}), position (\textit{sth\={a}na}), and etymological sense (\textit{sam\={a}khy\={a}}). These are ordered in a relative manner such that \textit{\'{s}ruti} $>$ \textit{li\.{n}ga} $>$ \textit{v\={a}ka} $>$ \textit{\textit{prakara\d{n}a}} $>$ \textit{sth\={a}na} $>$ \textit{sam\={a}khy\={a}}, with \textit{\'{s}ruti} as the strongest and \textit{sam\={a}khy\={a}} the weakest sense, respectively. If there is a conflict by applying each of these, priority is given to the stronger criteria \cite[p.~xxvii]{arthasamgraha}.
+
+\mimamsa~provides several interpretation rules to arrive at the real meaning. A few of these are given below \cite[p.~586,618]{mimamsa1}.
+\begin{enumerate}
+\item \textit{S\={a}rthakatva} axiom: Every word and sentence must have some meaning and purpose.
+\item \textit{L\={a}ghava} axiom: The shorter construction of the sentence should be preferred.
+\item \textit{Arthaikatva axiom}: Double meaning should be assumed to the word or sentence occurring in the same place. 
+\item \textit{Gu\d{n}apradh\={a}n} axiom: If a word expressing subordinate idea clashes with the principal idea, the former must be adjusted with the latter or altogether disregarded. 
+\item \textit{S\={a}ma\={n}jasya} axiom: Contradiction should not be assumed to any word or sentence, if it could be resolved.
+\item \textit{Vikalpa} axiom: If there is a real contradiction, which cannot be resolved, then one of the contradiction may be considered as an option.
+\end{enumerate}
+Apart from Veda, these axioms are used widely in interpreting rules in daily life (\textit{sm\d{r}ti} rules) and Indian judicial systems. 
+
+This dissertation concentrates on the instruction level interpretation and reasoning, given to a machine/artificial agent. Hence a few aspects from \mimamsa~like motivation for the performance of action (\textit{bh\={a}vana}), Injunctive statement (\textit{Vidhi}) classification, connection between injunctive and non-injunctive statements (\textit{hetu-hetumadbh\={a}va})  and two rules of interpretation based on conjunction (\textit{samucchya}) and disjunction (\textit{vikalpa}) are considered in this work. These are explained in the following sections in the same order.
+
+\subsection{Motivation in \mimamsa}
+\label{sec:bhavana}
+Traditionally two schools of thought on \mimamsa~have existed after the sage Jaimini: One was proposed by Kum\={a}rila Bha\d{t}\d{t}a and the other by Pr\={a}bh\={a}kara. The followers of the former were Bh\={a}\d{t}\d{t}a M\={i}m\={a}\.{m}sakas and the followers of the latter were Pr\={a}bh\={a}kara M\={i}m\={a}\'{m}sakas. Bh\={a}\d{t}\d{t}a M\={i}m\={a}\.{m}sakas categorized \textit{Bh\={a}van\={a}} into two types. These are \cite[p.~179]{mimamsa1}:
+\begin{enumerate}
+ \item \begin{sloppypar}\textit{prera\d{n}\={a}}, which creates an interest in the person to perform action indicated by the optative suffix or the verbal endings in imperatives or commands. This resides at linguistic and psychological level, and is known as \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}}. \end{sloppypar}
+\item \begin{sloppypar}\textit{prav\d{r}tti}, which prompts or initiates a person to perform the action. This level represents the actual activity to reach towards the intended objective, known as \textit{\={a}rth\={i}bh\={a}van\={a}}. \end{sloppypar}
+\end{enumerate}
+\begin{sloppypar}
+\mimamsa~specifies a formula with three requirements to implement the sacrifice. These are: (i) Objective (\textit{s\={a}dhya} or \textit{phala}), (ii) Instrument (\textit{s\={a}dhana} or \textit{kara\d{n}a}) and (iii) Auxiliaries (\textit{itikartavyat\={a}}).  These three requirements are elicited by three questions, namely: (i) What is the objective? (ii) What are the means or instruments to achieve the objective? and (iii) What are the aids or auxiliaries to perform these actions? ({``\textit{k\.{i}m bh\={a}vayet, kena bh\={a}vayet, katha\.{m} bh\={a}vayet}) \cite[p.~179]{mimamsa1}}.
+\end{sloppypar}
+\begin{sloppypar}
+This formula is applied to Vedic injunctions for the effective performance of the sacrifice. The formula as applied to the two senses (\textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} and \textit{\={a}rth\={i}bh\={a}van\={a}}) is given in table \ref{ta:bhavana}. 
+\end{sloppypar}
+\begin{table}[h]
+\caption{Three requirements for \textit{bh\={a}van\={a}}}
+\label{ta:bhavana}
+\begin{center}
+\begin{tabular}{|p{2.5 cm}|p{2.5 cm}|p{ 3 cm}|p{3.5 cm}|}
+\hline
+\textbf{Type of \textit{bh\={a}van\={a}}}  & \textbf{Objective} & \textbf{Instrument} & \textbf{Auxiliaries} \\
+\hline
+\textbf{\textit{\'{S}\={a}bd\={i}bh\={a}van\={a}}} & Generating \textit{\={a}rth\={i}bh\={a}van\={a}} & Knowledge of verbal termination \textit{li\.{n}} & \textit{Arthav\={a}da} (Eulogy or Criticism)  \\
+\hline
+\textbf{\textit{\={A}rth\={i}bh\={a}van\={a}}} & Objective of sacrifice  & Actual Performance & Procedure that involves instruction interpretation \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+The objective of \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} is to initate the activity (generating \textit{\={a}rth\={i}bh\={a}van\={a}}); instrument of \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}} is the knowledge of verbal termination, \textit{li\.{n}} in an injunction; and \textit{arthav\={a}da} (eulogy) acts as an aid for \textit{\'{s}\={a}bd\={i}bh\={a}van\={a}}, since it strengthens the motivation to perform the stated injunction. 
+
+In \textit{\={A}rth\={i}bh\={a}van\={a}}, the objective is the end result of the performance of sacrifice; instrument is the actual performance of the sacrifice; and auxiliaries include the procedure involving interpretation methodologies to perform the sacrifice \cite[pp.~179--180]{mimamsa1}. 
+\subsection{Classification of injunctions}
+\begin{sloppypar}
+In \mimamsa, an injunctive statement (\textit{Vidhi}) or a command provides a direction for the person to undertake a particular action. The definition of \textit{Vidhi} is given as ``\textit{Apr\={a}ptapr\={a}pako vidhih"} \textit{``If a rule contained a direction which a man would comply with even without it, it is no Vidhi. But if it contains a direction which commands a man to do a particular act, which he is unlikely to do unless under the force of a command, it is Vidhi"} \cite[p.~600]{mimamsa1}). For instance `\textit{Observe non-violence}' and \textit{`Tell the truth'} are \textit{Vidhi}. `\textit{Eat when you are hungry}' and `\textit{Drink when you are thirsty}' are not \textit{Vidhi}.  
+
+According to \mimamsa, every act should have a purpose. \textit{Pr\={a}bh\={a}kara}, one of the commentators of \mimamsa, expressed the importance of purpose as ``\textit{Artha} must mean \textit{Prayojana} (Purpose), as purpose is the most important factor; all the words in the sentence must be related to that important factor" \cite[p.~594]{mimamsa1}, \cite[p.~88]{mimamsa2}.  
+\end{sloppypar} 
+\begin{sloppypar}
+M\={i}m\={a}\.{m}s\={a} classifies injunctions in various ways.  In one type of classification, injunctions are divided into four basic categories. They are \cite[p.~xxvii]{arthasamgraha}:
+\end{sloppypar}
+\begin{enumerate}
+
+\item \begin{sloppypar}Principal injunctions (\textit{Utpattividhi}): Injunctions that enjoin an act, which has not been said before belong to this category. E.g., In the statement,`\textit{One should perform the agnihotra}' (\textit{agnihotra\.{m} juhoti}), the \textit{agnihotra} sacrifice is enjoined with the action of performing the sacrifice \cite[p.~179]{mimamsa1}. \end{sloppypar}
+\item \begin{sloppypar}Injunctions enjoining auxiliaries (\textit{Gu\d{n}avidhi}): Injunctions specify auxiliaries belong to this category. E.g., In the statement, ``\textit{perform the sacrifice with curd} (\textit{dadhn\={a} juhoti})", curd acts as an auxiliary to the main action namely, ``\textit{perform the agnihotra sacrifice}". \end{sloppypar}
+\item \begin{sloppypar}Procedural injunctions (\textit{Prayogavidhi}): This type of injunctions convey the overall process and specify the order of performance of the sacrifice. Here, \mimamsa~lays down six criteria to ascertain the order. These are \cite[pp.~208--209]{mimamsa1}:\end{sloppypar}
+\begin{enumerate}
+\item Direct assertion (\textit{\'{S}rutikrama}), which denotes the direct expression of the sequence by explicit verbal termination. 
+\item Meaning (\textit{Arthakrama}), that indicates the sequence based on the meaning.
+\item Reading (\textit{P\={a}\d{t}hakrama}), which points to the sequence based on the order mentioned in the text. 
+\item Position (\textit{Sth\={a}nakrama}), that considers the sequence based on place. 
+\item Principal rite (\textit{Mukyakrama}), which conveys the order of the subsidiary sacrifice, derived from the principal sacrifice and 
+\item Procedure (\textit{Pravrithikrama}), which specifies a repeated performance of a series of actions in an iterative manner.
+\end{enumerate}
+\item Injunction of qualification (\textit{Adhik\={a}ravidhi}): This type of \textit{vidhi} indicates the authorization of the person to perform the sacrifice.
+\end{enumerate}
+Injunctions are again classified based on the restrictive and exclusive nature. These are described below.
+\begin{enumerate}
+\item \begin{sloppypar}Restrictive injunction (\textit{Niyamavidhi}): When two or more methods are provided to reach the goal, making one of these mandatory is a restrictive injunction. E.g.: In the statement \textit{``pound the corn to remove the husk"} (\textit{vr\={i}hin avahanti}), the \textit{husk} can be removed in more than one way. However, this injunction specifies that the \textit{husk is to be removed only by the action of pounding.} \end{sloppypar}
+\item \begin{sloppypar}Exclusive injunction (\textit{Parisa\.{n}khy\={a}vidhi}): Exclusion of one from two items that are present simultaneously is an exclusive injunction. For example, the statement ``\textit{Only five animals with five toes may be eaten"} (\textit{panca pancanakh\={a} bhak\d{s}y\={a}\d{h}}), implies five-toed animals other than the stipulated five must not be eaten.\end{sloppypar}
+\end{enumerate}
+Apart from these, injunctions such as \textit{``One who desires heaven should perform fire-sacrifice"} exemplifies the connection of the sacrifice to the result. These are categorized as injunctions setting forth result (\textit{phalavidhi)} \cite[p.~5]{mimamsa4}.
+
+\subsection{Concept of Sentence unity}
+\label{sec:sentunity}
+\begin{sloppypar}
+During interpretation, doubts may arise about the structure and meaning of the sentence. To resolve this issue, \mimamsa~provides an account of the requirement of the sentence as a syntactical unit (\textit{ekav\={a}kya}), which is given as follows: \\
+\textit{Arthaikatv\={a}dekam v\={a}kya\.{m} s\={a}k\={a}\.{n}k\d{s}a\.{m} ced vibh\={a}go sy\={a}t} - Jaimini Sutra 2.1.46\\
+If the combination of words, when separated have an expectancy of each other, then the combination of words is to be treated as single sentence. In other words, if the given words and clauses serve a single purpose, then these can form a sentence \cite[p.~594]{mimamsa1}.
+
+\mimamsa~also prescribes the injunction to be in the form of a simple sentence structure, where an injunction consist of a single verb only. In such conditions, there are instances where two or more injunctions serve a single purpose. For example these two injunctions can be considered:
+\begin{enumerate}
+\item [] $I_{3.1}$ \textit{To attain heaven, perform the fire-sacrifice (agnihotram juhuy\={a}t svargak\={a}mah)}
+\item [] $I_{3.2}$ \textit{Perform the sacrifice with curd (dadhn\={a} juhoti)}
+\end{enumerate}
+Both these injunctions describe an action to be performed, but are mutually expectant. $I_{3.1}$ describes that the person has to do the sacrifice, but it does not specify the means (how) to perform the sacrifice. Similarly $I_{3.2}$ specifies how to perform the sacrifice, but does not describe the purpose of why curd should be offered. So, injunctions of this kind are connected by the concept of unity between the sentence and sentence, known as \textit{v\={a}kyaikav\={a}kyat\={a}}.
+
+Narrative statements (\textit{arthav\={a}das}) also occur in the Vedic literature. These do not convey any action, but merely support the injunction by means of praise or censure. Therefore there is a need to combine injunctions with these narrative statements, such that together they constitute a single unit. For this combination, the narrative statement is treated at the level of word (\textit{pada}), since it suggests either praise or censure.  Then at the level of word, it is connected with the injunction. This type of connection is called as \textit{padaikav\={a}kyat\={a}}.
+
+There are several other instances where this concept of sentence-unity between narrative statement and injunction is used. In one instance, Mur\={a}ri Mi\'{s}ra \footnote{Mur\={a}ri Mi\'{s}ra is the exponent of a third school of M\={i}m\={a}\.{m}s\={a} and wrote a full-fledged commentary on \textit{Jaimini s\={u}tra} during the twelfth century A.D.}  explains the unity of the two sentences having different verbal forms related by the concept of \textbf{\textit{hetu-hetumadbh\={a}va}} (The relation between the cause and one that possesses the cause). In this type of connection, one part of the sentence denotes the reason and the other an injunction. For example, in this sentence `\textit{``Your body is dirty, you should take bath}", the two parts have different verbal forms. The first part of the sentence (\textit{your body is dirty}) expresses ground or reason (\textit{hetu}) for the second part (\textit{you should take bath}), an injunction \cite[p.~374]{mimamsa1}.
+\end{sloppypar}
+
+\subsection{Interpretation rules}
+\label{sec:rules}
+\begin{sloppypar}
+\mimamsa~specifies several interpretation rules for a set of injunctions occurring in a passage \cite[pp.~585-600]{mimamsa1}. Out of these rules, two rules are considered. These are given below.
+\end{sloppypar}
+\begin{sloppypar}
+When several methods are stated to perform actions, \mimamsa~specifies the criteria as to when all the stated methods should be followed. It also specifies the condition when a single stated method is sufficient. This is described below.
+\end{sloppypar}
+\begin{enumerate}
+\item \begin{sloppypar}\textbf{Obligatory Rule} (\textit{sa\d{m}uccaya\d{h}}): If several accessories in the form of instructions are detailed, leading to a single purpose, \mimamsa$~$ suggests performing all those. This is given as follows: \\ ``\textit{ye ekasmin karmani gun\={a}\d{h} bahava\d{h} \'{s}isyante tes\={a}\.{m} sarve\d{s}\={a}\.{m}} \\
+\textit{kriy\={a} sy\={a}t ev\={a}\.{m} sa\d{m}uccaya\d{h} sarve\d{s}\={a}\.{m} \'{s}:asanam arthavad bhavi\d{s}yati.}" \\
+``When several details are laid down in connection with the same sacrifice, there should be performance of all". If all options are performed, it would lead to repetition (which is not ordained) \cite[pp.~599--600]{mimamsa1}. \end{sloppypar}
+\begin{sloppypar}
+\mimamsa~allows repetition of instructions. If the instruction is repeated, then performance of that particular action should also be repeated \cite[p.~995]{mimamsa2}.
+\end{sloppypar}
+\item \begin{sloppypar}\textbf{Optional Rule} (\textit{vikalpa}): If several optional instructions are laid out to achieve the same purpose, \mimamsa$~$ suggests choosing one among those instructions. This is given as: \\
+``\textit{Ek\={a}rth\={a}stu vikalpyeran. \\ Smuccaye hy\={a}v\d{r}thi\d{h} syat pradhanasya}": Jaimini 12-3-10 \\ ``When several details (procedures) serving the same purpose are prescribed, there should be an option to do one and not all")\cite[p.~599]{mimamsa1}. \end{sloppypar}
+\end{enumerate}
+
+Using the aforementioned methodologies, a formalism namely \mimamsa~Inspired Representation of Actions (MIRA) has been constructed with syntax at the command level and semantics at the level of action performance. The next section gives the background of this formalism.
+
+\section{\uppercase{Basis of MIRA}}
+ % For referencing the chapter elsewhere, use 
+A person guided by Vedic injunctions performs actions as stated in it, without the consideration of author/speaker. He assumes the stated injunctions to be consistent and knows that when performed exactly according to the injunctions, the desired objective would be achieved. This assumption is borrowed in this formalism, where an artificial agent is provided with a set of consistent instructions. The agent is expected to effectively execute these instructions in order to reach its goal. 
+
+For successful execution of instructions, \mimamsa~provides a formula with three requirements, namely Objective, Instruments and Auxiliaries. These requirements to \textit{\={a}rth\={i}bh\={a}van\={a}} (Section \ref{sec:bhavana}) are restated below.
+\begin{enumerate}
+\item Objective, which indicates the goal by executing the given set of instructions.
+\item Instrument through which the objective can be realized. The actual performance of actions act as the instrument to achieve the objective.
+\item Auxiliaries, which include the required material and procedure for performing actions. The procedure includes instruction interpretation methodologies, which is substantiated by \mimamsa.
+\end{enumerate}
+
+Inspired by this notion of \textit{\={a}rth\={i}bh\={a}van\={a}}, the agent is assumed to be motivated to execute the given set of instructions. This motivational aspect arises from the agent's intention to achieve the goal, which is indicated by the objective of \textit{\={a}rth\={i}bh\={a}van\={a}}. Once motivated, the agent should perform actions flawlessly, which is indicated by the instrument of \textit{\={a}rth\={i}bh\={a}van\={a}} and before performing actions, the given set of instructions should be interpreted correctly. This is indicated by the auxiliaries of \textit{\={a}rth\={i}bh\={a}van\={a}}.
+
+For example, if the instructions given to an agent are ``\textit{Go near the block ($i_1$), then pick it up ($i_2$) to hold the block ($p$)}", then the agent is expected to have the intention of holding the block first, and along with this intention move near the block and then pick up the block. Thus the performance of $i_1$ and $i_2$ may result in the goal $p$.
+
+ Therefore three major factors form the basis of the MIRA formalism. These are (i) Motivation for performance of action, (ii) Instruction Interpretation and (iii) Instruction Execution, which are described below.
+
+\subsection{Motivation for performance of action} 
+The agent should first be motivated as to why the action should be performed. According to M\={i}m\={a}\.{m}s\={a}, motivation or intention to reach the goal (\textit{bh\={a}van\={a}}) plays a vital role in the performance of an action. In the absence of such an intention, the action is considered to be unworthy \cite{mimamsa3}. Inspired by this notion, the intention of the goal is identified as the prime requirement of instruction execution (performing an action). In other words, the performance of action is successful only if the agent has the intention to achieve the goal and executes the instruction thereof; If the agent does not intend to achieve the goal, the performance or non-performance of action is considered to be meaningless. Therefore, the basis of the MIRA formalism rests on the principle that \textbf{presence of the intention of goal is the most important criterion for successful execution of instruction}. 
+
+\subsection{Interpretation of Instructions} 
+Once motivated to perform actions, the agent needs to interpret instructions correctly. A few of the M\={i}m\={a}\.{m}s\={a} methodologies described in Section \ref{sec:mimamsa} are considered for this interpretation from the perspective of computational instructions provided to an artificial agent. The given instructions are interpreted in the following manner, as listed in Table \ref{tab:basismira}:
+\begin{table}
+\caption{Instruction interpretation for MIRA from \mimamsa}
+\label{tab:basismira}
+\begin{center}
+\begin{tabular}{|p {2.5 cm}|p {4.5 cm}|p {5 cm}|}
+\hline
+\textbf{\mimamsa}&\textbf{MIRA}&\textbf{Example} \\
+\hline
+\textit{vidhi} & Positive unconditional imperative & Return the paper \\
+\hline
+\textit{ni\d{s}edha} & Negative unconditional imperative & Do not take the pen \\
+\hline
+\textit{phalavidhi} & Imperative enjoining goal (cig) & To write, take a pen \\
+\hline
+\textit{hetu- hetumadbh\={a}va} & Imperative enjoining reason (cir) & If there is a pencil, take it \\
+\hline
+\textit{\'{s}rutikrama} & Imperative enjoining sequence of actions (cia) & Write on paper, then fold it \\
+\hline
+\textit{sa\d{m}uccaya\d{h}} & Conjunction & Take pen and paper \\
+\hline
+\textit{vikalpa} & Exclusive disjunction & Use pen or pencil \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{enumerate}
+\item A positive injunction (\textit{vidhi}) is considered as a \textbf{positive unconditional imperative} statement as in the example ``\textit{Do $<action~i>$}".
+\item A negative injunction or prohibitory statement (\textit{ni\d{s}edha}) is considered as a \textbf{negative unconditional imperative statement} as in the example ``\textit{Don't do $<action~i>$}" or ``\textit{Never do $<action~i>$}".
+\item An injunction enjoining result (\textit{phalavidhi}) is considered as a \textbf{conditional imperative enjoining goal (\textit{cig)}}, since this type of injunction also conveys the fruit of the action. E.g.,``\textit{To achieve $<goal~p>$, do $<action~i>$}".
+\item Causal relation between injunctive and non-injunctive statement (\textit{Hetu-hetumadbh\={a}va}) is considered as a \textbf{conditional imperative enjoining reason (\textit{cir})}, since the non-injunctive portion of the statement contains the reason or the condition for the performance of action. E.g., ``\textit{If $<condition~r>$, do $<action~i>$}".
+\item Explicit rendering of sequencing of actions (\textit{\'{s}rutikrama}) is considered to be the \textbf{conditional imperative enjoining sequence of actions (\textit{cia})}, since this type of injunctive statement clearly specifies the sequence of action performance. E.g., ``\textit{Do $<action~i_1>$, then do $<action~i_2 >$}".
+\item In accordance with the obligatory rule of \mimamsa~(\textit{sa\d{m}uccaya\d{h}}), the operator of \textit{conjunction} is used. This operator ensures the mandatory performance of every stated instruction. The conjunction between instructions is possible when different instructions leading to different subgoals, which in turn lead to the same goal are specified. For instance, if the two statements ``\textit{Do $<action~i_1>$, to achieve $p_1$}", ``\textit{Do $<action~i_2>$, to achieve $p_2$}" occur in the instructional passage, which together lead to the same final goal ($P$), then these two imperative statements can be connected using the conjunction operator (and). This results in ``(\textit{Do $<action~i_1>$}) \textbf{and} (\textit{Do $<action~i_2>$})".
+\item In a set of instructional passage, if there is more than one instruction leading to the same purpose, then according to the optional rule (\textit{vikalpa}), one among those may be chosen. To denote this option, the disjunction operator `\textit{or}' is used. For instance, the disjunction operation is possible in imperatives of type \textit{``Do $<action~i_1>$ to achieve $p$"} \textbf{or} \textit{``Do $<action~i_2>$ to achieve $p$"}. 
+\item If there is a choice among instructions (\textit{$<$Do action $i$ to achieve $p>$or $<$Do action $j$ to achieve $p>$}) and one of the instructions is mandatory (\textit{Do action $i$}), then that particular instruction $i$ should be executed according to restrictive injunction (\textit{niyamavidhi}); and the instruction $j$ should not be executed according to exclusive injunction (\textit{parisa\.{n}khy\={a}vidhi}.)
+\end{enumerate}
+\subsection{Execution of instructions}
+According to \mimamsa, the basis of the performance of an action is the presence of intention to achieve the goal. Based on this criterion, the performance and non performance of actions are evaluated in the following manner:
+\begin{enumerate}
+\item If the agent intends to achieve the goal and executes the instruction, then the agent has successfully executed the instruction. The imperative is evaluated to `$S$' denoting \textit{Satisfaction}. 
+\item If the agent intends to achieve the goal and does not execute the instruction, the agent has violated the instruction. In this case, the imperative is evaluated to `$V$' denoting \textit{Violation}.
+\item If the agent does not intend to achieve the goal, the imperative is evaluated to `$N$', indicating the absence of intention to reach the goal.
+\end{enumerate}
+
+This evaluation of imperatives to three values $S$, $V$ and $N$ is inspired from Vranas (2008), who likewise uses three values $S$, $V$ and $A$ denoting $Satisfaction$, $Violation$ and $Avoidance$. According to Vranas, the value acquired by the negation of context (condition in conditional imperatives) is `$A$', whereas in MIRA, the value indicating the absence of intention to achieve the goal is indicated by `$N$'. 
+
+Although two values $S$ and $V$ are sufficient to evaluate an imperative, the third value of $N$ is necessary to accommodate the fundamental premise of \mimamsa, which states that the intention of goal is necessary for the successful performance of action. This premise is incorporated during the execution of imperative enjoining reason and goal, which are described below.
+\begin{enumerate}
+\item \textbf{Execution of imperative enjoining reason (\textit{cir})} (\textit{hetu-hetumatbh\={a}va}): In this type of imperative, the condition is indicated as the ground or reason, for an action to be performed. For instance, in the statement \textit{``If it is raining, take an umbrella"}, the condition is \textit{``If it is raining"} and the action is \textit{``take an umbrella"}. If the condition is \textit{true} and the action is performed, the imperative is evaluated to $S$; if the condition is \textit{true} and the action is not performed, the imperative is evaluated to $V$; and if the condition is \textit{false}, the imperative is evaluated to $N$, irrespective of whether the agent performs or does not perform the action. 
+\item \textbf{Execution of imperative enjoining goal} (\textit{phalavidhi}): In this type of imperative, the condition indicates the intention of the goal explicitly. For instance, in the statement \textit{``If you want to create a simple scaffold, place the plank between two ladders"}, the condition is, \textit{``If you want to create a simple scaffold"}, which indicates the intention of goal on the agent's part. If this condition is \textit{true} (intention of goal is present) and the action is performed, the imperative is evaluated to $S$; if the condition is \textit{true} and the action is not performed, the imperative is evaluated to $V$; if the intention of goal is not present, the condition is considered to be \textit{false} and the performance or non performance of actions does not lead to the desired goal. In such a case, the imperative is evaluated to $N$. 
+\end{enumerate}
+
+Although the evaluations of \textit{imperative enjoining reason} and \textit{imperative enjoining goal} are similar, these cannot be treated as a single \textit{conditional imperative}, because the semantic sense is different in both types as described below:
+\begin{enumerate}
+\item \textit{Imperative enjoining reason} is of the form \textit{If $<$ condition $>$, then do $<$ action i $>$}, where the antecedent denotes the condition for the performace of action. 
+\item \textit{Imperative enjoining goal} is of the form \textit{If you $<$ do action i $>$, you will achieve $<$ goal p $>$}, which denotes the temporal aspect of achieving the goal after the performance of \textit{action i}.  
+\end{enumerate}
+This differentiation is essential for the imperatives of type ``\textit{If $<$ condition $>$, do $<$ action i $>$ to achieve $<$ goal p$>$}", which includes both imperatives enjoining reason and goal for the same instruction $i$. For example, in the statement, \textit{``Since grandmother is weak, take this piece of cake, to strengthen her"},  \textit{``since grandmother is weak"} and \textit{``to strengthen her"} are the reason and goal, respectively for the instruction \textit{``take this piece of cake"}. 
+
+The evaluation of imperatives to $S$, $V$ and $N$ can be widely adopted in practical scenarios. To justify the use of these three values instead of two ($S$ and $V$), two sample scenarios are presented below.
+\begin{enumerate}
+\item Assume that an agent is provided with an instruction $i_1$ to reach the goal $p_1$ and an instruction $i_2$ to reach the goal $p_2$. If the agent intends to achieve the goal $p_2$, and not $p_1$, but performs action according to $i_1$, then the goal $p_2$ cannot be reached. In this case, the instruction $i_1$ leading to goal $p_1$ is evaluated to $N$, although the agent performs the action (satisfies the instruction $i_1$). 
+
+If only two values are used, where $V$ is used instead of $N$, then the instruction evaluates to $V$. This leads to a contradiction, because the agent has executed (satisfied) the instruction $i_1$, but the evaluation leads to $V$, which indicates the agent has violated the injunction. 
+\item In the scenario of AI plan execution and monitoring, if actions are represented through instructions, then $S$, $V$ and $N$ can be used to identify the location of failure. For example, if an intelligent agent \footnote{In AI, an intelligent agent is an autonomous entity that observes through sensors and acts upon an environment using actuators \cite{ai}.} is given an instruction in the form of \textit{$<$If $R$, do $i$$>$} and if $R$ is \textit{false}, then the instruction is evaluated to $N$; if $R$ is \textit{true} and the agent is not able to perform an action, then the instruction is evaluated to $V$. These two evaluation cases leading to $N$ and $V$ indicate the problem with environment and agent, respectively. If $V$ is used instead of $N$, then both evaluation-cases lead to $V$. Therefore using just two values do not help to pinpoint the location of the failure.
+\end{enumerate}
+
+With the underpinnings of the aforementioned three factors, a formalism is constructed with the syntax and semantics. The details of this construction are given in the next chapter. 
+
+
+
+%----------------------------------------------------------------------------------------
+
+
+

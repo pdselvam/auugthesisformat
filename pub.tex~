@@ -1,0 +1,17 @@
+\documentclass[12pt,a4paper]{aureport}
+\usepackage{aunatbib}
+\usepackage{auapalike1}
+\usepackage{bussproofs}
+\usepackage{auphd}
+\usepackage{array}
+\usepackage{setspace}
+\begin{document}
+\bibliographystyle{auapalike}
+%\bibliographystyle{unsrt}
+%\setcitestyle{round,aysep={},yysep={;}}
+\nocite{*}
+\begin{spacing}{1}
+  \normalsize
+  \bibliography{bama}
+  \end{spacing}
+  \end{document}

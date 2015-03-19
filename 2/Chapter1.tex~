@@ -1,0 +1,103 @@
+% Chapter 1
+
+\chapter{Introduction} % Main chapter title
+
+\label{intro} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%\lhead{Chapter 1. \emph{Chapter Title Here}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Problem Statement}
+This dissertation develops a formalism for representing and evaluating unambiguous instructions specified to a machine/artificial agent. The types of instruction that this work focusses on, are listed in Section \ref{sec:type}.
+\section{Motivation}
+Vedas are traditional Indian systems that deal with ritualisitic actions and philosophical wisdom. It is considered to be eternal (\textit{an\={a}di}) and authorless (\textit{apouru\d{s}eya}). The vast material in it provides the guidance for performing the right action. The guidance is provided in the form of Vedic injunctions or commands. The interpretation of Vedas is done through \mimamsa, which was written in the aphorism style (\textit{s\={u}tra}) by Sage Jaimini. Following this, the commentaries have been written by the exponents, Kum\={a}rila Bha\d{t}\d{t}a and Pr\={a}bh\={a}kara Mi\'{s}ra. 
+
+\mimamsa~ gives an exhaustive account of the interpretation methodogies of Vedic passages. Over the years, these methodlogies have been useful for interpreting other scriptures like \textit{Dharma\'{s}\={a}stras}. The interpretation rules of \mimamsa~ is also being used to solve a few cases in Indian Judicial Systems. 
+
+According to \mimamsa, motivation forms the central theme to perform any action. This motivation arises from the final objective of the performance of action. Actions to be performed are stated through injunctions in Veda. \mimamsa~lays down several criteria for interpreting these injunctions. A few instances from a gamut of interpretation techniques are listed below.
+\begin{enumerate}
+\item Injunction can be seen with goal (\textit{phalavidhi}).
+\item Injuction can be combined with other statement indicating a condition or reason to perform an action (\textit{hetu-hetumadbh\={a}va}).
+\item Injunction may occur with other statement indicating the order of performing the action (\textit{\'{s}rutikrama}).
+\end{enumerate}
+
+These instances can be easily correlated to the natural language instructions given to an artificial agent or robot. For example, consider these instructions:
+\begin{enumerate}
+\item \textit{Cut the square in half to create two triangles}.
+\item \textit{If there is a wall to your left, turn right}
+\item \textit{Go to the breakroom and report the location of the blue box}.
+\end{enumerate}
+The first instruction includes the goal namely ``\textit{to create two triangles}''. There can be many ways, in which the \textit{square could be cut in half}. However, the goal restrics the choice of performing the action \cite{eugenio}. The second instruction is given to a robot in the work of natural language interaction with robots \cite{walker}. This statement holds the condition namely, ``\textit{if there is a wall to your left}'', for performing the action ``\textit{turn right}''. 
+The third instruction is used in the work of translating the natural language directives into Temporal and Dynamic Logic representation for Goal Management and Action Execution \cite{temporalrobot}. This statement indicates two actions to be performed in sequence (\textit{go to the breakroom, then report the location of the blue box}).
+
+These instances indicate that the use of interpretation techniques from \mimamsa~ can ease the representation of instructions given to an artificial agent. Inspired by this philosophy, this dissertation explores the possibility of using \mimamsa~ principles to develop a formalism for representing and evaluating instructions, which denote actions.
+\section{Terminology}
+\label{sec:terminology}
+This section describes the meaning of terms used in this dissertation.
+\subsection{Imperative, Injunction and Instruction}
+According to Oxford Advanced Learner's Dictionary, imperatives, injunctions and instructions are defined as follows:
+\begin{enumerate}
+\item Imperative: ``\textit{The form of a verb that expresses an order; a verb in this form: In 'Go away!' the verb is in the imperative. 'Go away!' is an imperative.}".
+\item Injunction: ``\textit{An official order given by a court of law which demands that sth must or must not be done}".
+\item Instructions: ``\textit{Detailed information on how to do something}".
+\end{enumerate} 
+These words indicate the action to be performed. In this sense, the dissertation uses imperatives, injunctions, commands and instructions interchageably. 
+\subsection{Positive Imperative}
+An imperative statement which specifies the execution of an action is a positive imperative. Eg.,``\textit{Come Little Red Cap}".
+\subsection{Prohibitive statement or Negative Injunction}
+An imperative statement which prohibits a person to do something is a prohibitive statement or negative imperative. Eg., \textit{``Don't talk to strangers"}.
+\subsection{Proposition or Declarative sentences}
+The sentence which can be evaluated to \textit{true} or \textit{false} is a proposition or declarative sentence. Example, ``\textit{The sum of the numbers 3 and 5 equals 8}" \cite{huth}.
+\subsection{Imperative enjoining Reason}
+A statement denoting a \textit{condition} or \textit{reason} that occurs along with the imperative is \textit{imperative enjoining reason}. In this example, ``\textit{Since grandmother is weak, take this piece of cake}", ``\textit{since grandmother is weak}" is the \textit{reason} or \textit{condition} for the imperative ``\textit{take this piece of cake}".
+\subsection{Imperative enjoining Goal}
+A statement that has an imperative along with the goal is \textit{imperative enjoining goal}. Eg., In the statement ``\textit{Take this piece of cake, to strengthen your grandmother}" the imperative \textit{``take this piece of cake"} denotes the goal \textit{``to strengthen your grandmother"}. 
+\subsection{Imperative enjoining temporal action}
+A statement that has two imperatives denoting a sequence of actions is \textit{imperative enjoining temporal action}. Eg., The imperative statement \textit{``Take the pen and write neatly"}, indicates the actions \textit{``Take pen"}, followed by \textit{``write neatly"}. The temporal aspect here refers to the relative sequence between one action and the other and not with respect to the time. 
+\subsection{Types of instructions}
+\label{sec:type}
+The developed formalism is  capable of handling these type of instructions.
+\begin{enumerate}
+\item \label{itm:simple} Simple clear-cut imperatives (\cite{ChrisFox}), such as \textit{``Shut the door"}.
+\item Negative imperatives (\cite{ChrisFox}), like \textit{``Don't come to the party"}.
+\item Imperatives that denote a sequence \cite{Hare}, such as \textit{``Put on a parachute and jump out"}.
+\item Imperatives that denote the condition or reason, like \textit{``If it is raining, take an umbrella"}.
+\item Imperatives that indicate the goal, like \textit{``Exercise well to stay healthy"}.
+\item Imperatives that indicate both reason and goal, like \textit{``Since grandmother is weak, take this piece of cake, to strengthen her"}.
+\item Imperatives that occur with \textit{or}, like \textit{``To write, take the pen or pencil"}.
+\item Imperatives that occur with \textit{and}, such as:
+\begin{itemize}
+\item \textit{``Shut the window and close the door"}.
+\item \textit{``To write, take the pen and to draw, take the pencil"}.
+\item \textit{``If it is raining, take an umbrella and wear a raincoat"}.
+\item \textit{``If it is raining, take an umbrella and if it is not raining, don't take an umbrella"}.
+\end{itemize}
+\end{enumerate}
+\section{Desiderata}
+\label{sec:desire}
+Imperatives can be seen widely in various fields, for instance, in mathematical proofs, ``\emph{Let $x$ be a variable}"; moral instructions to children ``\emph{Respect your elders}";  and instructions for mechanical assembly, ``\emph{Check to see whether the bolt is fixed}". As a part of ISO (International organization for standards), documents of work-instructions are maintained by industries and these work-instructions help to organize tasks performed in the overall process. Though imperatives form an indispensable part in all these areas, not much work has been attempted in recent days to analyse the structure of imperatives \cite{vranas2008}.  
+
+This work aims at analysing the structure of imperatives and develop a formalism that caters to a wide range of fields. The desiderata can be discussed in terms of the representation and reasoning of imperatives that denote actions.
+\subsection{Representation}
+The developed formalism should encompass the instructions seen in every day world. These instructions include simple instructions such as \textit{``Shut the door"} and the prohibitive instructions such as \textit{``Don't shut the door"}. These instructions can be seen as compound instructions such as \textit{``Shut the door and close the window"} and \textit{``Take route A or route B, to reach the destination"}.
+
+Sometimes the imperatives can occur along with propositions like \textit{``If there is rain, take an umbrella"} and \textit{``To strengthen the grandmother, take this piece of cake"}. This combination results in a propositional or imperative evaluation or both \cite{ChrisFox}. 
+
+Imperatives also indicate a temporal ordering as in \textit{``Put on the parachute and jump"} \cite{ChrisFox}. In this example, \textit{``and"} indicates the sequence which is different from the notion of \textit{``conjunction"} used in propositional formulas. 
+
+The formalism that is proposed has to accomodate these categories.
+\label{sec:representation}
+\subsection{Reasoning}
+Imperatives do not hold the value of \textit{true} or \textit{false}. But the behavior of inference resembles propositions \cite{Jorgensen}, \cite{Ross}, \cite{Wright}, \cite{Hare}, \cite{Chellas}, \cite{Segerberg}. For example, from the imperative \textit{``Shut the door and close the window"}, we can infer \textit{``Shut the door"}. This is similar to the propositional conjunction elimination rule. However, the inference capabilities suffer from \textit{Ross Paradox} and \textit{Jorgensen's dielemma} \cite{ChrisFox}, which are described in Section~\ref{sec:issue}. The proposed formalism should be free from these issues. 
+
+Much of the work
+
+  
+\label{sec:reasoning}
+\subsection{Evaluation}
+\label{sec:evaluation}
+\section{Approach}
+\section{Outline}
+
+

@@ -1,0 +1,132 @@
+\sloppy
+\newtheorem{theo}{Theorem}
+\newtheorem{exam}[theo]{Example}
+\chapter{Introduction}
+\label{intro}
+
+In the computational arena, interpretation of natural language instructions is of common interest due to the inevitable necessity of communicating with computers. Towards this end, research has been going on to address the various methods of understanding natural language instructions. In line with this trend, this dissertation aims at proposing a formalism for interpreting, reasoning and evaluating imperatives that denote actions.
+
+According to Oxford Advanced Learner's Dictionary, imperatives, injunctions, instructions and actions are defined as follows:
+\begin{enumerate}
+\item Imperative: ``\textit{Expressing an order.}"
+\item Injunction: ``\textit{An official order given by a court of law which demands that something must or must not be done"}; \textit{``a warning or an order from somebody in authority.}"
+\item Instructions: ``\textit{Detailed information on how to do something.}"
+\item Actions: ``\textit{The process of doing something in order to make something happen or to deal with a situation."}
+\end{enumerate} 
+
+Imperatives can be seen widely in various fields, for instance, in mathematical proofs, ``\emph{Let $x$ be a variable}" \cite{Hofstadter}; moral instructions to children ``\emph{Respect your elders}"; task analysis in special education \textit{``Take the tooth brush, Open the tap"}, and instructions for mechanical assembly, ``\emph{Check to see whether the bolt is fixed}". As a part of International Organization for Standardization (ISO), documents of work-instructions are maintained by industries and these work-instructions help to organize tasks performed in the overall process. In computational intelligence, robots or artificial agents are given instructions like \textit{``Go to the break room and report the location of the blue box"}\cite{temporalrobot} .
+
+To effectively execute these, the agent should first be capable of interpreting the given instructions and then execute those. For example, let the agent be provided with the following set of jumbled instructions for writing an assessment:
+\begin{exam}
+\label{ex:assessment}
+\begin{enumerate}
+\item [ ] $~$
+\item [ ]$S_1$: \textit{Using a pen or pencil, write on paper and then fold it}.
+\item [ ]$S_2$: \textit{Take a pencil to write}.
+\item [ ]$S_3$: \textit{Take paper and pen}.
+\item [ ]$S_4$: \textit{Return the paper}.
+\item [ ]$S_5$: \textit{Take a pen to write}.
+\end{enumerate} 
+\end{exam}
+The agent in the first place should  have an intention to write an assessment and then start the process of interpretation. Since the instructions are jumbled, the agent should place them in sequence as shown below:
+\begin{enumerate}
+\item $S_3$: \textit{Take paper and pen}.
+\item $S_2$: \textit{Take a pencil to write}.
+\item $S_1$: \textit{Using a pen or pencil, write on paper and then fold it}.
+\item $S_4$: \textit{Return the paper}.
+\end{enumerate} 
+Then it should be capable of understanding that one of the two - either pen or pencil is sufficient to write an assessment. It should also possess the intelligence to differentiate the concurrent actions and sequential actions, i.e., $S_3$ denotes two actions that are concurrent, which can be done in any order (\textit{pen and paper can be taken in any order, particularly not in sequence}); but $S_1$ denotes actions to be executed in sequence. 
+
+Once these instructions are interpreted correctly, the agent should execute those. During execution, a feedback should be provided at each step to verify the successful performance of actions. 
+
+This dissertation aims at developing a formalism that helps to interpret and execute these type of instructions in an unambiguous manner. The inspiration for this formalism is derived from \mimamsa, an Indian philosophy, which provides a gamut of interpretation principles for successful execution of instructions. This is discussed in the next section.
+
+\section{Inspiration}
+\label{sec:inspiration}
+\begin{sloppypar}
+Indian scripture categorizes knowledge into fourteen domains. These are: (i) the four Vedas (\textit{Rigveda}, \textit{Yajurveda}, \textit{S\={a}maveda} and \textit{Atharvaveda}); (ii) six auxiliaries to Veda known as \textit{Vedaangas}; (iii) a discussion on Vedas, Mim\={a}\.{m}s\={a}; (iv) logic, \textit{ny\={a}ya}; (v) mythology, \textit{Puran\={a}s}; (vi) and epics, \textit{itih\={a}sa} \cite{vedas}. Among these, Vedas are considered to be the supreme authority. It is believed to be eternal (\textit{an\={a}di}) and of non-human origin (\textit{apouru\d{s}eya}) and provides guidance for performing the right action, pertaining to rituals. The guidance is provided in the form of Vedic \footnote{Vedic - Pertaining to Veda.} injunctions or commands. The interpretation of Vedas is done through \mimamsa, which was written in the style of aphorisms (\textit{s\={u}tra}) by Sage Jaimini, who is believed to have lived during third century B.C. The exposition of Jaimini's \mimamsa~s\={u}tras was written by Kum\={a}rila Bha\d{t}\d{t}a, (620-703 A.D.) and Pr\={a}bh\={a}kara Mi\'{s}ra, (650-700 A.D.), respectively leading to two schools of thought in \mimamsa~\cite[pp.xxv--xxvi]{mimamsa1}.
+\end{sloppypar}
+
+The interpretation methodologies prescribed by \mimamsa~are not only found useful for resolving ambiguities in Vedic passages, but are also used for interpreting other scriptures such as \textit{Dharma\'{s}\={a}stra} and \textit{ved\={a}nta}. The rules from \mimamsa~have also been used to handle a number of cases in Indian judicial systems \cite[p.619]{mimamsa1}. 
+
+According to \mimamsa, motivation (\textit{bh\={a}vana}) forms the central theme to perform any action. This motivation arises from the final objective of the performance of action. Actions to be performed are stated through injunctions in Veda. \mimamsa~lays down several criteria for interpreting these injunctions. These include the occurrence of injunctions with goal (\textit{phalavidhi}), conditional injunction, where the condition is an indicative statement \textit{hetu-hetumatbh\={a}va}, mutual-exclusive injunctions (\textit{vikalpa}), conjunction (\textit{\textit{sa\d{m}uccaya\d{h}}}) and  injunctions that denote the sequence (\textit{\'srutikrama}).
+
+\begin{sloppypar}
+The motivational aspect along with other interpretation techniques from \mimamsa~are borrowed to develop a formalism namely, MIRA (\mimamsa~Inspired Representation of Actions) for representing, reasoning and evaluating instructions. The construction and effectiveness of the formalism is discussed in the next section.
+\end{sloppypar}
+\section{Overview}
+From the notion of \textit{bh\={a}vana} from \mimamsa, three factors are identified for the successful execution of instructions. These are Motivation to perform an action, Instruction interpretation and Instruction execution, which are described below.
+\begin{enumerate}
+\item \textbf{Motivation to perform an action:} The motivation to perform an action arises from the objective of the performance of an action. The construction of MIRA is based on this notion, i.e., intention to achieve the goal is the prime requirement for performing an action. 
+\item \textbf{Instruction interpretation:} Once motivated, instructions are interpreted using \mimamsa~techniques, where the given set of instructions are categorized into unconditional and conditional imperatives. The conditional imperatives in turn are differentiated into three types as: imperative enjoining goal, reason and sequence of actions. Imperatives denoting the mandatory and optional performance of actions are interpreted using the conjunction ($\wedge$) and mutual exclusive ($\oplus$) operator, respectively. Table \ref{ta:basis} illustrates these categories with an example.
+\begin{table}
+\caption{Instruction interpretation according to \mimamsa~techniques}
+\label{ta:basis}
+\begin{center}
+\begin{tabular}{|l|p{ 3.7 cm}|p{ 3.7 cm}|}
+\hline
+\mimamsa & MIRA & Example \\
+\hline
+\textit{vidhi} & Unconditional Imperative & \textit{Return the paper} \\
+\hline
+\textit{phalavidhi} & Conditional imperative enjoining goal & \textit{Take a pen to write}  \\
+\hline
+\textit{hetu-hetumadbh\={a}va} & Conditional imperative enjoining reason & \textit{If there is a pencil, take it} \\
+\hline
+\textit{\'{s}rutikrama} & Imperative enjoining sequence of actions & \textit{Write on paper, then fold it} \\
+\hline
+\textit{vikalpa} & Exclusive disjunction & \textit{Use pen or pencil} \\
+\hline
+\textit{sa\d{m}uccaya\d{h}} & Conjunction & \textit{Take pen and paper} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\item \textbf{Instruction execution}: After interpretation, instructions are executed. Three values, $S$, $V$ and $N$ are assigned to evaluate this execution. An imperative is evaluated to:
+\begin{enumerate}
+\item $S$ (Satisfaction), if the instruction is executed. For instance in $S_5$ from Example \ref{ex:assessment}, if the intention to achieve the goal of \textit{writing} is present and the action is performed (\textit{``pen is taken"}), then the instruction is evaluated to $S$.
+\item $V$ (Violation), if the instruction is not executed. For instance in $S_5$ from Example \ref{ex:assessment}, if the intention to achieve the goal of \textit{writing} is present and the action is not performed (\textit{``pen is not taken"}), then the instruction is evaluated to $V$.
+\item $N$, if the agent does not have the intention to reach the goal. In this case, even if the action is performed or not, the instruction is evaluated to $N$. For instance, in $S_5$ from Example \ref{ex:assessment}, if there is no intention to achieve the goal (\textit{no intention of writing the assessment}), then the instruction is evaluated to $N$.
+\end{enumerate}
+\end{enumerate}
+With the basis of these three factors, a formalism with syntax and semantics is constructed. The former is from the perspective of instruction interpretation and the latter from that of instruction execution. These are described in the next section.
+
+\subsection{Syntax and Semantics}
+The syntax includes the formation rules and deduction rules, addressing the categories of imperatives listed in Table \ref{ta:basis} and the inference capabilities, respectively. Deduction rules include conjunction elimination, conjunction introduction, disjunction elimination, disjunction introduction, conditional introduction and conditional elimination rules. 
+
+The semantic operation is considered for both unconditional and conditional imperatives. Unconditional imperatives are evaluated to $S$ and $V$. In the conditional imperative enjoining reason and goal, the reason and goal are indicative parts attached to the imperative. The former denotes the condition for the execution of instruction, and the latter the presence or absence of intention of the goal in the mind of the agent/person, who is performing the action. For example in this conditional imperative \textit{``If there is a pen, take it"}, the reason \textit{``there is a pen"} can be evaluated to \textit{true} or \textit{false}. Similarly in the statement \textit{``Take a pen to write"}, the goal is \textit{``to write"} and the intention of this goal may either be present or absent, which can be evaluated to \textit{true} or \textit{false}. 
+
+Hence along with these indicative values (\textit{true} and \textit{false}), the conditional imperative enjoining reason and goal are evaluated to $S$, $V$ and $N$. The imperative enjoining sequence of actions is also evaluated to $S$, $V$ and $N$. 
+
+The validity of the formalism is addressed through soundness, where deduction rules are proved to be valid using the action performance table (analogous to truth table). This formalism can be widely used in different areas where action representation and evaluation is involved. In this dissertation, two areas namely, AI planning and Task analysis in special education are chosen to illustrate the effectiveness of MIRA. This is described in the next section.
+\subsection{AI planning}
+In AI planning, a plan is generated from the given set of action descriptions. These action description formalisms are generally atomic, where for a single action the \textit{preconditions} and \textit{postconditions} are specified. These act as states and a plan is generated indirectly using the states. MIRA when used in AI planning, not only derives an action sequence, but also accommodates the representation of concurrent actions, mutual exclusive and sequence of actions within the formalism itself. 
+\subsection{Task analysis in special education}
+People with behavior disabilities have difficulty in processing and adapting simple tasks like brushing the teeth and washing hands. To help them, the process of task analysis is used, where the tasks are broken down in finite chunks of smaller subtasks. This is a laborious process, since it not only involves an in-depth understanding of the tasks, but also the links of the generated subtasks should be well preserved. Using MIRA formalism, the logical sequence of tasks are generated automatically from the jumbled set of instructions. The formalism also acts as a task verifier, where it checks whether the generated tasks lead to the prescribed goal. If the goal could not be reached, the formalism has the capability of detecting the point of discontinuity. 
+
+Hence MIRA formalism offers a unique approach to represent and evaluate actions through instructions. A summary of the findings that resulted from this exploration and construction of the formalism is listed in the next section.
+\section{Contributions}
+\begin{sloppypar}
+\mimamsa~principles have been used in judicial systems to arrive at the correct judgement \cite{mimamsa1}. The methodology of \mimamsa, when incorporated in Ayurvedic education is shown to be effective in pedagogy \cite{ayurveda}. There has been proposals indicating the natural language processing capabilities from this philosophy \cite{nlp}. However, from the computational front, the construction of the logical formalism MIRA with trivalue is the first of its kind inspired from \mimamsa. A gist of the contributions that resulted from this construction is given below.
+\begin{enumerate}
+\item A few tenets from \mimamsa~are borrowed for representing the instructions given to the robot/artificial agent. Particularly, \textit{\={a}rthibh\={a}vana} from \mimamsa~is used as the guiding principle for MIRA, apart from other interpretation techniques.
+\item Actions are represented through instructions.
+\item The logical formalism is presented with syntax and semantic structure. 
+\item Instruction representation is formalized at the syntax level and deduction rules are provided, which help in the process of reasoning.
+\item Action performance tables, analogous to truth tables are worked out in semantics, where instructions are evaluated to three values $S$, $V$ and $N$.
+\item A proof for soundness is given through deduction rules and action performance tables.
+\item Illustration of MIRA in AI planning is suggested through three case studies: (i) Spare-tire problem, (ii) Cargo-world and (iii) Block world. 
+\item The effectiveness of MIRA is also illustrated in Task analysis for special education, where MIRA acts as a task verifier and reorders tasks from a jumbled set of instructions.
+\end{enumerate}
+\end{sloppypar}
+\section{Outline}
+The rest of this dissertation is organized as follows:
+\begin{itemize}
+\item In Chapter \ref{chap:survey}, an overview of the available formalisms in imperative logic is provided. From the computational front, action representation schema including Situation calculus, STRIPS and Dynamic logic are presented. 
+\item A few principles from \mimamsa~that help towards the construction of MIRA is described in Chapter \ref{chap:mimamsa}. Following the inspiration from \mimamsa~principles, the basis of the formalism is detailed in the same chapter through three factors: (i) motivation to perform an action (ii) instruction interpretation and instruction execution.
+\item MIRA is constructed logically with a syntactic and semantic structure in Chapter \ref{chap:mira}. Formation rules and deduction rules are formulated in syntax, which addresses action representation through instructions. In semantics, action performance tables are provided, which evaluates instructions through three values $S$, $V$ and $N$. 
+\item MIRA is compared against the existing formalisms from the perspective of imperative logic and action representation formalisms in Chapter \ref{chap:comparison}.
+\item The generation of action sequence in AI planning using MIRA is described in Chapter \ref{chap:aiplanning}, with the help of three case studies.
+\item In chapter \ref{chap:taskanalysis}, MIRA is used for the task analysis procedure in special education.
+\item A brief overview of the findings is provided, along with the future directions in Chapter \ref{chap:conclusion}.
+\end{itemize}

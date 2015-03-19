@@ -1,0 +1,51 @@
+@INPROCEEDINGS{factors,
+	AUTHOR = "Srinivasan, Bama and Parthasarathi, Ranjani",
+	TITLE = "Towards a formalism of imperatives based on {M}\={i}m\={a}\.{m}s\={a}",
+	BOOKTITLE = "Proceedings of the National Conference on Theoretical Computer Science and Applications",
+	
+	ADDRESS = "B S Abdur Rahman University, Chennai, India",	
+	YEAR = {2010}	}
+
+
+@INPROCEEDINGS{mira,
+	AUTHOR = "Srinivasan, Bama and Parthasarathi, Ranjani",
+	TITLE = "{M}\={i}m\={a}\.{m}s\={a} Inspired Representation of Actions ({MIRA})",
+	BOOKTITLE = "Proceedings of the Fifth Indian International Conference on Artificial Intelligence",
+	
+	ADDRESS = "Tumkur, India",	
+	YEAR = {2011}	}
+
+@ARTICLE{brp,
+	AUTHOR = "Srinivasan, Bama and Parthasarathi, Ranjani",
+	TITLE = "A formalism for Action Representation Inspired by {M}\={i}m\={a}\.{m}s\={a}",
+	JOURNAL = "Journal of Intelligent Systems",	
+	VOLUME = {21},
+	PAGES = {45-77},	
+	YEAR = {2012}	}
+
+@INPROCEEDINGS{icreate,
+	AUTHOR = "Srinivasan, Bama and Parthasarathi, Ranjani",
+	TITLE = "Task Facilitator for Special Education using \uppercase{MIRA}",
+	BOOKTITLE = "Proceedings of the Sixth Internation Convention of Rehabilitation Engineering and Assistive Technology",	
+	ADDRESS = "ETA East, Singapore",
+	YEAR = {2012}	
+		}
+
+@article{jal,
+title = "An intelligent task analysis approach for special education based on MIRA",
+journal = "Journal of Applied Logic",
+volume = "11",
+number = "1",
+pages = "137 - 145",
+year = "2013",
+note = "",
+issn = "1570-8683",
+doi = "10.1016/j.jal.2012.12.001",
+url = "http://www.sciencedirect.com/science/article/pii/S1570868312000754",
+author = "Bama Srinivasan and Ranjani Parthasarathi",
+keywords = "Teaching/learning strategies",
+keywords = "Intelligent tutoring systems",
+keywords = "Special education",
+keywords = "Logic",
+keywords = "Mīmāṁsā inspired representation of actions"
+}

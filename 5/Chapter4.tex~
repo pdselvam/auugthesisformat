@@ -1,0 +1,183 @@
+% Chapter 1
+\newtheorem{define}{Definition}
+\chapter{MIRA-Syntax and Semantics} % Main chapter title
+
+\label{rw} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+With the background of three factors, a formalism is constructed with the syntax at the command level and the semantics at the level of action performance. This section describes the syntax with the formation rules and deduction rules, semantics in the form of satisfaction tables analogous to truth tables, and soundness based on the deduction rules.   
+
+\subsection{Syntax}
+\label{sec:syntax}
+``Let $\L_i=<I, R, P, B >$ be the language of imperatives and let $I$ = $<I^v$, $I^n>$, where $I^v$ denotes positive imperatives (\textit{Vidhi}), $\{i^{+}_1,i^{+}_2,...i^{+}_n\}$ ; and  $I^n$ denotes negative imperatives (\textit{Ni\d{s}edha}) $\{i'_1,i'_2,...i'_n\}$; $R$ denotes Reasons, $ \{r_1,r_2,....r_n\}$, $P$ denotes Purpose, in terms of Goals $\{p_1,p_2,....p_n\} $ and $B$ indicates the binary connectives  $\{\wedge,\vee, \rightarrow_r, \rightarrow_i, \rightarrow_p\}$. $R$ and $P$ are set of fundamental units of propositions and $I$ is the set of unconditional imperatives. The Reason ($R$) is a set of propositions, which forms the conditions under which an action takes place as prescribed by an imperative. Let $\tau$ and $\theta$ be the propositional formula `$F$' \footnote{`$F$' includes the propositional connectives $\neg$ (negation), ($\cap$)conjunction, ($\cup$) disjunction, ($\Rightarrow$) implication and $\Leftrightarrow$ (logical equivalence).} from the set `$R$' and `$P$' respectively. `$B$' includes connectives which connect two statements. `$\wedge$' and `$\vee$' stand for conjunction and exclusive disjunction of imperatives respectively; the conditional imperative that enjoins reason is represented using `$\rightarrow_r$'; the conditional imperative that enjoins temporal action is represented using `$\rightarrow_i$'; and the conditional imperative enjoining goal is represented using `$\rightarrow_p$' \footnote{$\rightarrow_r$, $\rightarrow_i$ and $\rightarrow_p$ can be read as \textit{implied by r, implied by i and implied by p} respectively.}. \\
+
+Given the vocabulary of language ($\L_i$), two formulas, one dealing with the unconditional imperatives and the other dealing with the conditional imperatives can be categorized as \textit{imperative formula $F_{a}$ and $F_{b}$}. These formulas are defined as follows:
+\begin{define}
+The imperative formula ($F_{a}$) is formed from the operation of binary connectives $\wedge$, $\rightarrow_i$ on the set $I$ (unconditional imperatives). 
+\end{define}
+\begin{define}
+The imperative formula ($F_{b}$) is formed from the operation of binary connectives $\wedge$, $\vee$, $\rightarrow_r$, $\rightarrow_i$, and $\rightarrow_p$ on the set $R$, $I$ and $P$. 
+\end{define}
+ These formulas are given by the following formation rules:
+\begin{enumerate}
+\item  \label{itm:vton}If $i$ $\in$ $I^v$, then $i'$ $\in$ $I^n$
+\item  If \label{itm:ntov}$i$ $\in$ $I^n$, then $i^{+}$ $\in$ $I^v$
+\item \label{itm:unv}If $i$ $\in$ $I$, then $i$ $\in$ $F_{a}$
+\item \label{itm:iandi} If $i_i$ $\in$ $I$, and $i_j$ $\in$ $I$, then $i_i \wedge i_j$ $\in$ $F_{a}$, where $i \neq j$.
+\item \label{itm:iti} If $i_i$ $\in$ $I$, and $i_j$ $\in$ $I$, then $i_i \rightarrow_i i_j$ $\in$ $F_{a}$, where $i \neq j$.
+\item \label{itm:fafb}If $\rho$ $\in$ $F_{a}$, then $\rho$ $\in$ $F_{b}$.
+\item \label{itm:ri} If $\tau\in R$ and $\phi \in F_b$, then $\tau \rightarrow_r \phi \in F_{b} $.
+\item \label{itm:ip} If $\phi \in F_{b}$ and $\theta \in P$, then $\phi \rightarrow_p \theta \in F_{b}$.
+\item \label{itm:and} If $\phi \in F_{b}$, $\psi \in F_{b}$, $\theta_1$ $\in$ $P$, and $\theta_2$ $\in$ $P$, then  $(\phi \rightarrow_p \theta_1) \wedge (\psi \rightarrow_p \theta_2) \in F_{b}$, where $\theta_1 \neq \theta_2$.
+\item \label{itm:orvv} If $i_i \in I$, $i_j \in I$, and $\theta \in P$, then $(i_i \rightarrow_p \theta) \vee (i_j \rightarrow_p \theta) \in F_{b}$, where $i \neq j$.
+\item \label{itm:temporal} If $\phi \in F_{b}$ and $\psi \in F_{b}$, then $\phi \rightarrow_i \psi \in F_{b}$.
+\end{enumerate}
+
+$I$ in $\L_i$ contains the two sets $I^v$ and $I^n$, signifying positive imperatives and  negative imperatives respectively. If a positive imperative as in \textit{``Do A''} ($i^{+}_1$) appears in $I^v$, then its corresponding negative imperative \textit{``Don't do A"} ($i'_1$) occurs in the set $I^n$ (formation rule \ref{itm:vton}); and if a negative imperative as in \textit{``Don't do A"} appears in $I^n$, then its corresponding positive imperative occurs in the set $I^v$ (formation rule \ref{itm:ntov}).  A positive unconditional imperative as in \textit{``Do A"}  and the negative unconditonal imperative as in \textit{``Don't do A"} is an imperative formula `$F_{a}$' in itself. This is denoted as `$i \in F_{a}$' (formation rule \ref{itm:unv}).
+
+The operator `$\wedge$' connects the two imperatives when :
+\begin{enumerate}
+\item both are unconditional imperatives ($i_i,i_j \in I$), given by the formation rule \ref{itm:iandi}. Eg. \textit{Do A $\wedge$ Do B}.
+\item both are conditional imperatives having different goals ($\phi \rightarrow_p \theta_1$, $\psi \rightarrow_p \theta_2$), given by the formation rule \ref {itm:and}. Eg. \textit{Do A to acheive $\theta_1$ $\wedge$ Do B to achieve $\theta_2$}.
+\end{enumerate}   
+
+
+Any imperative formula, $F_a$ is also an imperative formula $F_b$ (formation rule \ref{itm:fafb}). If there occurs a proposition indicating reason or condition ($\tau$) for an action to take place specified by an imperative formula ($\phi$), the statement is denoted as a conditional imperative of type \textit{``If $<$condition or reason$>$, then $<$do action$>$''}. This is denoted as $\tau \rightarrow_r \phi$ (formation rule \ref{itm:ri}). 
+
+If an imperative ($\phi$) explicitly enjoins a propositional formula from the set `$P$', indicating the intention of goal ($\theta$),  it forms a conditional imperative of type \textit{``If you do A, you will achieve $\theta$"}. This is denoted as $\phi \rightarrow_p \theta$ (formation rule \ref{itm:ip}). 
+
+The operator $\vee$ connects the two imperatives when the two unconditional imperatives ($\i_i$ and $i_j$) lead to the same goal $\theta$ (formation rule \ref{itm:orvv}).
+
+
+The operator `$\rightarrow_i$' connects the two imperatives when:
+\begin{enumerate}
+\item both are unconditional imperatives ($i_i,i_j \in I$) indicating a sequence, given by the formation rule \ref{itm:iti}. Eg., \textit{Do A, then Do B}.
+\item both are conditional imperatives ($\phi$, $\psi$) indicating a sequence, given by the formation rule \ref{itm:temporal}. Eg: \textit{If $\tau_1$ ,do A, then if $\tau_2$,do B}, where $\tau_1$, $\tau_2$ $\in$ $R$;  \textit{do A to acheive $\theta_1$, then do B to achieve $\theta_2$}.
+\end{enumerate}
+
+These imperative formulas help in the deduction process, which is detailed in the next section.
+
+\subsection{Deduction rules}
+\label{sec:deduction}
+Let $\Gamma = \tau, \phi, \psi, \theta, (i^{+}_i \rightarrow_p \theta), (i^{+}_j \rightarrow_p \theta), i'_i, i'_j$; \\ where $ i^{+}_i,i^{+}_j  \in I^{+}; i'_i, i'_j \in I^{n};\tau \in R; \phi, \psi$ $\in$ $F_b; ~and~\theta \in P$.\\
+ A set of deduction rules is formulated as follows:
+
+\begin{enumerate}
+\item \textbf{Conjunction Introduction} ($ci$): This rule connects the two imperatives with a conjunction operator, in a manner similar to the conjunction introduction rule in propositional logic. This is shown in Equation \ref{eq:ci}.
+\begin{equation}
+\label{eq:ci}
+\frac {(\phi~~~~~\psi)}{\phi\wedge\psi} ~~~~~~~~~(ci)
+\end{equation}
+\item \textbf{Conjunction Elimination} ($ce$): If the two imperatives are connected by the conjunction operator, one of the imperatives can be deduced. This rule functions in a manner similar to the conjunction elimination in propositional logic and is given by the Equations \ref{eq:ce1} and \ref{eq:ce2}.
+\begin{equation}
+\label{eq:ce1}
+\frac {\phi \wedge \psi}{\phi}~~~~~~~~(ce_1)  
+\end{equation}
+\begin{equation}
+\label{eq:ce2}
+\frac {\phi \wedge \psi}{\psi}~~~~~~~~(ce_2) 
+\end{equation}
+\item \textbf{Disjunction Elimination} ($de$): When two unconditional imperatives leading to the same goal (For instance, $i^{+}_i \rightarrow_p \theta, i^{+}_j \rightarrow_p \theta$) are connected by the disjunction operator and the other counterpart of the imperative, $i'_j$ belongs to $\Gamma$, then the imperative `$i^{+}_i \rightarrow_p \theta$'  can be deduced. Similarly, if the negative counterpart of the other imperative ($i'_i$) appears along with the disjunction of two unconditional imperatives,  $i^{+}_j \rightarrow_p \theta$ can be deduced (Equation \ref{eq:de1} and \ref{eq:de2}).
+\begin{equation}
+\label{eq:de1}
+\frac{(i^{+}_i \rightarrow_p \theta) \vee (i^{+}_j \rightarrow_p \theta), i'_j} {i^{+}_i \rightarrow_p \theta}~~~~~~~~(de_1)
+\end{equation}
+\begin{equation}
+\label{eq:de2}
+\frac{(i^{+}_i \rightarrow_p \theta) \vee (i^{+}_j \rightarrow_p \theta), i'_i}{i^{+}_j \rightarrow_p \theta}~~~~~~~~(de_2)
+\end{equation}
+\item \textbf{Conditional Introduction of Reason and Imperative} ($\rightarrow_r i$): If the reason or condition ($\tau$) is assumed, leading to the imperative ($\phi$), then $\tau \rightarrow_r \phi$ can be deduced. This is given by Equation \ref{eq:ri}.
+\begin{equation}
+\label{eq:ri}
+\frac{\tau \cdots \phi}{\tau \rightarrow_r \phi}~~~~~~~~(\rightarrow_r i) 
+\end{equation}
+\begin{define}
+\label{def:ri}
+ The conditional binary operator `$\rightarrow_r$' holds `$\tau$' and `$\phi$' to its left and right sides respectively. 
+\end{define}
+\item \textbf{Conditional Introduction of temporal imperatives} ($\rightarrow_i i$): If an imperative `$\phi$' follows another imperative `$\psi$' sequentially, then `$\phi \rightarrow_i \psi$' can be deduced. This is given by Equation \ref{eq:ii}.
+\begin{equation}
+\label{eq:ii}
+\frac{\phi \cdots \psi}{\phi \rightarrow_i \psi}~~~~~~~~(\rightarrow_i i)
+\end{equation}
+\begin{define}
+\label{def:ii}
+The conditional binary operator `$\rightarrow_i$' holds sequentially related imperatives `$\phi$' and `$\psi$' to its left and right sides respectively. 
+\end{define} 
+\item \textbf{Conditional Introduction of imperative and goal} ($\rightarrow_p i$): If an imperative `$\phi$' is assumed, leading towards the goal `$\theta$', then `$\phi \rightarrow_p \theta$' can be deduced. This is given by Equation \ref{eq:pi}.
+\begin{equation}
+\label{eq:pi}
+\frac{\phi \cdots \theta}{\phi \rightarrow_p \theta} ~~~~~~~~(\rightarrow_p i)
+\end{equation}
+\begin{define}
+\label{def:ip}
+The conditional binary operator `$\rightarrow_p$' holds `$\phi$' and `$\theta$' to its left and right sides respectively.
+\end{define}
+\item \textbf{Conditional Elimination} ($cne$): This rule follows modus ponens of propositional logic. If $w = \{r, i, p\}$, then the rule is given by Equation \ref{eq:mp}.
+\begin{equation}
+\label{eq:mp}
+\frac{X,X \rightarrow_w Y}{Y}
+\end{equation}
+Three instances of this rule can be formulated when `$w$' takes the three values of `$r$', `$i$' and `$p$'. This is detailed below:
+\begin{enumerate}[i)]
+\item If $w = r$, the conditional operator holds `$\tau$' and `$\phi$  to its left and right sides according to the Definition \ref{def:ri}. Therefore the rule can be expressed by Equation \ref{eq:re}.
+\begin{equation}
+\label{eq:re}
+\frac{\tau, \tau \rightarrow_r \phi}{\phi}~~~~~~~~(\rightarrow_r e)
+\end{equation}
+\item If $w = i$, the conditional operator holds `$\phi$' and `$\psi$' which are sequentially related to its left and right sides according to the Definition \ref{def:ii}. Therefore the rule can be expressed by Equation \ref{eq:ie}.
+\begin{equation}
+\label{eq:ie}
+\frac{\phi, \phi \rightarrow_i \psi}{\psi}~~~~~~~~(\rightarrow_i e)
+\end{equation}
+\item If $w = p$, the conditional operator holds `$\phi$' and `$\theta$' to its left and right sides according to the Definition \ref{def:ip}. Therefore the rule can be expressed by Equation \ref{eq:pe}.
+\begin{equation}
+\label{eq:pe}
+\frac{\phi, \phi \rightarrow_p \theta}{\theta}~~~~~~~~(\rightarrow_p e)
+\end{equation}
+\end{enumerate}
+\end{enumerate}
+These deduction rules help in the derivation of other rules. If $\phi_1$, $\phi_2$ .... $\phi_n$ are premises, and $\psi$ is the conclusion, then by repeated application of deduction rules, a proof for `$\psi$' can be obtained. This is denoted by Equation \ref{eq:seq}.
+\begin{equation}
+\label{eq:seq}
+\phi_1, \phi_2,....\phi_n \vdash \psi
+\end{equation}
+ Two examples demonstrating the methodology to obtain the proofs are shown in Tables \ref{ta:proof1} and \ref{ta:proof2}. 
+
+\begin{table}[h]
+
+\caption{\textbf{Example 1}}
+\label{ta:proof1}
+\begin{tabular}{|lll|}
+\multicolumn{3}{l}{$i_1, i_2, (i_1 \rightarrow_p p_1), (i_2 \rightarrow_p p_2), ((p_1 \wedge p_2) \rightarrow P) \vdash P$}\\
+\hline
+\hline
+1. &$i_1$& Premise \\
+2. &$i_1 \rightarrow_p p_1$& Premise  \\
+3. &$p_1$& $\rightarrow_p e$ on 1, 2 \\
+4. &$i_2$& Premise \\
+5. &$i_2 \rightarrow_p p_2$ & Premise  \\
+6. &$p_2$ & $\rightarrow_p e$ on 4, 5 \\
+7. &$p_1 \wedge p_2$ & Propositional conjunction introduction on 3,6\\
+8. &$(p_1 \wedge p_2) \rightarrow P$ & Premise \\
+9. &$P$ & Propositional conditional elimination on 7,8 \\
+\hline
+\end{tabular}
+
+\end{table}
+
+\begin{table}[h]
+\caption{\textbf{Example 2}}
+\label{ta:proof2}
+\begin{tabular}{|lll|}
+\multicolumn{3}{l}{\textbf{$\tau$, $\tau$ $\rightarrow_r$ $i_1$, $i_1$ $\rightarrow_i$ $i_2$, $i_2$ $\rightarrow_p$ $\theta$ $\vdash$ $\theta$}}\\
+\hline
+1. &$\tau$ &Premise \\
+2. &$\tau \rightarrow_r i_1$ & Premise \\
+3. &$i_1$ & $\rightarrow_r e$ on 1,2 \\
+4. &$i_1 \rightarrow_i i_2$ & Premise \\
+5. &$i_2$ & $\rightarrow_i e$ on 3,4 \\
+6. &$i_2 \rightarrow_p \theta$ & Premise \\
+7. &$\theta$ & $\rightarrow_p e$ on 5,6 \\
+\hline
+\end{tabular}
+\end{table}
+
