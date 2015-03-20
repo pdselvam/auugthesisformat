@@ -1,5 +1,10 @@
 % Chapter 4
 
-\chapter{Practical Use} % Main chapter title
-
+\chapter{\uppercase{Design/ Algorithms/ Logic}} % Main chapter title
 \label{chap4} % For referencing
+This chapter is optional depending on the type of project. The format of the sample algorithm is given below.
+
+\section{\uppercase{Algorithm 1}}
+
+
+

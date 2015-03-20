@@ -17,7 +17,7 @@
 %% Check with the latest Anna University regulations before working with this format.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-\documentclass[13 pt,a4paper,twoside]{aureportm}%to print on both sides, twoside is used - page numbers visible on top-left and top-right on even and odd pages.
+\documentclass[13 pt,a4paper]{aureportm}
 \renewcommand{\normalsize}{\fontsize{13 pt}{14.6 pt}\selectfont}
 \usepackage{mathptm}
 \usepackage{aunatbib}
@@ -172,12 +172,12 @@
   \begin{center}
    %\includegraphics[width=26mm,height=25mm]{auemblem.pdf}   \\
    \includegraphics[scale=0.7]{auemblem.pdf} \\
-  \bigsize{ \textbf{INFORMATION AND}}\\
-  \bigsize{\textbf{COMMUNICATION ENGINEERING}}\\
-  \bigsize{\textbf{ANNA UNIVERSITY}}\\
-  \bigsize{\textbf{CHENNAI  600 025}}\\
+  \normalsize{ \textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY }}\\
+  \normalsize{\textbf{COLLEGE OF ENGINEERING}}\\
+  \normalsize{\textbf{ANNA UNIVERSITY}}\\
+  \normalsize{\textbf{CHENNAI  600 025}}\\
   \vspace{0.4\baselineskip}
-  \large{\textbf{MONTH YEAR }}
+  \normalsize{\textbf{MONTH YEAR }}
  \end{center}
 \pagebreak
 
@@ -222,11 +222,12 @@ BONA FIDE CERTIFICATE}
  \scriptsize{\textbf{CHENNAI - 600 025}}
  }
 \end{flushleft}
-\vspace{1 cm}
+\vspace{0.5 cm}
 \begin{center}
  \small{\textbf{COUNTERSIGNED}}\\ 
   \vspace{1 cm}
-  \textbf{\small{Dr. A. Kannan}}\\ 
+  \textbf{\scriptsize{DR. A. KANNAN}}\\ 
+  \scriptsize{\textbf{HEAD OF THE DEPARTMENT}}\\
  \scriptsize{\textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY}}\\
  \scriptsize{\textbf{COLLEGE OF ENGINEERING}}\\
  \scriptsize{\textbf{ANNA UNIVERSITY}}   \\
@@ -276,6 +277,7 @@ LIST OF FIGURES} \listoffigures
 \include{1/Chapter1}
 \include{2/Chapter2}
 \include{3/Chapter3}
+\include{4/Chapter4}
 \include{5/Chapter5}
 \include{6/Chapter6}
 \include{Conclusion/conclusion}

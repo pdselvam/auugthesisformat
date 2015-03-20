@@ -1,5 +1,20 @@
 % Chapter 3
 
-\chapter{Synthetic use} % Main chapter title
+\chapter{\uppercase{Your work based title}} % Main chapter title
+\label{ch:chap3} % For referencing
+Your actual work should come in here. Include system architecture, modules, etc., with diagrams and provide an explanation for each of these. 
+\section{\uppercase{Inclusion of figure}}
+The first figure \ref{fig:figure1} 
 
-\label{chap3} % For referencing
+The second figure \ref{fig:figure2}
+
+\section{\uppercase{Inclusion of table}} 
+
+The first table 
+
+The second table
+
+\section{\uppercase{Inclusion of image}}
+
+The first image 
+

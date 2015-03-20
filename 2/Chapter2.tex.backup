@@ -1,7 +1,23 @@
 % Chapter 2
 
-\chapter{\uppercase{Literature Survey}} % Main chapter title
-
+\chapter{\uppercase{Literature Survey/Related Work}} % Main chapter title
 \label{survey} % For referencing
 
-In the work, it is shown that theory is effective \cite{author:06}.
+This chapter should provide details about the related work. 
+
+\section{\uppercase{Section 1}}
+\subsection{Subsection 1}
+
+\subsection{Subsection 2}
+
+
+\section{\uppercase{Section 2}}
+\subsection{Subsection 1}
+
+\subsection{Subsection 2}
+
+
+\section{\uppercase{Section 3}}
+\subsection{Subsection 1}
+
+\subsection{Subsection 2}

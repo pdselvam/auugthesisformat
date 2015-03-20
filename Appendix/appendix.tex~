@@ -1,10 +1,8 @@
 \appendix
 \addcontentsline{toc}{chapter}{APPENDIX}
-\chapter{Topic 1}
-%\section*{$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$APPENDIX}
-\chapter{Topic2}
-\label{sec:topic2}
-\newpage
-\chapter{Topic3}
-\label{chap:topic3}
+\chapter{\uppercase{Topic 1}}
+\section{\uppercase{Section 1}}
+\section{\uppercase{Section 2}}
+
+
 

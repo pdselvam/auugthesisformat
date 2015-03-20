@@ -41,27 +41,10 @@ Fikes, R.~E \& Nilsson, N.~J 1971,
 \newblock  {Proceedings of the 2nd international joint conference on Artificial
   Intelligence}, London, England, pp.~608--620.
 
- \bibitem[Fan et. al 2000]{fan}
-  Fan, W, Gordon, MD \& Pathak, R 2000, 
-  \newblock ‘Personalization of search engine services for effective retrieval and knowledge management’, 
-  \newblock Proceedings of the twenty-first international conference on information systems, pp. 20-34.
+\bibitem[Fischer \& Ladner 1979]{PDL}
+Fischer, M.~J \& Ladner, R.~E 1979,
+\newblock `Propositional Dynamic Logic of regular programs',
+\newblock {Journal of Computer and System Sciences}, vol. 18, no. 2, pp. 194--211.
 
-\bibitem[website]{web}
-Australian Securities Exchange 2009, 
-\newblock Market Information. Available from: \url{http://www.asx.com.au/professionals/market_information/index.htm} 
-[5 July 2009].
 
-\bibitem[patent]{patent}
-Cookson, AH 1985, Particle trap for compressed gas insulated transmission systems, US Patent 4554399.
-
-\bibitem[thesis 2005]{thesis}
-Hos, JP 2005, 
-\newblock Mechanochemically synthesized nanomaterials for intermediate temperature solid oxide fuel cell membranes. Ph.D. thesis, University of Western
-Australia.
-
-\bibitem[newspaper print 2001]{newspaper}
-Ionesco, J 2001, 'Federal election: new Chip in politics', The Advertiser 23 October, p. 10.
-
-\bibitem[Anna University 2015]{regulations}
-Anna University PhD-Regulations 2015, Available from \url{https://cfr.annauniv.edu/research/regulation/PhD-Regualtion-2015.pdf}[20 March 2015].
 \end{thebibliography}

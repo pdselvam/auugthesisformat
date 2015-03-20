@@ -8,16 +8,17 @@
 %%Images can be saved in the format of *.png. 
 %%------------------------------------------------------
 %% Authors:
-%%Originally used by Dr. Mary Anita Rajam and then modified by Dr. Bama Srinivasan - bama@annauniv.edu
-%%Please report changes to bama@annauniv.edu, chorse@gmail.com
+%%Originally used by Dr. Mary Anita Rajam and then modified by Dr. Bama Srinivasan according to the latest Anna University regulations. %%Please report changes to bama@annauniv.edu, chorse@gmail.com
+%%Acknowledgement: Thanks to Dr.Ranjani Parthasarathi, who relentlessly and patiently corrected the ph.d dissertation of Bama Srinivasan.
 %---------------------------------------------------------
 %% Modification added:
 %%new file apalikem is added, which gives a neat reference list with 1, 2...
-%%aureportm has appendix starting with Arabic numbers.
-%% Check with the latest Anna University regulations before working with this format.
+%%aureportm has appendix starting with Arabic numbers
+%% Disclaimer: Check with the latest Anna University Ph.d regulations before working with this format.
+
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-\documentclass[13 pt,a4paper,twoside]{aureportm}%to print on both sides, twoside is used - page numbers visible on top-left and top-right on even and odd pages.
+\documentclass[13 pt,a4paper]{aureportm}
 \renewcommand{\normalsize}{\fontsize{13 pt}{14.6 pt}\selectfont}
 \usepackage{mathptm}
 \usepackage{aunatbib}
@@ -149,33 +150,35 @@
 \begin{center}
   \LARGE
   \textbf{\uppercase{Title of Project Report}} \\
-  \vspace{1.0\baselineskip}
+  \vspace{0.6\baselineskip}
   \bigsize{\textbf{A PROJECT REPORT}}\\
- \vspace{0.5\baselineskip}
+ \vspace{0.4\baselineskip}
 
   \normalsize{\textit{\textbf{Submitted by}}}\\
-  \vspace{0.6\baselineskip}
-  {\Large \textbf{NAME OF CANDIDATE(S)}} \\
+  \vspace{0.5\baselineskip}
+  {
+  \Large \textbf{CANDIDATE 1}}\\
+  \Large{\textbf{CANDIDATE 2}}\\
+  \Large{\textbf{CANDIDATE 3}} \\ \vspace{0.2\baselineskip}
   \normalsize{\textit{to the}} \\
-  \normalsize{FACULTY OF INFORMATION AND COMMUNICATION ENGINEERING}
-  
-
-  \vspace{1.6\baselineskip}
-
-  \normalsize{\textit{\textbf{in partial fulfillment for the award of the degree}}}\\
-  %\normalsize{\textit{\textbf{of}}}\\
+  \normalsize{\textbf{FACULTY OF INFORMATION AND COMMUNICATION ENGINEERING}} \\  
+  \vspace{1\baselineskip}
+  \normalsize{\textit{\textbf{for partial fulfillment for the award of the degree}}}\\
+  \normalsize{\textit{\textbf{of}}}\\
 \vspace{.2\baselineskip}
   \bigsize{{\textbf{BACHELOR OF TECHNOLOGY}}}\\
+  \normalsize{\textit{\textbf{in}}}\\
+  \bigsize{{\textbf{INFORMATION TECHNOLOGY}}}\\
 \end{center}
   \begin{center}
    %\includegraphics[width=26mm,height=25mm]{auemblem.pdf}   \\
    \includegraphics[scale=0.7]{auemblem.pdf} \\
-  \bigsize{ \textbf{FACULTY OF INFORMATION AND}}\\
-  \bigsize{\textbf{COMMUNICATION ENGINEERING}}\\
-  \bigsize{\textbf{ANNA UNIVERSITY}}\\
-  \bigsize{\textbf{CHENNAI  600 025}}\\
+  \normalsize{ \textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY }}\\
+  \normalsize{\textbf{COLLEGE OF ENGINEERING}}\\
+  \normalsize{\textbf{ANNA UNIVERSITY}}\\
+  \normalsize{\textbf{CHENNAI  600 025}}\\
   \vspace{0.4\baselineskip}
-  \large{\textbf{MONTH YEAR }}
+  \normalsize{\textbf{MONTH YEAR }}
  \end{center}
 \pagebreak
 
@@ -189,22 +192,49 @@ BONA FIDE CERTIFICATE}
 \newlength{\datewidth}
 \settowidth{\datewidth}{Chennai 600 025}
 
-\begin{spacing}{2}
+\begin{spacing}{1.5}
   \begin{sloppypar}
-  \fontsize{14}{17}\selectfont Certified that this Thesis titled ``TITLE OF THE THESIS'' is the bona fide work of AUTHOR who carried out the research under my supervision.  Certified further, that to the best of my knowledge the work reported herein does not form part of any other thesis or dissertation on the basis of which a degree or award was conferred on an earlier occasion on this or any other scholar.
+  \fontsize{14}{17}\selectfont Certified that this project report titled ``TITLE OF THE PROJECT'' is the bona fide work of ``NAME OF THE CANDIDATE(S)'' who carried out project work under my supervision. Certified further that to the best of my knowledge and belief, the work reported herein does not form part of any other thesis or dissertation on the basis of which a degree or an award was conferred on an earlier occasion on this or any other candidate.
   \end{sloppypar}
 \end{spacing}
 
+%\begin{flushleft}
+  %\parbox[t]{7 cm}{\small{\textbf{SIGNATURE}}\\ \\
+   %\small{\textbf{HEAD OF THE DEPARTMENT}} \\
+  % \small{\textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY}}\\
+ %  \small{\textbf{CEG CAMPUS}}\\
+%   \small{\textbf{ANNA UNIVERSITY}}   }
+%  \hfill
+%  \parbox[t]{4 cm}{\textbf{NAME}\\
+%    SIGNATURE\\
+%   DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY\\CEG CAMPUS 
+%    }
+%\end{flushleft}
+
 \begin{flushleft}
-  %\parbox[t]{\datewidth}{Chennai 600 025\\
-  % Date: 27 December 2013 
-  % }
-  \hfill
-  \parbox[t]{8 cm}{\textbf{NAME}\\
-    SUPERVISOR\\
-    ADDRESS\\
-    }
+ \parbox[t]{\datewidth}{\small{\textbf{PLACE: }}\\
+ \small{\textbf{DATE: }}}
+ \hfill
+ \parbox[t]{9 cm}{\scriptsize{$<<$NAME OF THE GUIDE$>>$} \\
+ \scriptsize{\textbf{PROJECT GUIDE}}\\
+ \scriptsize{\textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY}}\\
+ \scriptsize{\textbf{COLLEGE OF ENGINEERING}}\\
+ \scriptsize{\textbf{ANNA UNIVERSITY}}   \\
+ \scriptsize{\textbf{CHENNAI - 600 025}}
+ }
 \end{flushleft}
+\vspace{0.5 cm}
+\begin{center}
+ \small{\textbf{COUNTERSIGNED}}\\ 
+  \vspace{1 cm}
+  \textbf{\scriptsize{DR. A. KANNAN}}\\ 
+  \scriptsize{\textbf{HEAD OF THE DEPARTMENT}}\\
+ \scriptsize{\textbf{DEPARTMENT OF INFORMATION SCIENCE AND TECHNOLOGY}}\\
+ \scriptsize{\textbf{COLLEGE OF ENGINEERING}}\\
+ \scriptsize{\textbf{ANNA UNIVERSITY}}   \\
+ \scriptsize{\textbf{CHENNAI - 600 025}}
+ 
+\end{center}
 
 
 \addtocontents{toc}{\protect\flushleft \protect\bfseries
@@ -248,6 +278,7 @@ LIST OF FIGURES} \listoffigures
 \include{1/Chapter1}
 \include{2/Chapter2}
 \include{3/Chapter3}
+\include{4/Chapter4}
 \include{5/Chapter5}
 \include{6/Chapter6}
 \include{Conclusion/conclusion}
@@ -269,12 +300,7 @@ LIST OF FIGURES} \listoffigures
 \newpage
 \clearpage
 
-\begin{spacing}{1}
-  \normalsize
-    \include{lpub/lpub}
-\end{spacing}
 
-\newpage
 
 
 \addtocontents{toc}{\protect\newpage}
