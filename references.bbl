@@ -6,7 +6,7 @@ frames’,
 \newblock IEEE Transactions on Information Theory, 
 \newblock vol. 49, no. 9, pp. 2307-2309.
 
-\bibitem[Conley TG \& Galeson 1998]{conley}
+\bibitem[\protect\citeauthoryear{Conley TG \& Galeson}{1998}]{conley}
 Conley, TG \& Galeson, DW 1998, 
 \newblock ‘Nativity and wealth in mid-nineteenth century
 cities’, 

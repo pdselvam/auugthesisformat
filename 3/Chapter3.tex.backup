@@ -51,16 +51,6 @@ Examples of pictures are shown in Figure \ref{fig:one} and Figure \ref{fig:two}.
 \end{center}
 \end{figure}
 
-\section{\uppercase{View of Equations}}
-The sum of squares of $a$ and $b$ are calculated as shown below:
-\begin{eqnarray}
- \label{eq:sum}
- (a+b)^2 = a^2+b^2+2ab
-\end{eqnarray}
-
-From Equation \ref{eq:sum}, the data is obtained.
-
-
 
 
 

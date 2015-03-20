@@ -1,10 +1,11 @@
 % Chapter 2
 
 \chapter{\uppercase{Literature Survey/Related Work}} % Main chapter title
-\label{survey} % For referencing
+\label{ch:survey} % For referencing
 
-This chapter should provide details about the related work. 
+This chapter should provide the details about the related work. Atleast 20 articles should be referred and cited. The explanation should be provided within sections and subsections. 
 
+Include the limitations of the existing work and briefly explain how your idea is advantageous over the existing ones in the last paragraph of the chapter.
 \section{\uppercase{Section 1}}
 \subsection{Subsection 1}
 

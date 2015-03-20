@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.10)  20 MAR 2015 22:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.10)  21 MAR 2015 00:09
 entering extended mode
  %&-line parsing enabled.
 **authesis.tex
@@ -960,7 +960,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 159.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
- <auemblem.pdf, id=170, 120.45pt x 118.4425pt>
+ <auemblem.pdf, id=190, 120.45pt x 118.4425pt>
 File: auemblem.pdf Graphic file (type pdf)
 
 <use auemblem.pdf> [1
@@ -983,41 +983,41 @@ Underfull \hbox (badness 2065) in paragraph at lines 196--197
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 22
-3.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 202.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 21
+0.
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 22
-3.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 21
+0.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 22
-3.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 21
+0.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 223.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 223.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 223.
-LaTeX Font Info:    Try loading font information for U+msa on input line 223.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
+LaTeX Font Info:    Try loading font information for U+msa on input line 210.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 223.
+LaTeX Font Info:    Try loading font information for U+msb on input line 210.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 223.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 210.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1064,17 +1064,17 @@ Overfull \hbox (12.21292pt too wide) in paragraph at lines 21--21
  []
 
 
-Overfull \hbox (2.15517pt too wide) in paragraph at lines 23--23
+Overfull \hbox (2.15517pt too wide) in paragraph at lines 24--24
  [][] [][]\OT1/ptm/b/n/13 LITERATURE SUR-VEY/RELATED 
  []
 
 [6]
-Overfull \hbox (43.93694pt too wide) in paragraph at lines 34--34
+Overfull \hbox (43.93694pt too wide) in paragraph at lines 39--39
  [][] [][]\OT1/ptm/b/n/13 DESIGN/ PSEU-DOCODE/ AL-GO-RITHMS/ 
  []
 
 
-Overfull \hbox (13.5951pt too wide) in paragraph at lines 36--36
+Overfull \hbox (13.5951pt too wide) in paragraph at lines 41--41
  [][] [][]\OT1/ptm/b/n/13 IMPLEMENTATION/ RE-SULTS AND 
  []
 
@@ -1126,9 +1126,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <13> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 18.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 19.
 
-Overfull \hbox (10.35297pt too wide) in paragraph at lines 27--28
+Overfull \hbox (10.35297pt too wide) in paragraph at lines 28--29
 []\OT1/ptm/m/n/13 Appendices should be num-bered us-ing Ara-bic nu-mer-als, e.g
 . Ap-pendix
  []
@@ -1136,26 +1136,27 @@ Overfull \hbox (10.35297pt too wide) in paragraph at lines 27--28
 [2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 43.
+(hyperref)                removing `\uppercase' on input line 44.
 
 
-Overfull \hbox (4.54858pt too wide) in paragraph at lines 48--51
+Overfull \hbox (4.54858pt too wide) in paragraph at lines 49--52
 \OT1/ptm/m/n/13 should be left jus-ti-fied. The typed ma-te-rial di-rectly be-l
 ow di-vi-sion or sub-division
  []
 
+[4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 52.
+(hyperref)                removing `\uppercase' on input line 53.
 
-[4]
-Overfull \hbox (0.78465pt too wide) in paragraph at lines 54--55
+
+Overfull \hbox (0.78465pt too wide) in paragraph at lines 55--56
 []\OT1/ptm/m/n/13 All page num-bers (whether it be in Ro-man or Ara-bic num-ber
 s) should
  []
 
 [5]
-Overfull \hbox (5.94614pt too wide) in paragraph at lines 64--65
+Overfull \hbox (5.94614pt too wide) in paragraph at lines 65--66
 []\OT1/ptm/m/n/13 Equations ap-pear-ing in each Chap-ter or Ap-pendix should be
  num-bered
  []
@@ -1180,18 +1181,31 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 9.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 15.
+Overfull \hbox (24.01575pt too wide) in paragraph at lines 12--13
+[]\OT1/ptm/m/n/13 An im-proved al-go-rithm has been adopted in the lit-er-a-tur
+e ([]). 
+ []
+
+
+Overfull \hbox (59.50453pt too wide) in paragraph at lines 18--19
+[]\OT1/ptm/m/n/13 The prob-lem of me-chan-i-cal ma-nip-u-la-tors has been stud-
+ied ([]). 
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 21.
+(hyperref)                removing `\uppercase' on input line 20.
 
 [7
 
 
 
-]) [8]
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 26.
+
+) [8]
 \openout2 = `3/Chapter3.aux'.
 
  (./3/Chapter3.tex
@@ -1200,11 +1214,41 @@ CHAPTER 3.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
-) [9
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 6.
+
+
+Overfull \hbox (10.1842pt too wide) in paragraph at lines 7--36
+[]\OT1/ptm/m/n/13 Sample view is shown in Ta-ble []3.1[] and an ex-am-ple is gi
+ven in Ta-ble []3.2[].
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 37.
+
+<3/eg1.png, id=356, 566.5968pt x 342.5598pt>
+File: 3/eg1.png Graphic file (type png)
+ <use 3/eg1.png>
+<3/eg2.png, id=358, 65.49469pt x 48.18pt>
+File: 3/eg2.png Graphic file (type png)
+ <use 3/eg2.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 54.
+
+[9
 
 
 
-]
+]) [10 <./3/eg1.png> <./3/eg2.png (PNG copy)>]
 \openout2 = `4/Chapter4.aux'.
 
  (./4/Chapter4.tex
@@ -1217,7 +1261,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 7.
 
-) [10
+) [11
 
 
 
@@ -1230,7 +1274,7 @@ CHAPTER 5.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
-) [11
+) [12
 
 
 
@@ -1243,7 +1287,7 @@ CHAPTER 6.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
-) [12
+) [13
 
 
 
@@ -1257,12 +1301,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 1.
 
 )
-Overfull \hbox (20.93533pt too wide) in paragraph at lines 3--283
+Overfull \hbox (20.93533pt too wide) in paragraph at lines 3--270
 []\OT1/ptm/m/n/13 Conclude your work and pro-vide an ex-pla-na-tion for fu-ture
  en-hance-ments. 
  []
 
-[13
+[14
 
 
 
@@ -1283,7 +1327,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 5.
 
-) [14
+) [15
 
 
 
@@ -1340,7 +1384,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 5 . pdf$[]\OT1/ptm/m/n/13 [20
  []
 
-) [15
+) [16
 
 
 
@@ -1354,13 +1398,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 12243 strings out of 495061
- 174762 string characters out of 1182620
- 341095 words of memory out of 3000000
- 14903 multiletter control sequences out of 15000+50000
- 46237 words of font info for 102 fonts, out of 3000000 for 9000
+ 12313 strings out of 495061
+ 175683 string characters out of 1182620
+ 341328 words of memory out of 3000000
+ 14956 multiletter control sequences out of 15000+50000
+ 49530 words of font info for 107 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,7n,54p,718b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,75p,709b,433s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
@@ -1369,9 +1413,9 @@ pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1
 /urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on authesis.pdf (26 pages, 160083 bytes).
+Output written on authesis.pdf (27 pages, 192384 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 462 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
